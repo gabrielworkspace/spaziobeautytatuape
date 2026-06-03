@@ -1934,6 +1934,10 @@ body.no-scroll {
         display: none !important;
     }
     
+    .cutout-shape {
+        opacity: 0.15;
+    }
+    
     .services-tabs {
         gap: 8px;
     }
