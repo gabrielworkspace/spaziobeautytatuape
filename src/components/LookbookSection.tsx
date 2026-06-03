@@ -3,14 +3,12 @@ import { motion } from 'framer-motion';
 
 const LookbookSection: React.FC = () => {
     const lookbookItems = [
-        { src: '/img/penteado-festa/image.png', alt: 'Penteado Festa' },
-        { src: '/img/alongamento-fibra-vidro/image.png', alt: 'Unhas Fibra de Vidro' },
-        { src: '/img/make-festa/image.png', alt: 'Make Festa' },
-        { src: '/img/manicure-esmaltacao-gel/image.png', alt: 'Manicure e Esmaltação' },
-        { src: '/img/penteado-express/image.png', alt: 'Penteado Express' },
-        { src: '/img/design-sobrancelha/image.png', alt: 'Design de Sobrancelhas' },
-        { src: '/img/Screenshot 2026-05-25 at 17-19-40 (3) Instagram.png', alt: 'Nails Instagram' },
-        { src: '/img/Screenshot 2026-05-25 at 17-19-56 (3) Instagram.png', alt: 'Make Instagram' },
+        { src: '/img/carrossel/Screenshot 2026-06-03 at 11-38-44 Instagram.png', alt: 'Cliente Spazio Beauty 1' },
+        { src: '/img/carrossel/Screenshot 2026-06-03 at 11-38-48 Instagram.png', alt: 'Cliente Spazio Beauty 2' },
+        { src: '/img/carrossel/Screenshot 2026-06-03 at 11-41-00 Instagram.png', alt: 'Cliente Spazio Beauty 3' },
+        { src: '/img/carrossel/Screenshot 2026-06-03 at 11-42-04 Instagram.png', alt: 'Cliente Spazio Beauty 4' },
+        { src: '/img/carrossel/Screenshot 2026-06-03 at 11-42-15 Instagram.png', alt: 'Cliente Spazio Beauty 5' },
+        { src: '/img/carrossel/Screenshot 2026-06-03 at 11-42-29 Instagram.png', alt: 'Cliente Spazio Beauty 6' },
     ];
 
     return (
