@@ -3,12 +3,12 @@ import { motion } from 'framer-motion';
 
 const LookbookSection: React.FC = () => {
     const lookbookItems = [
-        { src: '/img/carrossel/Screenshot%202026-06-03%20at%2011-38-44%20Instagram.png', alt: 'Cliente Spazio Beauty 1' },
-        { src: '/img/carrossel/Screenshot%202026-06-03%20at%2011-38-48%20Instagram.png', alt: 'Cliente Spazio Beauty 2' },
-        { src: '/img/carrossel/Screenshot%202026-06-03%20at%2011-41-00%20Instagram.png', alt: 'Cliente Spazio Beauty 3' },
-        { src: '/img/carrossel/Screenshot%202026-06-03%20at%2011-42-04%20Instagram.png', alt: 'Cliente Spazio Beauty 4' },
-        { src: '/img/carrossel/Screenshot%202026-06-03%20at%2011-42-15%20Instagram.png', alt: 'Cliente Spazio Beauty 5' },
-        { src: '/img/carrossel/Screenshot%202026-06-03%20at%2011-42-29%20Instagram.png', alt: 'Cliente Spazio Beauty 6' },
+        { src: '/img/carrossel/cliente-1.png', alt: 'Cliente Spazio Beauty 1' },
+        { src: '/img/carrossel/cliente-2.png', alt: 'Cliente Spazio Beauty 2' },
+        { src: '/img/carrossel/cliente-3.png', alt: 'Cliente Spazio Beauty 3' },
+        { src: '/img/carrossel/cliente-4.png', alt: 'Cliente Spazio Beauty 4' },
+        { src: '/img/carrossel/cliente-5.png', alt: 'Cliente Spazio Beauty 5' },
+        { src: '/img/carrossel/cliente-6.png', alt: 'Cliente Spazio Beauty 6' },
     ];
 
     return (
