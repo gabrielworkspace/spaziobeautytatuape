@@ -30,10 +30,10 @@ const HeroSection: React.FC = () => {
                         <svg className="badge-star" viewBox="0 0 100 100" fill="currentColor">
                             <path d="M50,0 C50,35 65,50 100,50 C65,50 50,65 50,100 C50,65 35,50 0,50 C35,50 50,35 50,0 Z"/>
                         </svg>
-                        ✦ O SEU REFÚGIO DE ALTO PADRÃO NO TATUAPÉ
+                        ✦ O SEU REFÚGIO DE AUTOCUIDADO NO TATUAPÉ
                     </span>
                     <h1 className="hero-title font-serif text-5xl md:text-6xl font-semibold mask-reveal delay-2">A Arte de Revelar a Sua <span className="font-serif italic text-accent-brass">Identidade</span>.</h1>
-                    <p className="hero-subtitle font-sans font-light leading-relaxed text-text-dark text-base mask-reveal delay-3">Esqueça o óbvio. Unimos técnicas autorais de visagismo, fine tattoo e hair styling em um ambiente meticulosamente projetado para o seu descanso absoluto.</p>
+                    <p className="hero-subtitle font-sans font-light leading-relaxed text-text-dark text-base mask-reveal delay-3">Esqueça o óbvio. Unimos técnicas autorais de visagismo, hair styling, nail Designer e makeUp em um ambiente meticulosamente projetado para o seu descanso absoluto.</p>
                     <div className="hero-btns mask-reveal delay-4">
                         <a href="#booking" className="btn btn-brand font-sans font-medium uppercase tracking-wider hover:bg-accent-brass transition-colors">RESERVAR MEU MOMENTO</a>
                         <div className="social-proof-cluster">
