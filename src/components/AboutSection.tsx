@@ -4,6 +4,15 @@ const AboutSection: React.FC = () => {
     return (
         <section id="about" className="about-section px-6" style={{ paddingTop: '100px', paddingBottom: '100px' }}>
             <div className="container">
+                <div className="text-center mb-16 flex flex-col items-center reveal-slide-up">
+                    <span className="section-badge font-sans font-medium uppercase tracking-wider block mx-auto">— BEM-VINDO</span>
+                    <h2 className="section-title font-serif text-4xl md:text-5xl font-semibold mx-auto" style={{ marginLeft: 0 }}>Bem-vindo ao <span className="font-serif italic text-accent-brass">Spazio Beauty Tatuapé</span>.</h2>
+                    
+                    <blockquote className="curator-poem mx-auto" style={{ margin: '40px auto' }}>
+                        <p className="concept-quote-text font-serif italic text-accent-brass">"Onde a sua beleza autêntica<br/>ganha destaque de forma natural."</p>
+                    </blockquote>
+                </div>
+
                 <div className="about-grid">
                     <div className="about-visual reveal-slide-left">
                         <div className="about-image-wrapper">
@@ -12,14 +21,7 @@ const AboutSection: React.FC = () => {
                         </div>
                     </div>
                     
-                    <div className="about-text-content reveal-slide-right text-center flex flex-col items-center">
-                        <span className="section-badge font-sans font-medium uppercase tracking-wider block text-center mx-auto">— BEM-VINDO</span>
-                        <h2 className="section-title font-serif text-4xl md:text-5xl font-semibold overlap-headline text-center mx-auto">Bem-vindo ao <span className="font-serif italic text-accent-brass">Spazio Beauty Tatuapé</span>.</h2>
-                        
-                        <blockquote className="curator-poem">
-                            <p className="concept-quote-text font-serif italic text-accent-brass">"Onde a sua beleza autêntica<br/>ganha destaque de forma natural."</p>
-                        </blockquote>
-                        
+                    <div className="about-text-content reveal-slide-right text-left">
                         <p className="about-desc font-sans font-light leading-relaxed text-text-dark text-base">
                             Há mais de 7 anos, criamos um refúgio no coração do Tatuapé para quem busca ir além da estética tradicional. Nós não acreditamos em padrões engessados. Acreditamos na beleza que já existe em você — leve, única e que merece ser evidenciada com naturalidade.
                         </p>
@@ -29,7 +31,7 @@ const AboutSection: React.FC = () => {
                         </p>
 
                         <div className="mt-12 w-full">
-                            <h3 className="font-serif text-2xl font-semibold mb-6 text-center" style={{ color: 'var(--color-brand-green)' }}>Por que Escolher o Spazio Beauty?</h3>
+                            <h3 className="font-serif text-2xl font-semibold mb-6" style={{ color: 'var(--color-brand-green)' }}>Por que Escolher o Spazio Beauty?</h3>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full text-left">
                                 <div className="feature-item-minimal">
                                     <span className="feature-roman font-serif italic text-accent-brass">I.</span>
