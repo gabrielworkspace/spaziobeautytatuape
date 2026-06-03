@@ -12,9 +12,9 @@ const AboutSection: React.FC = () => {
                         </div>
                     </div>
                     
-                    <div className="about-text-content reveal-slide-right">
-                        <span className="section-badge font-sans font-medium uppercase tracking-wider">— BEM-VINDO</span>
-                        <h2 className="section-title font-serif text-4xl md:text-5xl font-semibold overlap-headline">Bem-vindo ao <span className="font-serif italic text-accent-brass">Spazio Beauty Tatuapé</span>.</h2>
+                    <div className="about-text-content reveal-slide-right text-center flex flex-col items-center">
+                        <span className="section-badge font-sans font-medium uppercase tracking-wider block text-center mx-auto">— BEM-VINDO</span>
+                        <h2 className="section-title font-serif text-4xl md:text-5xl font-semibold overlap-headline text-center mx-auto">Bem-vindo ao <span className="font-serif italic text-accent-brass">Spazio Beauty Tatuapé</span>.</h2>
                         
                         <blockquote className="curator-poem">
                             <p className="concept-quote-text font-serif italic text-accent-brass">"Onde a sua beleza autêntica<br/>ganha destaque de forma natural."</p>
@@ -28,9 +28,9 @@ const AboutSection: React.FC = () => {
                             O Spazio nasceu de uma grande virada de chave da fundadora Renata Vezzetti, que deixou o mundo corporativo para unir gestão de excelência e extrema sensibilidade humana. O resultado? O acolhimento intimista de um salão de bairro elevado ao rigor técnico dos maiores estúdios de beleza. Para nós, cada visita não é apenas um serviço, é um ritual de bem-estar.
                         </p>
 
-                        <div className="mt-12">
-                            <h3 className="font-serif text-2xl font-semibold mb-6" style={{ color: 'var(--color-brand-green)' }}>Por que Escolher o Spazio Beauty?</h3>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div className="mt-12 w-full">
+                            <h3 className="font-serif text-2xl font-semibold mb-6 text-center" style={{ color: 'var(--color-brand-green)' }}>Por que Escolher o Spazio Beauty?</h3>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full text-left">
                                 <div className="feature-item-minimal">
                                     <span className="feature-roman font-serif italic text-accent-brass">I.</span>
                                     <div className="feature-text-block">
