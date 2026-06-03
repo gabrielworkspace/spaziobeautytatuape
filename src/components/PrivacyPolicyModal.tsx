@@ -80,7 +80,7 @@ const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({ isOpen, onClose
                     <section style={{ marginBottom: '40px' }}>
                         <h3 className="font-serif font-medium mb-4" style={{ color: '#445D48', fontSize: '1.5rem' }}>1. Nosso Compromisso</h3>
                         <p style={{ margin: '0 0 16px 0' }}>
-                            No Spazio Beauty (Razão Social: Esmalteria Nacional Azevedo Soares, inscrita no CNPJ sob o nº 27.201.652/0001-40, com sede no Tatuapé, SP), a proteção da sua identidade e dos seus dados é tratada com o mesmo cuidado e exclusividade que dedicamos ao seu atendimento físico. Esta política detalha como operamos nosso catálogo digital e protegemos suas informações.
+                            No Spazio Beauty (Razão Social: Centro de Beleza Tatuapé, inscrita no CNPJ sob o nº 27.201.652/0001-40, com sede no Tatuapé, SP), a proteção da sua identidade e dos seus dados é tratada com o mesmo cuidado e exclusividade que dedicamos ao seu atendimento físico. Esta política detalha como operamos nosso catálogo digital e protegemos suas informações.
                         </p>
                     </section>
 

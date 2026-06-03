@@ -86,7 +86,7 @@ const TermsOfUseModal: React.FC<TermsOfUseModalProps> = ({ isOpen, onClose }) =>
                     <section style={{ marginBottom: '40px' }}>
                         <h3 className="font-serif font-medium mb-4" style={{ color: '#445D48', fontSize: '1.5rem' }}>1. Definições e Objeto</h3>
                         <p style={{ margin: '0 0 16px 0' }}>
-                            Estes Termos de Uso regem a utilização do ambiente digital do Spazio Beauty (Razão Social: Esmalteria Nacional Azevedo Soares, inscrita no CNPJ sob o nº 27.201.652/0001-40). Nossa plataforma funciona exclusivamente como um portfólio interativo (Lookbook) e catálogo de serviços. Não somos um e-commerce e não realizamos vendas, checkouts ou agendamentos automatizados diretamente no site.
+                            Estes Termos de Uso regem a utilização do ambiente digital do Spazio Beauty (Razão Social: Centro de Beleza Tatuapé, inscrita no CNPJ sob o nº 27.201.652/0001-40). Nossa plataforma funciona exclusivamente como um portfólio interativo (Lookbook) e catálogo de serviços. Não somos um e-commerce e não realizamos vendas, checkouts ou agendamentos automatizados diretamente no site.
                         </p>
                     </section>
 
