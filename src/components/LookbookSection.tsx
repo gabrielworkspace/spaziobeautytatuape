@@ -35,9 +35,12 @@ const LookbookSection: React.FC = () => {
                 >
                     {/* Duplicate the list twice for seamless loop */}
                     {[...lookbookItems, ...lookbookItems].map((item, index) => (
-                        <div 
+                        <a 
                             key={index} 
-                            className="w-[280px] h-[360px] md:w-[320px] md:h-[420px] flex-shrink-0 rounded-xl overflow-hidden shadow-xl shadow-[#445D48]/5 border border-[#445D48]/10 group relative cursor-pointer"
+                            href="https://www.instagram.com/spaziobeautytatuape"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-[280px] h-[360px] md:w-[320px] md:h-[420px] flex-shrink-0 rounded-xl overflow-hidden shadow-xl shadow-[#445D48]/5 border border-[#445D48]/10 group relative cursor-pointer block"
                             style={{ margin: '0 12px' }}
                         >
                             <img 
@@ -55,7 +58,7 @@ const LookbookSection: React.FC = () => {
                                     Ver no Instagram
                                 </span>
                             </div>
-                        </div>
+                        </a>
                     ))}
                 </motion.div>
             </div>
