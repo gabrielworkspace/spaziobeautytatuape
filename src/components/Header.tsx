@@ -20,7 +20,8 @@ const Header: React.FC = () => {
             <header 
                 className={`header ${isScrolled ? 'scrolled' : ''} ${isMobileOpen ? 'mobile-open' : ''}`}
                 style={{ 
-                    position: 'sticky', 
+                    position: 'fixed', 
+                    width: '100%',
                     top: 0, 
                     zIndex: 50, 
                     backgroundColor: isScrolled ? 'rgba(235, 232, 225, 0.95)' : 'rgba(235, 232, 225, 0.85)', 
