@@ -19,7 +19,7 @@ const HeroSection: React.FC = () => {
                 </svg>
             </div>
 
-            <div className="hero-editorial-cutouts">
+            <div className="hero-editorial-cutouts hidden md:block">
                 <div className="cutout-shape cutout-1 mask-reveal delay-2" style={{backgroundImage: "url('/img/hero_editorial_2_1780436650212.png')"}}></div>
                 <div className="cutout-shape cutout-2 mask-reveal delay-3" style={{backgroundImage: "url('/img/hero_editorial_3_1780436660812.png')"}}></div>
             </div>
