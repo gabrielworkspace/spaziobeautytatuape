@@ -23,8 +23,8 @@ const FAQSection: React.FC = () => {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     return (
-        <section id="faq" style={{ paddingTop: '100px', paddingBottom: '100px', backgroundColor: '#F9F8F6' }}>
-            <div className="px-6" style={{ maxWidth: '800px', margin: '0 auto' }}>
+        <section id="faq" style={{ padding: '80px 0', backgroundColor: '#F9F8F6' }}>
+            <div className="container" style={{ maxWidth: '800px', margin: '0 auto' }}>
                 <div style={{ textAlign: 'center', marginBottom: '64px' }}>
                     <span className="font-sans font-medium uppercase text-sm" style={{ color: '#8E794D', letterSpacing: '0.15em' }}>— Dúvidas Frequentes</span>
                     <h2 className="font-serif font-semibold" style={{ color: '#445D48', fontSize: '2.5rem', marginTop: '16px' }}>Sua Experiência Spazio</h2>
