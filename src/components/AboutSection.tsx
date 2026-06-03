@@ -17,7 +17,7 @@ const AboutSection: React.FC = () => {
                     <div className="about-visual reveal-slide-left" style={{ marginTop: '-120px' }}>
                         <div className="about-image-wrapper">
                             <img src="/img/about-main.png" alt="Spazio Beauty" className="about-img" />
-                            <img src="/img/spazio_diptych_arch_1780438447261.png" alt="Arquitetura Minimalista" className="about-img-diptych" />
+                            <img src="/img/about-arch.png" alt="Arquitetura Minimalista" className="about-img-diptych" />
                         </div>
                     </div>
                     

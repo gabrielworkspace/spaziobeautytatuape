@@ -20,8 +20,8 @@ const HeroSection: React.FC = () => {
             </div>
 
             <div className="hero-editorial-cutouts hidden md:block">
-                <div className="cutout-shape cutout-1 mask-reveal delay-2" style={{backgroundImage: "url('/img/hero_editorial_2_1780436650212.png')"}}></div>
-                <div className="cutout-shape cutout-2 mask-reveal delay-3" style={{backgroundImage: "url('/img/hero_editorial_3_1780436660812.png')"}}></div>
+                <div className="cutout-shape cutout-1 mask-reveal delay-2" style={{backgroundImage: "url('/img/hero-2.png')"}}></div>
+                <div className="cutout-shape cutout-2 mask-reveal delay-3" style={{backgroundImage: "url('/img/hero-3.png')"}}></div>
             </div>
 
             <div className="container hero-container">
@@ -38,9 +38,9 @@ const HeroSection: React.FC = () => {
                         <a href="#booking" className="btn btn-brand font-sans font-medium uppercase tracking-wider hover:bg-accent-brass transition-colors">RESERVAR MEU MOMENTO</a>
                         <div className="social-proof-cluster">
                             <div className="avatar-group">
-                                <img src="/img/hero_editorial_1_1780436632488.png" alt="Cliente" className="avatar-img" />
-                                <img src="/img/hero_editorial_2_1780436650212.png" alt="Cliente" className="avatar-img" />
-                                <img src="/img/hero_editorial_3_1780436660812.png" alt="Cliente" className="avatar-img" />
+                                <img src="/img/hero-1.png" alt="Cliente" className="avatar-img" />
+                                <img src="/img/hero-2.png" alt="Cliente" className="avatar-img" />
+                                <img src="/img/hero-3.png" alt="Cliente" className="avatar-img" />
                             </div>
                             <span className="social-proof-text font-serif italic text-accent-brass">Mais de 3.8k mulheres transformadas</span>
                         </div>

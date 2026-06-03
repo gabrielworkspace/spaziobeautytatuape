@@ -15,7 +15,7 @@ const ContactSection: React.FC = () => {
                         
                         <div className="mb-10 rounded-xl overflow-hidden shadow-lg h-64 relative group" style={{ border: '1px solid rgba(68, 93, 72, 0.1)' }}>
                             <img 
-                                src="/img/image.png" 
+                                src="/img/contact-facade.png" 
                                 alt="Fachada Spazio Beauty" 
                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
                             />
