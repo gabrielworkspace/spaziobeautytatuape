@@ -40,7 +40,7 @@ const ServicesSection: React.FC = () => {
                             <div className="panel-grid">
                                 <div className="panel-text">
                                     <h3 className="panel-title font-serif text-3xl font-semibold">Cabelos com Conceito & Técnica</h3>
-                                    <p className="panel-desc font-sans font-light leading-relaxed text-text-dark text-base">Oferecemos cortes de alta precisão baseados em visagismo, além de colorações integras e mechas artísticas criadas sob medida para o seu estilo.</p>
+                                    <p className="panel-desc font-sans font-light leading-relaxed text-text-dark text-base">Oferecemos cortes de alta precisão baseados em visagismo, além de colorações íntegras e mechas artísticas criadas sob medida para o seu estilo.</p>
                                     
                                     <ul className="service-menu-list">
                                         <li className="flex items-center gap-4">
@@ -103,7 +103,7 @@ const ServicesSection: React.FC = () => {
                                             <img src="/img/pedicure-tradicional/image.png" alt="Pedicure Tradicional" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
                                             <div className="flex-1">
                                                 <div className="service-menu-item flex-1">
-                                                    <span className="service-name font-sans font-medium text-lg">Pedicure tradicional</span>
+                                                    <span className="service-name font-sans font-medium text-lg">Pedicure Tradicional</span>
                                                     <span className="service-price font-sans font-medium text-text-dark">R$ 45,00</span>
                                                 </div>
                                                 <p className="service-details font-sans font-light leading-relaxed text-text-dark text-sm mt-1">Cuidados clássicos com hidratação para os pés.</p>
@@ -113,7 +113,7 @@ const ServicesSection: React.FC = () => {
                                             <img src="/img/manicure-tradicional/image.png" alt="Manicure Tradicional" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
                                             <div className="flex-1">
                                                 <div className="service-menu-item flex-1">
-                                                    <span className="service-name font-sans font-medium text-lg">Manicure tradicional</span>
+                                                    <span className="service-name font-sans font-medium text-lg">Manicure Tradicional</span>
                                                     <span className="service-price font-sans font-medium text-text-dark">R$ 42,00</span>
                                                 </div>
                                                 <p className="service-details font-sans font-light leading-relaxed text-text-dark text-sm mt-1">Cutilagem perfeita e esmaltação premium.</p>

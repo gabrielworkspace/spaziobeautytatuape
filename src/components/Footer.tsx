@@ -35,8 +35,8 @@ const Footer: React.FC<FooterProps> = ({ onOpenPrivacyPolicy, onOpenTermsOfUse }
                 <div className="footer-services">
                     <h3>Contato</h3>
                     <ul style={{ fontSize: '0.85rem', color: 'var(--color-brand-green-pale)', opacity: 0.85, lineHeight: '1.8' }}>
-                        <li>Rua Serra de Bragança, 1234 - Tatuapé</li>
-                        <li>São Paulo - SP, 03318-000</li>
+                        <li>Rua Azevedo Soares, 1604 - Tatuapé</li>
+                        <li>São Paulo - SP, 03322-001</li>
                         <li style={{ marginTop: '12px' }}><strong>WhatsApp:</strong> (11) 95144-1205</li>
                         <li><strong>E-mail:</strong> contato@spaziobeauty.com.br</li>
                     </ul>

@@ -5,7 +5,7 @@ const testimonials = [
         id: 1,
         name: "Silvia M.",
         badge: "Local Guide",
-        text: "Eu sou a Silvia Malanzuk do Casamento às Cegas 50+ e eu estou complementamente apaixonada e sendo extremamente bem tratada pela equipe da Renata aqui no Spazio Beauty! Super indico!!! Selinho amooooorrrrrr",
+        text: "Eu sou a Silvia Malanzuk do Casamento às Cegas 50+ e eu estou completamente apaixonada e sendo extremamente bem tratada pela equipe da Renata aqui no Spazio Beauty! Super indico!!! Selinho amooooorrrrrr",
         stars: 5,
         time: "7 meses atrás"
     },
@@ -21,7 +21,7 @@ const testimonials = [
         id: 3,
         name: "Tatiane Macedo Soares",
         badge: "2 avaliações",
-        text: "Ambiente maravilhoso, profissionais qualificadas super indico😍😍😍 ...",
+        text: "Ambiente maravilhoso, profissionais qualificadas, super indico😍😍😍 ...",
         stars: 5,
         time: "7 meses atrás"
     }
