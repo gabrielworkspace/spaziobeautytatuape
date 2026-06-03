@@ -25,6 +25,14 @@ const AboutSection: React.FC = () => {
                         <p className="about-desc font-sans font-light leading-relaxed text-text-dark text-base">
                             Há mais de 7 anos, o Spazio Beauty nasceu no coração do Tatuapé com o propósito de ir muito além da estética tradicional. Nós não acreditamos em padrões moldados, mas sim na <strong>beleza autêntica</strong> — aquela que já existe em você e que merece ser evidenciada de maneira natural, leve e única.
                         </p>
+                        
+                        <p className="about-desc font-sans font-light leading-relaxed text-text-dark text-base">
+                            Ao chegar no Spazio, fica fácil entender por que tantas pessoas retornam e fazem daqui o seu lugar de cuidado: o carinho acolhe desde a recepção, a experiência é acompanhada por mimos com bebidas deliciosas e você desfruta da deliciosa sensação de estar em um salão de bairro, mas com o padrão de atendimento e o talento de profissionais de grandes salões.
+                        </p>
+                        
+                        <p className="about-desc font-sans font-light leading-relaxed text-text-dark text-base">
+                            Para nós, cada visita é uma oportunidade de entregar mais do que um serviço de excelência — é viver uma <strong>verdadeira experiência de bem-estar</strong>.
+                        </p>
 
                         <div className="mt-12">
                             <h3 className="font-serif text-2xl font-semibold mb-6" style={{ color: 'var(--color-brand-green)' }}>Por que Escolher o Spazio Beauty?</h3>
@@ -65,21 +73,12 @@ const AboutSection: React.FC = () => {
                                 onClick={() => setIsExpanded(true)}
                                 className="btn btn-outline font-sans font-semibold uppercase tracking-wider text-sm mt-8 cursor-pointer"
                             >
-                                Ler mais
+                                Conhecer nossa história
                             </button>
                         )}
 
                         {isExpanded && (
                             <div className="expanded-content">
-                                <div className="mt-8">
-                                    <p className="about-desc font-sans font-light leading-relaxed text-text-dark text-base mt-4">
-                                        Ao chegar no Spazio, fica fácil entender por que tantas pessoas retornam e fazem daqui o seu lugar de cuidado: o carinho acolhe desde a recepção, a experiência é acompanhada por mimos com bebidas deliciosas e você desfruta da deliciosa sensação de estar em um salão de bairro, mas com o padrão de atendimento e o talento de profissionais de grandes salões.
-                                    </p>
-                                    <p className="about-desc font-sans font-light leading-relaxed text-text-dark text-base">
-                                        Para nós, cada visita é uma oportunidade de entregar mais do que um serviço de excelência — é viver uma <strong>verdadeira experiência de bem-estar</strong>.
-                                    </p>
-                                </div>
-
                                 <div className="mt-12">
                                     <h3 className="font-serif text-2xl font-semibold mb-4" style={{ color: 'var(--color-brand-green)' }}>Nossa História: Um Sonho Feito de Pessoas para Pessoas</h3>
                                     <p className="about-desc font-sans font-light leading-relaxed text-text-dark text-base">
@@ -94,7 +93,7 @@ const AboutSection: React.FC = () => {
                                     onClick={() => setIsExpanded(false)}
                                     className="btn btn-outline font-sans font-semibold uppercase tracking-wider text-sm mt-8 cursor-pointer"
                                 >
-                                    Ler menos
+                                    Ocultar história
                                 </button>
                             </div>
                         )}
