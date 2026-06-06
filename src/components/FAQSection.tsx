@@ -16,6 +16,10 @@ const faqs = [
     {
         question: "Posso agendar mais de um serviço no mesmo dia?",
         answer: "Prezamos pela agilidade nos serviços, pois entendemos que o tempo de nossas clientes é o bem mais precioso. Aqui no Spazio realizamos a maioria dos serviços capilares em conjunto com as unhas. Entre em contato e nos informe sobre sua necessidade para que possamos realizar as reservas em conjunto."
+    },
+    {
+        question: "Quais as formas de pagamento aceitas?",
+        answer: "Aceitamos Pix, débito e crédito parcelado sem juros. Consulte as condições na recepção."
     }
 ];
 

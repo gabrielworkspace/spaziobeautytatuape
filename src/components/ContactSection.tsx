@@ -10,7 +10,7 @@ const ContactSection: React.FC = () => {
                         <span className="section-badge font-sans font-medium uppercase tracking-wider" style={{ color: '#8E794D' }}>— Localização</span>
                         <h2 className="section-title font-serif text-5xl md:text-6xl font-semibold mb-6">O Destino Físico</h2>
                         <p className="contact-desc font-sans font-light leading-relaxed text-text-dark text-base mb-8">
-                            O Spazio Beauty está localizado no coração do Tatuapé. Uma estrutura pensada para ser o seu oásis particular, com fácil acesso e estacionamento conveniado.
+                            O Spazio Beauty está localizado no coração do Tatuapé. Uma estrutura pensada para ser o seu oásis particular, com fácil acesso e serviço de valet conveniado.
                         </p>
                         
                         <div className="mb-10 rounded-xl overflow-hidden shadow-lg h-64 relative group" style={{ border: '1px solid rgba(68, 93, 72, 0.1)' }}>
@@ -25,8 +25,8 @@ const ContactSection: React.FC = () => {
                             </div>
                         </div>
                         
-                        <ul style={{ margin: '32px 0' }}>
-                            <li style={{ display: 'flex', alignItems: 'flex-start', gap: '16px', marginBottom: '24px' }}>
+                        <ul style={{ margin: '32px 0', display: 'flex', flexDirection: 'column', gap: '24px' }}>
+                            <li style={{ display: 'flex', alignItems: 'flex-start', gap: '16px' }}>
                                 <div className="text-xl" style={{ color: '#8E794D', marginTop: '4px' }}><i className="fa-solid fa-location-dot"></i></div>
                                 <div>
                                     <h4 className="font-serif text-lg font-semibold" style={{ color: '#445D48', margin: 0 }}>Endereço</h4>
@@ -38,6 +38,13 @@ const ContactSection: React.FC = () => {
                                 <div>
                                     <h4 className="font-serif text-lg font-semibold" style={{ color: '#445D48', margin: 0 }}>Horário de Funcionamento</h4>
                                     <p className="font-sans font-light mt-1" style={{ color: 'rgba(60, 60, 52, 0.8)', margin: 0 }}>Terça a Sábado<br/>09:00 às 21:00</p>
+                                </div>
+                            </li>
+                            <li style={{ display: 'flex', alignItems: 'flex-start', gap: '16px' }}>
+                                <div className="text-xl" style={{ color: '#8E794D', marginTop: '4px' }}><i className="fa-solid fa-car"></i></div>
+                                <div>
+                                    <h4 className="font-serif text-lg font-semibold" style={{ color: '#445D48', margin: 0 }}>Estacionamento com Valet</h4>
+                                    <p className="font-sans font-light mt-1" style={{ color: 'rgba(60, 60, 52, 0.8)', margin: 0 }}>Temos estacionamento conveniado com serviço de valet, garantindo comodidade e segurança para seu veículo.</p>
                                 </div>
                             </li>
                         </ul>
