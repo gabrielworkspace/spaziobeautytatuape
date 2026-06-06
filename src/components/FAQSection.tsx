@@ -2,20 +2,20 @@ import React, { useState } from 'react';
 
 const faqs = [
     {
-        question: "Como funciona a avaliação visagista?",
-        answer: "Antes de qualquer procedimento capilar ou de design de sobrancelhas, realizamos uma rápida consultoria para entender seu formato de rosto, subtom de pele e estilo de vida, garantindo um resultado que harmonize perfeitamente com você."
+        question: "Tem estacionamento?",
+        answer: "Possuímos convênio com valet por apenas R$ 10,00 o período de 12 horas. Esse serviço está disponível de terça a sábado a partir das 11h45."
     },
     {
-        question: "Qual a durabilidade do alongamento em Fibra de Vidro?",
-        answer: "Com a manutenção correta realizada a cada 20 ou 30 dias, o alongamento em fibra de vidro pode durar meses mantendo o aspecto natural e a resistência."
+        question: "Como funciona a avaliação com o hair stylist?",
+        answer: "A avaliação feita pelos nossos profissionais é muito importante se você quer realizar um trabalho de química como botox ou luzes. Indicamos um agendamento para avaliação e orçamento personalizado."
+    },
+    {
+        question: "Minhas unhas estão fracas, o que eu faço?",
+        answer: "O Spazio Beauty possui técnicas para proteção, fortalecimento e alongamento natural das unhas. Utilizamos desde blindagem das unhas com gel até alongamentos em fibra de vidro. A avaliação pelas nossas nails designers é essencial. Agende um horário conosco e descubra a solução perfeita."
     },
     {
         question: "Posso agendar mais de um serviço no mesmo dia?",
-        answer: "Sim! Pensando no seu conforto e otimização de tempo, possuímos pacotes onde você pode realizar cabelo, unhas e maquiagem de forma simultânea ou sequencial com nossa equipe."
-    },
-    {
-        question: "Quais as formas de pagamento aceitas?",
-        answer: "Para sua comodidade, aceitamos pagamentos via PIX, cartões de débito e crédito (com parcelamento em até 3x sem juros para procedimentos acima de R$ 300)."
+        answer: "Prezamos pela agilidade nos serviços, pois entendemos que o tempo de nossas clientes é o bem mais precioso. Aqui no Spazio realizamos a maioria dos serviços capilares em conjunto com as unhas. Entre em contato e nos informe sobre sua necessidade para que possamos realizar as reservas em conjunto."
     }
 ];
 
