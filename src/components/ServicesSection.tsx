@@ -140,7 +140,7 @@ const ServicesSection: React.FC = () => {
                                                     <span className="service-name font-sans font-medium text-lg">Pedicure Tradicional</span>
                                                     <span className="service-price font-sans font-medium text-text-dark">R$ 48,00</span>
                                                 </div>
-                                                <p className="service-details font-sans font-light leading-relaxed text-text-dark text-sm mt-1">Cuidados clássicos com hidratação para os pés.</p>
+                                                <p className="service-details font-sans font-light leading-relaxed text-text-dark text-sm mt-1">Cuidados clássicos para os pés.</p>
                                             </div>
                                         </li>
                                         <li className="flex items-center gap-4">
@@ -160,6 +160,7 @@ const ServicesSection: React.FC = () => {
                                                     <span className="service-name font-sans font-medium text-lg">Pé e Mão</span>
                                                     <span className="service-price font-sans font-medium text-text-dark">R$ 83,00</span>
                                                 </div>
+                                                <p className="service-details font-sans font-light leading-relaxed text-text-dark text-sm mt-1">Unindo dois serviços com valor especial.</p>
                                             </div>
                                         </li>
                                         <li className="flex items-center gap-4">
@@ -169,6 +170,7 @@ const ServicesSection: React.FC = () => {
                                                     <span className="service-name font-sans font-medium text-lg">Spa dos Pés com Bota Térmica</span>
                                                     <span className="service-price font-sans font-medium text-text-dark">R$ 30,00</span>
                                                 </div>
+                                                <p className="service-details font-sans font-light leading-relaxed text-text-dark text-sm mt-1">Hidratação profunda e esfoliação.</p>
                                             </div>
                                         </li>
                                         <li className="flex items-center gap-4">
@@ -178,6 +180,7 @@ const ServicesSection: React.FC = () => {
                                                     <span className="service-name font-sans font-medium text-lg">Podologia Simples</span>
                                                     <span className="service-price font-sans font-medium text-text-dark">R$ 130,00</span>
                                                 </div>
+                                                <p className="service-details font-sans font-light leading-relaxed text-text-dark text-sm mt-1">Remoção de calosidades, rachaduras e hidratação especial.</p>
                                             </div>
                                         </li>
                                     </ul>
