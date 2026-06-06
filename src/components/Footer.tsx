@@ -16,7 +16,7 @@ const Footer: React.FC<FooterProps> = ({ onOpenPrivacyPolicy, onOpenTermsOfUse }
                         <img src="/img/spazio-logo.png" alt="Spazio Beauty Logo" style={{ height: '80px', objectFit: 'contain' }} />
                     </a>
                     <p className="footer-tagline" style={{ marginTop: '16px' }}>
-                        Um oásis de sofisticação e cuidado no Tatuapé.
+                        Seu refúgio de autocuidado no Tatuapé.
                     </p>
                     <div className="footer-socials" style={{ marginTop: '24px' }}>
                         <a href="https://www.instagram.com/spaziobeautytatuape" target="_blank" rel="noopener noreferrer" aria-label="Instagram">

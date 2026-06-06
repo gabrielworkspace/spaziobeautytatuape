@@ -37,7 +37,7 @@ const ContactSection: React.FC = () => {
                                 <div className="text-xl" style={{ color: '#8E794D', marginTop: '4px' }}><i className="fa-solid fa-clock"></i></div>
                                 <div>
                                     <h4 className="font-serif text-lg font-semibold" style={{ color: '#445D48', margin: 0 }}>Horário de Funcionamento</h4>
-                                    <p className="font-sans font-light mt-1" style={{ color: 'rgba(60, 60, 52, 0.8)', margin: 0 }}>Terça a Sábado<br/>09:00 às 19:00</p>
+                                    <p className="font-sans font-light mt-1" style={{ color: 'rgba(60, 60, 52, 0.8)', margin: 0 }}>Terça a Sábado<br/>09:00 às 21:00</p>
                                 </div>
                             </li>
                         </ul>

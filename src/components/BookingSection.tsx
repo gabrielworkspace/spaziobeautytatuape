@@ -62,7 +62,7 @@ const BookingSection: React.FC = () => {
                                 <span className="step-num font-serif italic text-accent-brass text-3xl">2</span>
                                 <div>
                                     <h4 className="font-serif text-xl font-semibold">Defina o Melhor Período</h4>
-                                    <p className="font-sans font-light text-sm opacity-80">Atendemos presencialmente de terça a sábado, das 09h às 19h.</p>
+                                    <p className="font-sans font-light text-sm opacity-80">Atendemos presencialmente de terça a sábado, das 09h às 21h.</p>
                                 </div>
                             </div>
                             <div className="step-card">
@@ -95,11 +95,11 @@ const BookingSection: React.FC = () => {
                                 <div className="quiz-step active">
                                     <h4 className="quiz-step-title font-serif text-2xl font-semibold text-text-dark">1. Qual serviço você deseja agendar?</h4>
                                     <div className="quiz-options-grid">
-                                        {['Cabelos', 'Unhas em Gel', 'Make Up / Sobrancelhas'].map((opt) => (
+                                        {['Cabelos', 'Unhas e Nail Design', 'Make e Olhar'].map((opt) => (
                                             <label className="quiz-option-card" key={opt}>
                                                 <input type="radio" name="quizService" value={opt} checked={service === opt} onChange={() => setService(opt)} />
                                                 <div className="quiz-card-content">
-                                                    <i className={`fa-solid ${opt === 'Cabelos' ? 'fa-scissors' : opt === 'Unhas em Gel' ? 'fa-hand-sparkles' : 'fa-wand-magic-sparkles'} option-icon`}></i>
+                                                    <i className={`fa-solid ${opt === 'Cabelos' ? 'fa-scissors' : opt === 'Unhas e Nail Design' ? 'fa-hand-sparkles' : 'fa-wand-magic-sparkles'} option-icon`}></i>
                                                     <span>{opt}</span>
                                                 </div>
                                             </label>
@@ -129,7 +129,7 @@ const BookingSection: React.FC = () => {
                                     
                                     <h4 className="quiz-step-title mt-4">Qual período do dia prefere?</h4>
                                     <div className="quiz-options-row">
-                                        {['Manhã (09h - 12h)', 'Tarde (12h - 18h)'].map((opt) => (
+                                        {['Manhã (09h - 12h)', 'Tarde (12h - 18h)', 'Noite (18h - 21h)'].map((opt) => (
                                             <label className="quiz-option-row-card" key={opt}>
                                                 <input type="radio" name="quizPeriod" value={opt} checked={period === opt} onChange={() => setPeriod(opt)} />
                                                 <span>{opt.split(' (')[0]}</span>

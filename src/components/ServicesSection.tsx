@@ -26,7 +26,7 @@ const ServicesSection: React.FC = () => {
                         </button>
                         <button className={`tab-btn ${activeTab === 'unhas' ? 'active' : ''}`} role="tab" onClick={() => setActiveTab('unhas')}>
                             <i className="fa-solid fa-hand-sparkles"></i>
-                            <span>Unhas em Gel</span>
+                            <span>Unhas e Nail Design</span>
                         </button>
                         <button className={`tab-btn ${activeTab === 'make' ? 'active' : ''}`} role="tab" onClick={() => setActiveTab('make')}>
                             <i className="fa-solid fa-wand-magic-sparkles"></i>
