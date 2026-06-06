@@ -33,7 +33,7 @@ const HeroSection: React.FC = () => {
                         ✦ O SEU REFÚGIO DE AUTOCUIDADO NO TATUAPÉ
                     </span>
                     <h1 className="hero-title font-serif text-5xl md:text-6xl font-semibold mask-reveal delay-2">A Arte de Revelar a Sua <span className="font-serif italic text-accent-brass">Identidade</span>.</h1>
-                    <p className="hero-subtitle font-sans font-light leading-relaxed text-text-dark text-base mask-reveal delay-3">Esqueça o óbvio. Unimos técnicas autorais de Visagismo, Hair Styling, Nail Design e Make Up em um ambiente meticulosamente projetado para o seu descanso absoluto.</p>
+                    <p className="hero-subtitle font-sans font-light leading-relaxed text-text-dark text-base mask-reveal delay-3">Esqueça o óbvio. Unimos técnicas autorais de Visagismo, Hair Styling, Nail Design e Make Up em um ambiente aconchegante que te transforma na sua melhor versão.</p>
                     <div className="hero-btns mask-reveal delay-4">
                         <a href="#booking" className="btn btn-brand font-sans font-medium uppercase tracking-wider hover:bg-accent-brass transition-colors">RESERVAR MEU MOMENTO</a>
                         <div className="social-proof-cluster">
