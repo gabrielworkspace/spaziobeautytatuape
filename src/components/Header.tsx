@@ -34,10 +34,8 @@ const Header: React.FC = () => {
                 <div className="container header-container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: isScrolled ? '12px 24px' : '20px 24px', transition: 'padding 0.3s' }}>
                     
                     {/* LOGO */}
-                    <a href="#" className="logo font-serif tracking-widest" style={{ textDecoration: 'none', color: '#3C3C34' }}>
-                        <span className="logo-sub font-sans uppercase tracking-[0.3em] block" style={{ fontSize: '0.75rem', color: '#8E794D' }}>SPAZIO</span>
-                        <span className="logo-main text-3xl" style={{ lineHeight: 1.1 }}>BEAUTY</span>
-                        <span className="logo-tag font-sans font-light uppercase tracking-widest block" style={{ fontSize: '0.6rem', color: 'rgba(60, 60, 52, 0.8)', marginTop: '2px' }}>CONCEITO EM BELEZA</span>
+                    <a href="#" className="logo" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
+                        <img src="/img/spazio-logo.png" alt="Spazio Beauty Logo" style={{ height: '48px', objectFit: 'contain' }} />
                     </a>
                     
                     {/* NAVIGATION LINKS */}
