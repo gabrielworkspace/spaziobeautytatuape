@@ -44,23 +44,57 @@ const ServicesSection: React.FC = () => {
                                     
                                     <ul className="service-menu-list">
                                         <li className="flex items-center gap-4">
-                                            <img src="/img/penteado-express/image.png" alt="Penteado Express" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <img src="/img/penteado-festa/image.png" alt="Penteado" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
                                             <div className="flex-1">
                                                 <div className="service-menu-item flex-1">
-                                                    <span className="service-name font-sans font-medium text-lg">Penteado Express</span>
-                                                    <span className="service-price font-sans font-medium text-text-dark">R$ 138,00</span>
+                                                    <span className="service-name font-sans font-medium text-lg">Penteado</span>
+                                                    <span className="service-price font-sans font-medium text-text-dark">a partir de R$ 189,00</span>
                                                 </div>
-                                                <p className="service-details font-sans font-light leading-relaxed text-text-dark text-sm mt-1">Trança Semi Preso.</p>
                                             </div>
                                         </li>
                                         <li className="flex items-center gap-4">
-                                            <img src="/img/penteado-festa/image.png" alt="Penteado Festa" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <img src="/img/penteado-express/image.png" alt="Corte Feminino" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
                                             <div className="flex-1">
                                                 <div className="service-menu-item flex-1">
-                                                    <span className="service-name font-sans font-medium text-lg">Penteado Festa</span>
-                                                    <span className="service-price font-sans font-medium text-text-dark">R$ 189,00</span>
+                                                    <span className="service-name font-sans font-medium text-lg">Corte Feminino</span>
+                                                    <span className="service-price font-sans font-medium text-text-dark">R$ 100,00</span>
                                                 </div>
-                                                <p className="service-details font-sans font-light leading-relaxed text-text-dark text-sm mt-1">Rabo de cavalo e coques estruturados.</p>
+                                            </div>
+                                        </li>
+                                        <li className="flex items-center gap-4">
+                                            <img src="/img/penteado-festa/image.png" alt="Escova" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <div className="flex-1">
+                                                <div className="service-menu-item flex-1">
+                                                    <span className="service-name font-sans font-medium text-lg">Escova Lisa ou Modelada</span>
+                                                    <span className="service-price font-sans font-medium text-text-dark">a partir de R$ 88,00</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li className="flex items-center gap-4">
+                                            <img src="/img/penteado-express/image.png" alt="Coloração" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <div className="flex-1">
+                                                <div className="service-menu-item flex-1">
+                                                    <span className="service-name font-sans font-medium text-lg">Coloração</span>
+                                                    <span className="service-price font-sans font-medium text-text-dark">a partir de R$ 120,00</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li className="flex items-center gap-4">
+                                            <img src="/img/penteado-festa/image.png" alt="Luzes" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <div className="flex-1">
+                                                <div className="service-menu-item flex-1">
+                                                    <span className="service-name font-sans font-medium text-lg">Luzes</span>
+                                                    <span className="service-price font-sans font-medium text-text-dark">a partir de R$ 490,00</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li className="flex items-center gap-4">
+                                            <img src="/img/penteado-express/image.png" alt="Botox e Progressiva" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <div className="flex-1">
+                                                <div className="service-menu-item flex-1">
+                                                    <span className="service-name font-sans font-medium text-lg">Botox e Progressivas</span>
+                                                    <span className="service-price font-sans font-medium text-text-dark">a partir de R$ 250,00</span>
+                                                </div>
                                             </div>
                                         </li>
                                     </ul>
@@ -84,17 +118,17 @@ const ServicesSection: React.FC = () => {
                                             <div className="flex-1">
                                                 <div className="service-menu-item flex-1">
                                                     <span className="service-name font-sans font-medium text-lg">Manicure + Esmaltação em Gel</span>
-                                                    <span className="service-price font-sans font-medium text-text-dark">R$ 95,00</span>
+                                                    <span className="service-price font-sans font-medium text-text-dark">R$ 100,00</span>
                                                 </div>
                                                 <p className="service-details font-sans font-light leading-relaxed text-text-dark text-sm mt-1">Acabamento impecável e alta durabilidade.</p>
                                             </div>
                                         </li>
                                         <li className="flex items-center gap-4">
-                                            <img src="/img/alongamento-fibra-vidro/image.png" alt="Alongamento Fibra de Vidro" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <img src="/img/alongamento-fibra-vidro/image.png" alt="Alongamentos Naturais" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
                                             <div className="flex-1">
                                                 <div className="service-menu-item flex-1">
-                                                    <span className="service-name font-sans font-medium text-lg">Alongamento Fibra de Vidro</span>
-                                                    <span className="service-price font-sans font-medium text-text-dark">R$ 250,00</span>
+                                                    <span className="service-name font-sans font-medium text-lg">Alongamentos Naturais</span>
+                                                    <span className="service-price font-sans font-medium text-text-dark">a partir de R$ 180,00</span>
                                                 </div>
                                                 <p className="service-details font-sans font-light leading-relaxed text-text-dark text-sm mt-1">Resistência extrema com aspecto fino e natural.</p>
                                             </div>
@@ -104,7 +138,7 @@ const ServicesSection: React.FC = () => {
                                             <div className="flex-1">
                                                 <div className="service-menu-item flex-1">
                                                     <span className="service-name font-sans font-medium text-lg">Pedicure Tradicional</span>
-                                                    <span className="service-price font-sans font-medium text-text-dark">R$ 45,00</span>
+                                                    <span className="service-price font-sans font-medium text-text-dark">R$ 48,00</span>
                                                 </div>
                                                 <p className="service-details font-sans font-light leading-relaxed text-text-dark text-sm mt-1">Cuidados clássicos com hidratação para os pés.</p>
                                             </div>
@@ -114,9 +148,36 @@ const ServicesSection: React.FC = () => {
                                             <div className="flex-1">
                                                 <div className="service-menu-item flex-1">
                                                     <span className="service-name font-sans font-medium text-lg">Manicure Tradicional</span>
-                                                    <span className="service-price font-sans font-medium text-text-dark">R$ 42,00</span>
+                                                    <span className="service-price font-sans font-medium text-text-dark">R$ 45,00</span>
                                                 </div>
                                                 <p className="service-details font-sans font-light leading-relaxed text-text-dark text-sm mt-1">Cutilagem perfeita e esmaltação premium.</p>
+                                            </div>
+                                        </li>
+                                        <li className="flex items-center gap-4">
+                                            <img src="/img/manicure-tradicional/image.png" alt="Pé e Mão" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <div className="flex-1">
+                                                <div className="service-menu-item flex-1">
+                                                    <span className="service-name font-sans font-medium text-lg">Pé e Mão</span>
+                                                    <span className="service-price font-sans font-medium text-text-dark">R$ 83,00</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li className="flex items-center gap-4">
+                                            <img src="/img/pedicure-tradicional/image.png" alt="Spa dos Pés com Bota Térmica" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <div className="flex-1">
+                                                <div className="service-menu-item flex-1">
+                                                    <span className="service-name font-sans font-medium text-lg">Spa dos Pés com Bota Térmica</span>
+                                                    <span className="service-price font-sans font-medium text-text-dark">R$ 30,00</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li className="flex items-center gap-4">
+                                            <img src="/img/pedicure-tradicional/image.png" alt="Podologia Simples" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <div className="flex-1">
+                                                <div className="service-menu-item flex-1">
+                                                    <span className="service-name font-sans font-medium text-lg">Podologia Simples</span>
+                                                    <span className="service-price font-sans font-medium text-text-dark">R$ 130,00</span>
+                                                </div>
                                             </div>
                                         </li>
                                     </ul>
@@ -136,33 +197,30 @@ const ServicesSection: React.FC = () => {
                                     
                                     <ul className="service-menu-list">
                                         <li className="flex items-center gap-4">
-                                            <img src="/img/make-festa/image.png" alt="Make Festa" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <img src="/img/make-festa/image.png" alt="Make Up" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
                                             <div className="flex-1">
                                                 <div className="service-menu-item flex-1">
-                                                    <span className="service-name font-sans font-medium text-lg">Make Festa</span>
-                                                    <span className="service-price font-sans font-medium text-text-dark">R$ 189,00</span>
+                                                    <span className="service-name font-sans font-medium text-lg">Make Up</span>
+                                                    <span className="service-price font-sans font-medium text-text-dark">a partir de R$ 189,00</span>
                                                 </div>
-                                                <p className="service-details font-sans font-light leading-relaxed text-text-dark text-sm mt-1">Inclui contorno, iluminação e delineado.</p>
                                             </div>
                                         </li>
                                         <li className="flex items-center gap-4">
-                                            <img src="/img/design-sobrancelha/image.png" alt="Design de Sobrancelha" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <img src="/img/design-sobrancelha/image.png" alt="Extensão de Cílios e Brow Lamination" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
                                             <div className="flex-1">
                                                 <div className="service-menu-item flex-1">
-                                                    <span className="service-name font-sans font-medium text-lg">Design de Sobrancelha</span>
-                                                    <span className="service-price font-sans font-medium text-text-dark">R$ 60,00</span>
+                                                    <span className="service-name font-sans font-medium text-lg">Extensão de Cílios e Brow Lamination</span>
+                                                    <span className="service-price font-sans font-medium text-text-dark">a partir de R$ 150,00</span>
                                                 </div>
-                                                <p className="service-details font-sans font-light leading-relaxed text-text-dark text-sm mt-1">Alinhamento e desenho harmônico dos fios.</p>
                                             </div>
                                         </li>
                                         <li className="flex items-center gap-4">
-                                            <img src="/img/design-sobrancelha-henna/image.png" alt="Design de Sobrancelha com Henna" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <img src="/img/design-sobrancelha-henna/image.png" alt="Limpeza e Design de Sobrancelha" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
                                             <div className="flex-1">
                                                 <div className="service-menu-item flex-1">
-                                                    <span className="service-name font-sans font-medium text-lg">Design com Henna</span>
-                                                    <span className="service-price font-sans font-medium text-text-dark">R$ 70,00</span>
+                                                    <span className="service-name font-sans font-medium text-lg">Limpeza e Design de Sobrancelha</span>
+                                                    <span className="service-price font-sans font-medium text-text-dark">a partir de R$ 45,00</span>
                                                 </div>
-                                                <p className="service-details font-sans font-light leading-relaxed text-text-dark text-sm mt-1">Preenchimento temporário para maior volume e definição.</p>
                                             </div>
                                         </li>
                                     </ul>
