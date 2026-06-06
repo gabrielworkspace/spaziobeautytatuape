@@ -44,7 +44,7 @@ const ServicesSection: React.FC = () => {
                                     
                                     <ul className="service-menu-list">
                                         <li className="flex items-center gap-4">
-                                            <img src="/img/penteado-festa/image.png" alt="Penteado" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <img src="/img/servicos/penteado.png" alt="Penteado" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
                                             <div className="flex-1">
                                                 <div className="service-menu-item flex-1">
                                                     <span className="service-name font-sans font-medium text-lg">Penteado</span>
@@ -53,7 +53,7 @@ const ServicesSection: React.FC = () => {
                                             </div>
                                         </li>
                                         <li className="flex items-center gap-4">
-                                            <img src="/img/penteado-express/image.png" alt="Corte Feminino" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <img src="/img/servicos/corte-feminino.png" alt="Corte Feminino" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
                                             <div className="flex-1">
                                                 <div className="service-menu-item flex-1">
                                                     <span className="service-name font-sans font-medium text-lg">Corte Feminino</span>
@@ -62,7 +62,7 @@ const ServicesSection: React.FC = () => {
                                             </div>
                                         </li>
                                         <li className="flex items-center gap-4">
-                                            <img src="/img/penteado-festa/image.png" alt="Escova" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <img src="/img/servicos/escova-lisa.png" alt="Escova" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
                                             <div className="flex-1">
                                                 <div className="service-menu-item flex-1">
                                                     <span className="service-name font-sans font-medium text-lg">Escova Lisa ou Modelada</span>
@@ -71,7 +71,7 @@ const ServicesSection: React.FC = () => {
                                             </div>
                                         </li>
                                         <li className="flex items-center gap-4">
-                                            <img src="/img/penteado-express/image.png" alt="Coloração" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <img src="/img/servicos/coloracao.png" alt="Coloração" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
                                             <div className="flex-1">
                                                 <div className="service-menu-item flex-1">
                                                     <span className="service-name font-sans font-medium text-lg">Coloração</span>
@@ -80,7 +80,7 @@ const ServicesSection: React.FC = () => {
                                             </div>
                                         </li>
                                         <li className="flex items-center gap-4">
-                                            <img src="/img/penteado-festa/image.png" alt="Luzes" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <img src="/img/servicos/luzes.png" alt="Luzes" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
                                             <div className="flex-1">
                                                 <div className="service-menu-item flex-1">
                                                     <span className="service-name font-sans font-medium text-lg">Luzes</span>
@@ -89,7 +89,7 @@ const ServicesSection: React.FC = () => {
                                             </div>
                                         </li>
                                         <li className="flex items-center gap-4">
-                                            <img src="/img/penteado-express/image.png" alt="Botox e Progressiva" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <img src="/img/servicos/botox-progressiva.png" alt="Botox e Progressiva" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
                                             <div className="flex-1">
                                                 <div className="service-menu-item flex-1">
                                                     <span className="service-name font-sans font-medium text-lg">Botox e Progressivas</span>
@@ -144,7 +144,7 @@ const ServicesSection: React.FC = () => {
                                             </div>
                                         </li>
                                         <li className="flex items-center gap-4">
-                                            <img src="/img/manicure-tradicional/image.png" alt="Manicure Tradicional" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <img src="/img/servicos/manicure-tradicional.png" alt="Manicure Tradicional" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
                                             <div className="flex-1">
                                                 <div className="service-menu-item flex-1">
                                                     <span className="service-name font-sans font-medium text-lg">Manicure Tradicional</span>
@@ -154,7 +154,7 @@ const ServicesSection: React.FC = () => {
                                             </div>
                                         </li>
                                         <li className="flex items-center gap-4">
-                                            <img src="/img/manicure-tradicional/image.png" alt="Pé e Mão" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <img src="/img/servicos/pe-e-mao.png" alt="Pé e Mão" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
                                             <div className="flex-1">
                                                 <div className="service-menu-item flex-1">
                                                     <span className="service-name font-sans font-medium text-lg">Pé e Mão</span>
@@ -163,7 +163,7 @@ const ServicesSection: React.FC = () => {
                                             </div>
                                         </li>
                                         <li className="flex items-center gap-4">
-                                            <img src="/img/pedicure-tradicional/image.png" alt="Spa dos Pés com Bota Térmica" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <img src="/img/servicos/spa-dos-pes.png" alt="Spa dos Pés com Bota Térmica" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
                                             <div className="flex-1">
                                                 <div className="service-menu-item flex-1">
                                                     <span className="service-name font-sans font-medium text-lg">Spa dos Pés com Bota Térmica</span>
@@ -172,7 +172,7 @@ const ServicesSection: React.FC = () => {
                                             </div>
                                         </li>
                                         <li className="flex items-center gap-4">
-                                            <img src="/img/pedicure-tradicional/image.png" alt="Podologia Simples" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <img src="/img/servicos/podologia.png" alt="Podologia Simples" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
                                             <div className="flex-1">
                                                 <div className="service-menu-item flex-1">
                                                     <span className="service-name font-sans font-medium text-lg">Podologia Simples</span>
@@ -197,7 +197,7 @@ const ServicesSection: React.FC = () => {
                                     
                                     <ul className="service-menu-list">
                                         <li className="flex items-center gap-4">
-                                            <img src="/img/make-festa/image.png" alt="Make Up" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <img src="/img/servicos/make-up.png" alt="Make Up" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
                                             <div className="flex-1">
                                                 <div className="service-menu-item flex-1">
                                                     <span className="service-name font-sans font-medium text-lg">Make Up</span>
@@ -206,7 +206,7 @@ const ServicesSection: React.FC = () => {
                                             </div>
                                         </li>
                                         <li className="flex items-center gap-4">
-                                            <img src="/img/design-sobrancelha/image.png" alt="Extensão de Cílios e Brow Lamination" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <img src="/img/servicos/extensao-cilios.png" alt="Extensão de Cílios e Brow Lamination" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
                                             <div className="flex-1">
                                                 <div className="service-menu-item flex-1">
                                                     <span className="service-name font-sans font-medium text-lg">Extensão de Cílios e Brow Lamination</span>
@@ -215,7 +215,7 @@ const ServicesSection: React.FC = () => {
                                             </div>
                                         </li>
                                         <li className="flex items-center gap-4">
-                                            <img src="/img/design-sobrancelha-henna/image.png" alt="Limpeza e Design de Sobrancelha" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <img src="/img/servicos/design-sobrancelha.png" alt="Limpeza e Design de Sobrancelha" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
                                             <div className="flex-1">
                                                 <div className="service-menu-item flex-1">
                                                     <span className="service-name font-sans font-medium text-lg">Limpeza e Design de Sobrancelha</span>
