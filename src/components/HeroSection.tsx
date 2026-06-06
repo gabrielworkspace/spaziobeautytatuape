@@ -38,9 +38,9 @@ const HeroSection: React.FC = () => {
                         <a href="#booking" className="btn btn-brand font-sans font-medium uppercase tracking-wider hover:bg-accent-brass transition-colors">RESERVAR MEU MOMENTO</a>
                         <div className="social-proof-cluster">
                             <div className="avatar-group">
-                                <img src="/img/hero-1.png" alt="Cliente" className="avatar-img" />
-                                <img src="/img/hero-2.png" alt="Cliente" className="avatar-img" />
-                                <img src="/img/hero-3.png" alt="Cliente" className="avatar-img" />
+                                <img src="/img/clientes/image.png" alt="Cliente" className="avatar-img" />
+                                <img src="/img/clientes/image copy.png" alt="Cliente" className="avatar-img" />
+                                <img src="/img/clientes/image copy 2.png" alt="Cliente" className="avatar-img" />
                             </div>
                             <span className="social-proof-text font-serif italic text-accent-brass">Mais de 3.8k mulheres transformadas</span>
                         </div>
