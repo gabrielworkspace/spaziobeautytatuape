@@ -35,7 +35,7 @@ const Header: React.FC = () => {
                     
                     {/* LOGO */}
                     <a href="#" className="logo" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
-                        <img src="/img/spazio-logo.png" alt="Spazio Beauty Logo" style={{ height: '48px', objectFit: 'contain' }} />
+                        <img src="/img/spazio-logo.png" alt="Spazio Beauty Logo" style={{ height: '80px', objectFit: 'contain' }} />
                     </a>
                     
                     {/* NAVIGATION LINKS */}
