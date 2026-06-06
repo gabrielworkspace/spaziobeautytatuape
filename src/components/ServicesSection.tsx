@@ -15,7 +15,7 @@ const ServicesSection: React.FC = () => {
                 <div className="text-center-heading">
                     <span className="section-badge font-sans font-medium uppercase tracking-wider">Especialidades</span>
                     <h2 className="section-title text-brand font-serif text-5xl md:text-6xl font-semibold">Nossos Serviços de Elite</h2>
-                    <p className="section-subtitle font-sans font-light leading-relaxed text-text-dark text-base">Escolha uma categoria para explorar os cuidados e assinaturas exclusivas do nosso salão.</p>
+                    <p className="section-subtitle font-sans font-light leading-relaxed text-text-dark text-base">Escolha uma categoria para explorar os cuidados e expertise do nosso salão.</p>
                 </div>
                 
                 <div className="services-tabs-container">
