@@ -227,7 +227,7 @@ const ServicesSection: React.FC = () => {
                                     <a href="#booking" className="btn btn-brand btn-sm font-sans font-medium uppercase tracking-wider hover:bg-accent-brass transition-colors"><i className="fa-brands fa-whatsapp"></i> Agendar Make Up</a>
                                 </div>
                                 <div className="panel-visual">
-                                    <img src="/img/make-festa/image.png" alt="Maquiagem Spazio Beauty" className="panel-img" />
+                                    <img src="/img/servicos/capa-make.png" alt="Maquiagem Spazio Beauty" className="panel-img" />
                                 </div>
                             </div>
                         </div>
