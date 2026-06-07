@@ -3,12 +3,12 @@ import { motion } from 'framer-motion';
 
 const LookbookSection: React.FC = () => {
     const lookbookItems = [
-        { src: '/img/carrossel/cliente-1.png', alt: 'Cliente Spazio Beauty 1' },
-        { src: '/img/carrossel/cliente-2.png', alt: 'Cliente Spazio Beauty 2' },
-        { src: '/img/carrossel/cliente-3.png', alt: 'Cliente Spazio Beauty 3' },
-        { src: '/img/carrossel/cliente-4.png', alt: 'Cliente Spazio Beauty 4' },
-        { src: '/img/carrossel/cliente-5.png', alt: 'Cliente Spazio Beauty 5' },
-        { src: '/img/carrossel/cliente-6.png', alt: 'Cliente Spazio Beauty 6' },
+        { src: '/img/carrossel/cliente-1.webp', alt: 'Cliente Spazio Beauty 1' },
+        { src: '/img/carrossel/cliente-2.webp', alt: 'Cliente Spazio Beauty 2' },
+        { src: '/img/carrossel/cliente-3.webp', alt: 'Cliente Spazio Beauty 3' },
+        { src: '/img/carrossel/cliente-4.webp', alt: 'Cliente Spazio Beauty 4' },
+        { src: '/img/carrossel/cliente-5.webp', alt: 'Cliente Spazio Beauty 5' },
+        { src: '/img/carrossel/cliente-6.webp', alt: 'Cliente Spazio Beauty 6' },
     ];
 
     return (
@@ -43,7 +43,7 @@ const LookbookSection: React.FC = () => {
                             className="w-[280px] h-[360px] md:w-[320px] md:h-[420px] flex-shrink-0 rounded-xl overflow-hidden shadow-xl shadow-[#445D48]/5 border border-[#445D48]/10 group relative cursor-pointer block"
                             style={{ margin: '0 12px' }}
                         >
-                            <img 
+                            <img loading="lazy" 
                                 src={item.src} 
                                 alt={item.alt} 
                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 

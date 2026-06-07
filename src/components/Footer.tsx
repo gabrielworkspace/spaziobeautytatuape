@@ -13,7 +13,7 @@ const Footer: React.FC<FooterProps> = ({ onOpenPrivacyPolicy, onOpenTermsOfUse }
                 {/* Coluna 1 (Marca & Essência) */}
                 <div className="footer-brand">
                     <a href="#" className="logo">
-                        <img src="/img/spazio-logo.png" alt="Spazio Beauty Logo" style={{ height: '80px', objectFit: 'contain', filter: 'brightness(0) invert(1)' }} />
+                        <img loading="lazy" src="/img/spazio-logo.webp" alt="Spazio Beauty Logo" style={{ height: '80px', objectFit: 'contain', filter: 'brightness(0) invert(1)' }} />
                     </a>
                     <p className="footer-tagline" style={{ marginTop: '16px' }}>
                         Seu refúgio de autocuidado no Tatuapé.

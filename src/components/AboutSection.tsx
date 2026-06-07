@@ -16,8 +16,8 @@ const AboutSection: React.FC = () => {
                 <div className="about-grid">
                     <div className="about-visual reveal-slide-left">
                         <div className="about-image-wrapper">
-                            <img src="/img/about-main.png" alt="Spazio Beauty" className="about-img" />
-                            <img src="/img/image.png" alt="Arquitetura Minimalista" className="about-img-diptych" />
+                            <img loading="lazy" src="/img/about-main.webp" alt="Spazio Beauty" className="about-img" />
+                            <img loading="lazy" src="/img/image.webp" alt="Arquitetura Minimalista" className="about-img-diptych" />
                         </div>
                     </div>
                     

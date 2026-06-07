@@ -44,7 +44,7 @@ const ServicesSection: React.FC = () => {
                                     
                                     <ul className="service-menu-list">
                                         <li className="flex items-center gap-4">
-                                            <img src="/img/servicos/penteado.png" alt="Penteado" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <img loading="lazy" src="/img/servicos/penteado.webp" alt="Penteado" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
                                             <div className="flex-1">
                                                 <div className="service-menu-item flex-1">
                                                     <span className="service-name font-sans font-medium text-lg">Penteado</span>
@@ -53,7 +53,7 @@ const ServicesSection: React.FC = () => {
                                             </div>
                                         </li>
                                         <li className="flex items-center gap-4">
-                                            <img src="/img/servicos/corte-feminino.png" alt="Corte Feminino" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <img loading="lazy" src="/img/servicos/corte-feminino.webp" alt="Corte Feminino" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
                                             <div className="flex-1">
                                                 <div className="service-menu-item flex-1">
                                                     <span className="service-name font-sans font-medium text-lg">Corte Feminino</span>
@@ -62,7 +62,7 @@ const ServicesSection: React.FC = () => {
                                             </div>
                                         </li>
                                         <li className="flex items-center gap-4">
-                                            <img src="/img/servicos/escova-lisa.png" alt="Escova" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <img loading="lazy" src="/img/servicos/escova-lisa.webp" alt="Escova" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
                                             <div className="flex-1">
                                                 <div className="service-menu-item flex-1">
                                                     <span className="service-name font-sans font-medium text-lg">Escova Lisa ou Modelada</span>
@@ -71,7 +71,7 @@ const ServicesSection: React.FC = () => {
                                             </div>
                                         </li>
                                         <li className="flex items-center gap-4">
-                                            <img src="/img/servicos/coloracao.png" alt="Coloração" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <img loading="lazy" src="/img/servicos/coloracao.webp" alt="Coloração" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
                                             <div className="flex-1">
                                                 <div className="service-menu-item flex-1">
                                                     <span className="service-name font-sans font-medium text-lg">Coloração</span>
@@ -80,7 +80,7 @@ const ServicesSection: React.FC = () => {
                                             </div>
                                         </li>
                                         <li className="flex items-center gap-4">
-                                            <img src="/img/servicos/luzes.png" alt="Luzes" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <img loading="lazy" src="/img/servicos/luzes.webp" alt="Luzes" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
                                             <div className="flex-1">
                                                 <div className="service-menu-item flex-1">
                                                     <span className="service-name font-sans font-medium text-lg">Luzes</span>
@@ -89,7 +89,7 @@ const ServicesSection: React.FC = () => {
                                             </div>
                                         </li>
                                         <li className="flex items-center gap-4">
-                                            <img src="/img/servicos/botox-progressiva.png" alt="Botox e Progressiva" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <img loading="lazy" src="/img/servicos/botox-progressiva.webp" alt="Botox e Progressiva" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
                                             <div className="flex-1">
                                                 <div className="service-menu-item flex-1">
                                                     <span className="service-name font-sans font-medium text-lg">Botox e Progressivas</span>
@@ -101,7 +101,7 @@ const ServicesSection: React.FC = () => {
                                     <a href="#booking" className="btn btn-brand btn-sm font-sans font-medium uppercase tracking-wider hover:bg-accent-brass transition-colors"><i className="fa-brands fa-whatsapp"></i> Agendar Cabelo</a>
                                 </div>
                                 <div className="panel-visual">
-                                    <img src="/img/penteado-festa/image.png" alt="Corte e Penteado Spazio Beauty" className="panel-img" />
+                                    <img loading="lazy" src="/img/penteado-festa/image.webp" alt="Corte e Penteado Spazio Beauty" className="panel-img" />
                                 </div>
                             </div>
                         </div>
@@ -114,7 +114,7 @@ const ServicesSection: React.FC = () => {
                                     
                                     <ul className="service-menu-list">
                                         <li className="flex items-center gap-4">
-                                            <img src="/img/manicure-esmaltacao-gel/image.png" alt="Manicure e Esmaltação em Gel" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <img loading="lazy" src="/img/manicure-esmaltacao-gel/image.webp" alt="Manicure e Esmaltação em Gel" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
                                             <div className="flex-1">
                                                 <div className="service-menu-item flex-1">
                                                     <span className="service-name font-sans font-medium text-lg">Manicure + Esmaltação em Gel</span>
@@ -124,7 +124,7 @@ const ServicesSection: React.FC = () => {
                                             </div>
                                         </li>
                                         <li className="flex items-center gap-4">
-                                            <img src="/img/alongamento-fibra-vidro/image.png" alt="Alongamentos Naturais" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <img loading="lazy" src="/img/alongamento-fibra-vidro/image.webp" alt="Alongamentos Naturais" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
                                             <div className="flex-1">
                                                 <div className="service-menu-item flex-1">
                                                     <span className="service-name font-sans font-medium text-lg">Alongamentos Naturais</span>
@@ -134,7 +134,7 @@ const ServicesSection: React.FC = () => {
                                             </div>
                                         </li>
                                         <li className="flex items-center gap-4">
-                                            <img src="/img/pedicure-tradicional/image.png" alt="Pedicure Tradicional" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <img loading="lazy" src="/img/pedicure-tradicional/image.webp" alt="Pedicure Tradicional" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
                                             <div className="flex-1">
                                                 <div className="service-menu-item flex-1">
                                                     <span className="service-name font-sans font-medium text-lg">Pedicure Tradicional</span>
@@ -144,7 +144,7 @@ const ServicesSection: React.FC = () => {
                                             </div>
                                         </li>
                                         <li className="flex items-center gap-4">
-                                            <img src="/img/servicos/manicure-tradicional.png" alt="Manicure Tradicional" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <img loading="lazy" src="/img/servicos/manicure-tradicional.webp" alt="Manicure Tradicional" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
                                             <div className="flex-1">
                                                 <div className="service-menu-item flex-1">
                                                     <span className="service-name font-sans font-medium text-lg">Manicure Tradicional</span>
@@ -154,7 +154,7 @@ const ServicesSection: React.FC = () => {
                                             </div>
                                         </li>
                                         <li className="flex items-center gap-4">
-                                            <img src="/img/servicos/pe-e-mao.png" alt="Pé e Mão" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <img loading="lazy" src="/img/servicos/pe-e-mao.webp" alt="Pé e Mão" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
                                             <div className="flex-1">
                                                 <div className="service-menu-item flex-1">
                                                     <span className="service-name font-sans font-medium text-lg">Pé e Mão</span>
@@ -164,7 +164,7 @@ const ServicesSection: React.FC = () => {
                                             </div>
                                         </li>
                                         <li className="flex items-center gap-4">
-                                            <img src="/img/servicos/spa-dos-pes.png" alt="Spa dos Pés com Bota Térmica" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <img loading="lazy" src="/img/servicos/spa-dos-pes.webp" alt="Spa dos Pés com Bota Térmica" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
                                             <div className="flex-1">
                                                 <div className="service-menu-item flex-1">
                                                     <span className="service-name font-sans font-medium text-lg">Spa dos Pés com Bota Térmica</span>
@@ -174,7 +174,7 @@ const ServicesSection: React.FC = () => {
                                             </div>
                                         </li>
                                         <li className="flex items-center gap-4">
-                                            <img src="/img/servicos/podologia.png" alt="Podologia Simples" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <img loading="lazy" src="/img/servicos/podologia.webp" alt="Podologia Simples" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
                                             <div className="flex-1">
                                                 <div className="service-menu-item flex-1">
                                                     <span className="service-name font-sans font-medium text-lg">Podologia Simples</span>
@@ -187,7 +187,7 @@ const ServicesSection: React.FC = () => {
                                     <a href="#booking" className="btn btn-brand btn-sm font-sans font-medium uppercase tracking-wider hover:bg-accent-brass transition-colors"><i className="fa-brands fa-whatsapp"></i> Agendar Unhas</a>
                                 </div>
                                 <div className="panel-visual">
-                                    <img src="/img/alongamento-fibra-vidro/image.png" alt="Unhas em Gel Spazio Beauty" className="panel-img" />
+                                    <img loading="lazy" src="/img/alongamento-fibra-vidro/image.webp" alt="Unhas em Gel Spazio Beauty" className="panel-img" />
                                 </div>
                             </div>
                         </div>
@@ -200,7 +200,7 @@ const ServicesSection: React.FC = () => {
                                     
                                     <ul className="service-menu-list">
                                         <li className="flex items-center gap-4">
-                                            <img src="/img/servicos/make-up.png" alt="Make Up" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <img loading="lazy" src="/img/servicos/make-up.webp" alt="Make Up" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
                                             <div className="flex-1">
                                                 <div className="service-menu-item flex-1">
                                                     <span className="service-name font-sans font-medium text-lg">Make Up</span>
@@ -209,7 +209,7 @@ const ServicesSection: React.FC = () => {
                                             </div>
                                         </li>
                                         <li className="flex items-center gap-4">
-                                            <img src="/img/servicos/extensao-cilios.png" alt="Extensão de Cílios e Brow Lamination" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <img loading="lazy" src="/img/servicos/extensao-cilios.webp" alt="Extensão de Cílios e Brow Lamination" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
                                             <div className="flex-1">
                                                 <div className="service-menu-item flex-1">
                                                     <span className="service-name font-sans font-medium text-lg">Extensão de Cílios e Brow Lamination</span>
@@ -218,7 +218,7 @@ const ServicesSection: React.FC = () => {
                                             </div>
                                         </li>
                                         <li className="flex items-center gap-4">
-                                            <img src="/img/servicos/design-sobrancelha.png" alt="Limpeza e Design de Sobrancelha" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <img loading="lazy" src="/img/servicos/design-sobrancelha.webp" alt="Limpeza e Design de Sobrancelha" className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
                                             <div className="flex-1">
                                                 <div className="service-menu-item flex-1">
                                                     <span className="service-name font-sans font-medium text-lg">Limpeza e Design de Sobrancelha</span>
@@ -230,7 +230,7 @@ const ServicesSection: React.FC = () => {
                                     <a href="#booking" className="btn btn-brand btn-sm font-sans font-medium uppercase tracking-wider hover:bg-accent-brass transition-colors"><i className="fa-brands fa-whatsapp"></i> Agendar Make Up</a>
                                 </div>
                                 <div className="panel-visual">
-                                    <img src="/img/servicos/capa-make.png" alt="Maquiagem Spazio Beauty" className="panel-img" />
+                                    <img loading="lazy" src="/img/servicos/capa-make.webp" alt="Maquiagem Spazio Beauty" className="panel-img" />
                                 </div>
                             </div>
                         </div>
