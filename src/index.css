@@ -763,6 +763,7 @@ a {
     position: relative;
     display: flex;
     justify-content: center;
+    margin-top: -120px;
 }
 .about-image-wrapper {
     position: relative;
@@ -1865,6 +1866,18 @@ body.no-scroll {
     }
     .about-visual {
         order: 2;
+        margin-top: 40px;
+    }
+    .about-image-wrapper {
+        transform: none;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    .about-img-diptych {
+        bottom: -20px;
+        right: -10px;
+        width: 60%;
+        border-width: 4px;
     }
     .about-text-content {
         order: 1;

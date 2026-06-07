@@ -14,7 +14,7 @@ const AboutSection: React.FC = () => {
                 </div>
 
                 <div className="about-grid">
-                    <div className="about-visual reveal-slide-left" style={{ marginTop: '-120px' }}>
+                    <div className="about-visual reveal-slide-left">
                         <div className="about-image-wrapper">
                             <img src="/img/about-main.png" alt="Spazio Beauty" className="about-img" />
                             <img src="/img/image.png" alt="Arquitetura Minimalista" className="about-img-diptych" />
