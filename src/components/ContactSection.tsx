@@ -56,7 +56,9 @@ const ContactSection: React.FC = () => {
                         </div>
                     </div>
                     
-                    <div className="contact-map-block reveal-slide-right md:h-auto min-h-[400px] rounded-xl overflow-hidden shadow-xl relative" style={{ backgroundColor: '#EBE8E1', border: '1px solid rgba(68, 93, 72, 0.1)' }}>
+                    <div className="contact-map-block reveal-slide-right rounded-xl overflow-hidden shadow-xl relative" style={{ backgroundColor: '#EBE8E1', border: '1px solid rgba(68, 93, 72, 0.1)', height: '400px' }}>
+                        {/* Overlay to prevent scroll trapping on mobile */}
+                        <div className="absolute inset-0 z-20 md:pointer-events-none"></div>
                         <div className="absolute inset-0 pointer-events-none mix-blend-color z-10" style={{ backgroundColor: 'rgba(68, 93, 72, 0.2)' }}></div>
                         <iframe 
                             src="https://maps.google.com/maps?q=Spazio+Beauty+-+Tatuap%C3%A9,+R.+Azevedo+Soares,+1604&t=&z=16&ie=UTF8&iwloc=&output=embed" 
@@ -64,7 +66,6 @@ const ContactSection: React.FC = () => {
                             height="100%" 
                             style={{border:0, filter: 'grayscale(100%) contrast(1.1) opacity(0.9)'}} 
                             allowFullScreen={false} 
-                            loading="lazy" 
                             referrerPolicy="no-referrer-when-downgrade"
                             title="Mapa Spazio Beauty"
                             className="absolute inset-0 w-full h-full z-0"
