@@ -225,9 +225,6 @@ const WelcomePopup: React.FC = () => {
                                 {isLoading ? 'ENVIANDO...' : 'RESGATAR MEU PRESENTE'}
                             </button>
                             
-                            <p id="mensagem" style={{ color: statusMsg.color, textAlign: 'center', marginTop: '8px', fontWeight: 500, fontSize: '0.9rem', minHeight: '20px' }}>
-                                {statusMsg.text}
-                            </p>
                         </form>
                         <p className="font-sans text-center mt-4" style={{ fontSize: '0.75rem', color: '#6B6B63' }}>
                             Ao resgatar, você concorda em receber comunicações exclusivas do Spazio Beauty.
@@ -262,10 +259,8 @@ const WelcomePopup: React.FC = () => {
                         <h2 className="font-serif text-3xl font-semibold mb-4" style={{ color: '#445D48' }}>
                             {submitState === 'success' ? 'Tudo Certo!' : 'Aviso'}
                         </h2>
-                        <p className="font-sans font-light mb-6" style={{ color: 'rgba(60, 60, 52, 0.8)', fontSize: '1rem', lineHeight: 1.6 }}>
-                            {submitState === 'success' 
-                                ? 'Seus dados foram recebidos com sucesso. Nossa equipe entrará em contato em breve pelo WhatsApp para dar andamento ao seu agendamento!' 
-                                : 'Já existe um cadastro registrado com este CPF em nosso sistema.'}
+                        <p id="mensagem" className="font-sans font-light mb-6" style={{ color: 'rgba(60, 60, 52, 0.8)', fontSize: '1rem', lineHeight: 1.6 }}>
+                            {statusMsg.text}
                         </p>
                         <button 
                             onClick={handleClose}
