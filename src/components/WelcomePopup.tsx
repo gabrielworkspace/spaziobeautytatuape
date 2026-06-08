@@ -6,18 +6,18 @@ const WelcomePopup: React.FC = () => {
     const [formData, setFormData] = useState({ nome: '', cpf: '', telefone: '' });
 
     useEffect(() => {
-        const hasSeenPopup = localStorage.getItem('hasSeenWelcomePopup');
-        if (!hasSeenPopup) {
+        // const hasSeenPopup = localStorage.getItem('hasSeenWelcomePopup');
+        // if (!hasSeenPopup) {
             const timer = setTimeout(() => {
                 setIsOpen(true);
             }, 3000); // Show after 3 seconds
             return () => clearTimeout(timer);
-        }
+        // }
     }, []);
 
     const handleClose = () => {
         setIsOpen(false);
-        localStorage.setItem('hasSeenWelcomePopup', 'true');
+        // localStorage.setItem('hasSeenWelcomePopup', 'true');
     };
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -41,7 +41,7 @@ const WelcomePopup: React.FC = () => {
         }
 
         setIsSubmitted(true);
-        localStorage.setItem('hasSeenWelcomePopup', 'true');
+        // localStorage.setItem('hasSeenWelcomePopup', 'true');
     };
 
     // Prevent background scrolling when modal is open
