@@ -12,6 +12,7 @@ import Footer from './components/Footer';
 import CookieBanner from './components/CookieBanner';
 import PrivacyPolicyModal from './components/PrivacyPolicyModal';
 import TermsOfUseModal from './components/TermsOfUseModal';
+import WelcomePopup from './components/WelcomePopup';
 import './index.css';
 
 function App() {
@@ -55,6 +56,7 @@ function App() {
       <CookieBanner onOpenPrivacyPolicy={() => setIsPrivacyModalOpen(true)} />
       <PrivacyPolicyModal isOpen={isPrivacyModalOpen} onClose={() => setIsPrivacyModalOpen(false)} />
       <TermsOfUseModal isOpen={isTermsModalOpen} onClose={() => setIsTermsModalOpen(false)} />
+      <WelcomePopup />
     </div>
   );
 }

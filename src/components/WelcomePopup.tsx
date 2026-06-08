@@ -1,0 +1,244 @@
+import React, { useState, useEffect } from 'react';
+
+const WelcomePopup: React.FC = () => {
+    const [isOpen, setIsOpen] = useState(false);
+    const [isSubmitted, setIsSubmitted] = useState(false);
+    const [formData, setFormData] = useState({ name: '', cpf: '', phone: '' });
+
+    useEffect(() => {
+        const hasSeenPopup = localStorage.getItem('hasSeenWelcomePopup');
+        if (!hasSeenPopup) {
+            const timer = setTimeout(() => {
+                setIsOpen(true);
+            }, 3000); // Show after 3 seconds
+            return () => clearTimeout(timer);
+        }
+    }, []);
+
+    const handleClose = () => {
+        setIsOpen(false);
+        localStorage.setItem('hasSeenWelcomePopup', 'true');
+    };
+
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({ ...prev, [name]: value }));
+    };
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        // Here you would typically send data to a server or CRM
+        console.log('Lead Capturado:', formData);
+        setIsSubmitted(true);
+        localStorage.setItem('hasSeenWelcomePopup', 'true');
+    };
+
+    // Prevent background scrolling when modal is open
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+        return () => {
+            document.body.style.overflow = 'unset';
+        };
+    }, [isOpen]);
+
+    if (!isOpen) return null;
+
+    return (
+        <div style={{
+            position: 'fixed',
+            inset: 0,
+            backgroundColor: 'rgba(0, 0, 0, 0.7)',
+            backdropFilter: 'blur(8px)',
+            WebkitBackdropFilter: 'blur(8px)',
+            zIndex: 9999,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '24px'
+        }} onClick={handleClose}>
+            
+            <div style={{
+                backgroundColor: '#F9F8F6',
+                width: '100%',
+                maxWidth: '500px',
+                borderRadius: '16px',
+                overflow: 'hidden',
+                position: 'relative',
+                boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+                display: 'flex',
+                flexDirection: 'column',
+                animation: 'maskRevealAnim 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards'
+            }} onClick={(e) => e.stopPropagation()}>
+                
+                {/* Close Button */}
+                <button 
+                    onClick={handleClose}
+                    style={{
+                        position: 'absolute',
+                        top: '16px',
+                        right: '24px',
+                        background: 'none',
+                        border: 'none',
+                        fontSize: '2rem',
+                        color: '#445D48',
+                        cursor: 'pointer',
+                        lineHeight: 1,
+                        zIndex: 10
+                    }}
+                    aria-label="Fechar"
+                >
+                    &times;
+                </button>
+
+                {!isSubmitted ? (
+                    <div style={{ padding: '40px 32px 32px 32px' }}>
+                        <div style={{ textAlign: 'center', marginBottom: '32px' }}>
+                            <h2 className="font-serif text-3xl font-semibold mb-3" style={{ color: '#445D48', lineHeight: 1.1 }}>
+                                Presente de<br /> <span className="italic text-accent-brass">Boas-Vindas</span>
+                            </h2>
+                            <p className="font-sans font-light" style={{ color: 'rgba(60, 60, 52, 0.8)', fontSize: '0.95rem' }}>
+                                Preencha seus dados para receber <strong>10% de desconto</strong> no seu primeiro agendamento conosco.
+                            </p>
+                        </div>
+
+                        <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                            <div>
+                                <input 
+                                    type="text" 
+                                    name="name" 
+                                    placeholder="Seu Nome Completo" 
+                                    required 
+                                    value={formData.name}
+                                    onChange={handleInputChange}
+                                    style={{
+                                        width: '100%',
+                                        padding: '14px 20px',
+                                        borderRadius: '8px',
+                                        border: '1px solid rgba(68, 93, 72, 0.2)',
+                                        backgroundColor: '#FFFFFF',
+                                        fontFamily: 'var(--font-sans)',
+                                        fontSize: '0.9rem',
+                                        color: '#3C3C34',
+                                        outline: 'none'
+                                    }}
+                                />
+                            </div>
+                            <div>
+                                <input 
+                                    type="text" 
+                                    name="cpf" 
+                                    placeholder="CPF" 
+                                    required 
+                                    value={formData.cpf}
+                                    onChange={handleInputChange}
+                                    style={{
+                                        width: '100%',
+                                        padding: '14px 20px',
+                                        borderRadius: '8px',
+                                        border: '1px solid rgba(68, 93, 72, 0.2)',
+                                        backgroundColor: '#FFFFFF',
+                                        fontFamily: 'var(--font-sans)',
+                                        fontSize: '0.9rem',
+                                        color: '#3C3C34',
+                                        outline: 'none'
+                                    }}
+                                />
+                            </div>
+                            <div>
+                                <input 
+                                    type="tel" 
+                                    name="phone" 
+                                    placeholder="Telefone (WhatsApp)" 
+                                    required 
+                                    value={formData.phone}
+                                    onChange={handleInputChange}
+                                    style={{
+                                        width: '100%',
+                                        padding: '14px 20px',
+                                        borderRadius: '8px',
+                                        border: '1px solid rgba(68, 93, 72, 0.2)',
+                                        backgroundColor: '#FFFFFF',
+                                        fontFamily: 'var(--font-sans)',
+                                        fontSize: '0.9rem',
+                                        color: '#3C3C34',
+                                        outline: 'none'
+                                    }}
+                                />
+                            </div>
+                            <button 
+                                type="submit" 
+                                className="btn btn-brand" 
+                                style={{ 
+                                    width: '100%', 
+                                    marginTop: '8px', 
+                                    padding: '16px',
+                                    borderRadius: '8px',
+                                    fontSize: '0.9rem',
+                                    letterSpacing: '1.5px'
+                                }}
+                            >
+                                RESGATAR MEU PRESENTE
+                            </button>
+                        </form>
+                        <p className="font-sans text-center mt-4" style={{ fontSize: '0.75rem', color: '#6B6B63' }}>
+                            Ao resgatar, você concorda em receber comunicações exclusivas do Spazio Beauty.
+                        </p>
+                    </div>
+                ) : (
+                    <div style={{ padding: '60px 32px', textAlign: 'center' }}>
+                        <div style={{
+                            width: '80px',
+                            height: '80px',
+                            borderRadius: '50%',
+                            backgroundColor: 'rgba(142, 121, 77, 0.1)',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            margin: '0 auto 24px auto',
+                            color: '#8E794D'
+                        }}>
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                        </div>
+                        <h2 className="font-serif text-3xl font-semibold mb-4" style={{ color: '#445D48' }}>
+                            Tudo Certo!
+                        </h2>
+                        <p className="font-sans font-light mb-6" style={{ color: 'rgba(60, 60, 52, 0.8)', fontSize: '1rem', lineHeight: 1.6 }}>
+                            Seu desconto de 10% já está garantido para o primeiro agendamento. Mencione o código abaixo quando formos confirmar o seu horário.
+                        </p>
+                        <div style={{
+                            backgroundColor: '#EBE8E1',
+                            padding: '16px',
+                            borderRadius: '8px',
+                            border: '1px dashed #8E794D',
+                            display: 'inline-block',
+                            marginBottom: '32px'
+                        }}>
+                            <strong style={{ color: '#8E794D', fontSize: '1.2rem', letterSpacing: '2px' }}>SPAZIO10</strong>
+                        </div>
+                        <a 
+                            href="#booking" 
+                            onClick={handleClose}
+                            className="btn btn-brand" 
+                            style={{ 
+                                width: '100%', 
+                                padding: '16px',
+                                borderRadius: '8px'
+                            }}
+                        >
+                            AGENDAR AGORA
+                        </a>
+                    </div>
+                )}
+            </div>
+        </div>
+    );
+};
+
+export default WelcomePopup;
