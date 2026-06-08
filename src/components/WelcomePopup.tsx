@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 const WelcomePopup: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
+    const [statusMsg, setStatusMsg] = useState({ text: '', color: '' });
     const [formData, setFormData] = useState({ nome: '', cpf: '', telefone: '' });
 
     useEffect(() => {
@@ -27,21 +29,37 @@ const WelcomePopup: React.FC = () => {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        setIsLoading(true);
+        setStatusMsg({ text: 'Enviando...', color: '#6B6B63' });
         
         try {
-            await fetch('https://hook.us2.make.com/yyc86gsqnrk23c1ayrs21fqv3wuk4ggl', {
+            const response = await fetch('https://hook.us2.make.com/yyc86gsqnrk23c1ayrs21fqv3wuk4ggl', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(formData)
             });
+            
+            const resultado = await response.json();
+            
+            if (resultado.status === 'novo') {
+                setStatusMsg({ text: resultado.mensagem, color: 'green' });
+                // Move to the success screen after a brief delay so they see the success message
+                setTimeout(() => {
+                    setIsSubmitted(true);
+                    // localStorage.setItem('hasSeenWelcomePopup', 'true');
+                }, 1500);
+            } else {
+                setStatusMsg({ text: resultado.mensagem, color: 'orange' });
+            }
+            
         } catch (error) {
             console.error('Erro ao enviar lead:', error);
+            setStatusMsg({ text: 'Erro de conexão. Tente novamente.', color: 'red' });
+        } finally {
+            setIsLoading(false);
         }
-
-        setIsSubmitted(true);
-        // localStorage.setItem('hasSeenWelcomePopup', 'true');
     };
 
     // Prevent background scrolling when modal is open
@@ -186,6 +204,7 @@ const WelcomePopup: React.FC = () => {
                             <button 
                                 type="submit" 
                                 id="enviar"
+                                disabled={isLoading}
                                 className="btn btn-brand" 
                                 style={{ 
                                     width: '100%', 
@@ -193,11 +212,19 @@ const WelcomePopup: React.FC = () => {
                                     padding: '16px',
                                     borderRadius: '8px',
                                     fontSize: '0.9rem',
-                                    letterSpacing: '1.5px'
+                                    letterSpacing: '1.5px',
+                                    opacity: isLoading ? 0.7 : 1,
+                                    cursor: isLoading ? 'wait' : 'pointer'
                                 }}
                             >
-                                RESGATAR MEU PRESENTE
+                                {isLoading ? 'ENVIANDO...' : 'RESGATAR MEU PRESENTE'}
                             </button>
+                            
+                            {statusMsg.text && (
+                                <p id="mensagem" style={{ color: statusMsg.color, textAlign: 'center', marginTop: '8px', fontWeight: 500, fontSize: '0.9rem' }}>
+                                    {statusMsg.text}
+                                </p>
+                            )}
                         </form>
                         <p className="font-sans text-center mt-4" style={{ fontSize: '0.75rem', color: '#6B6B63' }}>
                             Ao resgatar, você concorda em receber comunicações exclusivas do Spazio Beauty.
