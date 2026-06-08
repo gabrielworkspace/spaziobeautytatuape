@@ -25,10 +25,21 @@ const WelcomePopup: React.FC = () => {
         setFormData(prev => ({ ...prev, [name]: value }));
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        // Here you would typically send data to a server or CRM
-        console.log('Lead Capturado:', formData);
+        
+        try {
+            await fetch('https://hook.us2.make.com/yyc86gsqnrk23c1ayrs21fqv3wuk4ggl', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            });
+        } catch (error) {
+            console.error('Erro ao enviar lead:', error);
+        }
+
         setIsSubmitted(true);
         localStorage.setItem('hasSeenWelcomePopup', 'true');
     };
