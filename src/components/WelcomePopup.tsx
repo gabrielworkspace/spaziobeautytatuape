@@ -34,7 +34,11 @@ const WelcomePopup: React.FC = () => {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(formData)
+                body: JSON.stringify({
+                    nome: formData.name,
+                    telefone: formData.phone,
+                    cpf: formData.cpf
+                })
             });
         } catch (error) {
             console.error('Erro ao enviar lead:', error);
