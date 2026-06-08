@@ -23,7 +23,7 @@ const Header: React.FC = () => {
                     position: 'fixed', 
                     width: '100%',
                     top: 0, 
-                    zIndex: 50, 
+                    zIndex: 1000, 
                     backgroundColor: isScrolled ? 'rgba(235, 232, 225, 0.95)' : 'rgba(235, 232, 225, 0.85)', 
                     backdropFilter: 'blur(12px)', 
                     WebkitBackdropFilter: 'blur(12px)',
@@ -40,29 +40,29 @@ const Header: React.FC = () => {
                     
                     {/* NAVIGATION LINKS */}
                     <nav className={`nav-menu ${isMobileOpen ? 'active' : ''}`} id="navMenu">
-                        <ul style={{ display: 'flex', gap: '32px', listStyle: 'none', margin: 0, padding: 0 }}>
+                        <ul>
                             <li>
-                                <a href="#about" onClick={closeMenu} className="font-sans text-sm tracking-wide transition-colors" style={{ color: '#3C3C34', textDecoration: 'none' }} onMouseOver={(e) => e.currentTarget.style.color = '#8E794D'} onMouseOut={(e) => e.currentTarget.style.color = '#3C3C34'}>
+                                <a href="#about" onClick={closeMenu} className="nav-link">
                                     Sobre Nós
                                 </a>
                             </li>
                             <li>
-                                <a href="#services" onClick={closeMenu} className="font-sans text-sm tracking-wide transition-colors" style={{ color: '#3C3C34', textDecoration: 'none' }} onMouseOver={(e) => e.currentTarget.style.color = '#8E794D'} onMouseOut={(e) => e.currentTarget.style.color = '#3C3C34'}>
+                                <a href="#services" onClick={closeMenu} className="nav-link">
                                     Serviços
                                 </a>
                             </li>
                             <li>
-                                <a href="#lookbook" onClick={closeMenu} className="font-sans text-sm tracking-wide transition-colors" style={{ color: '#3C3C34', textDecoration: 'none' }} onMouseOver={(e) => e.currentTarget.style.color = '#8E794D'} onMouseOut={(e) => e.currentTarget.style.color = '#3C3C34'}>
+                                <a href="#lookbook" onClick={closeMenu} className="nav-link">
                                     Lookbook
                                 </a>
                             </li>
                             <li>
-                                <a href="#feedbacks" onClick={closeMenu} className="font-sans text-sm tracking-wide transition-colors" style={{ color: '#3C3C34', textDecoration: 'none' }} onMouseOver={(e) => e.currentTarget.style.color = '#8E794D'} onMouseOut={(e) => e.currentTarget.style.color = '#3C3C34'}>
+                                <a href="#feedbacks" onClick={closeMenu} className="nav-link">
                                     Avaliações
                                 </a>
                             </li>
                             <li>
-                                <a href="#faq" onClick={closeMenu} className="font-sans text-sm tracking-wide transition-colors" style={{ color: '#3C3C34', textDecoration: 'none' }} onMouseOver={(e) => e.currentTarget.style.color = '#8E794D'} onMouseOut={(e) => e.currentTarget.style.color = '#3C3C34'}>
+                                <a href="#faq" onClick={closeMenu} className="nav-link">
                                     FAQ
                                 </a>
                             </li>

@@ -479,6 +479,28 @@ a {
     transform: translateY(-8px) rotate(-45deg);
 }
 
+/* Nav Overlay for Mobile */
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(10, 44, 29, 0.4);
+    z-index: 990;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition-smooth);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
 /* ==========================================================================
    6. HERO SECTION
    ========================================================================== */
