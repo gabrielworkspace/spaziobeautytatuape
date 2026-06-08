@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const WelcomePopup: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const [isSubmitted, setIsSubmitted] = useState(false);
+    const [submitState, setSubmitState] = useState<'form' | 'success' | 'duplicate'>('form');
     const [isLoading, setIsLoading] = useState(false);
     const [statusMsg, setStatusMsg] = useState({ text: '', color: '' });
     const [formData, setFormData] = useState({ nome: '', cpf: '', telefone: '' });
@@ -45,13 +45,18 @@ const WelcomePopup: React.FC = () => {
             
             if (resultado.status === 'novo') {
                 setStatusMsg({ text: resultado.mensagem, color: 'green' });
-                // Move to the success screen after a brief delay so they see the success message
+                // Move to the success screen after a brief delay
                 setTimeout(() => {
-                    setIsSubmitted(true);
+                    setSubmitState('success');
                     // localStorage.setItem('hasSeenWelcomePopup', 'true');
                 }, 1500);
             } else {
                 setStatusMsg({ text: resultado.mensagem, color: 'orange' });
+                // Move to the duplicate screen after a brief delay
+                setTimeout(() => {
+                    setSubmitState('duplicate');
+                    // localStorage.setItem('hasSeenWelcomePopup', 'true');
+                }, 1500);
             }
             
         } catch (error) {
@@ -123,7 +128,7 @@ const WelcomePopup: React.FC = () => {
                     &times;
                 </button>
 
-                {!isSubmitted ? (
+                {!isOpen ? null : submitState === 'form' ? (
                     <div style={{ padding: '40px 32px 32px 32px' }}>
                         <div style={{ textAlign: 'center', marginBottom: '32px' }}>
                             <h2 className="font-serif text-3xl font-semibold mb-3" style={{ color: '#445D48', lineHeight: 1.1 }}>
@@ -234,36 +239,35 @@ const WelcomePopup: React.FC = () => {
                             width: '80px',
                             height: '80px',
                             borderRadius: '50%',
-                            backgroundColor: 'rgba(142, 121, 77, 0.1)',
+                            backgroundColor: submitState === 'success' ? 'rgba(142, 121, 77, 0.1)' : 'rgba(220, 53, 69, 0.1)',
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
                             margin: '0 auto 24px auto',
-                            color: '#8E794D'
+                            color: submitState === 'success' ? '#8E794D' : '#DC3545'
                         }}>
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
+                            {submitState === 'success' ? (
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                            ) : (
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="15" y1="9" x2="9" y2="15"></line>
+                                    <line x1="9" y1="9" x2="15" y2="15"></line>
+                                </svg>
+                            )}
                         </div>
                         <h2 className="font-serif text-3xl font-semibold mb-4" style={{ color: '#445D48' }}>
-                            Tudo Certo!
+                            {submitState === 'success' ? 'Tudo Certo!' : 'Aviso'}
                         </h2>
                         <p className="font-sans font-light mb-6" style={{ color: 'rgba(60, 60, 52, 0.8)', fontSize: '1rem', lineHeight: 1.6 }}>
-                            Seu desconto de 10% já está garantido para o primeiro agendamento. Mencione o código abaixo quando formos confirmar o seu horário.
+                            {submitState === 'success' 
+                                ? 'Seus dados foram recebidos com sucesso. Nossa equipe entrará em contato em breve pelo WhatsApp para dar andamento ao seu agendamento!' 
+                                : 'Já existe um cadastro registrado com este CPF em nosso sistema.'}
                         </p>
-                        <div style={{
-                            backgroundColor: '#EBE8E1',
-                            padding: '16px',
-                            borderRadius: '8px',
-                            border: '1px dashed #8E794D',
-                            display: 'inline-block',
-                            marginBottom: '32px'
-                        }}>
-                            <strong style={{ color: '#8E794D', fontSize: '1.2rem', letterSpacing: '2px' }}>SPAZIO10</strong>
-                        </div>
-                        <a 
-                            href="#booking" 
+                        <button 
                             onClick={handleClose}
                             className="btn btn-brand" 
                             style={{ 
@@ -272,8 +276,8 @@ const WelcomePopup: React.FC = () => {
                                 borderRadius: '8px'
                             }}
                         >
-                            AGENDAR AGORA
-                        </a>
+                            FECHAR
+                        </button>
                     </div>
                 )}
             </div>
