@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 const WelcomePopup: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
-    const [formData, setFormData] = useState({ name: '', cpf: '', phone: '' });
+    const [formData, setFormData] = useState({ nome: '', cpf: '', telefone: '' });
 
     useEffect(() => {
         const hasSeenPopup = localStorage.getItem('hasSeenWelcomePopup');
@@ -34,11 +34,7 @@ const WelcomePopup: React.FC = () => {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({
-                    nome: formData.name,
-                    telefone: formData.phone,
-                    cpf: formData.cpf
-                })
+                body: JSON.stringify(formData)
             });
         } catch (error) {
             console.error('Erro ao enviar lead:', error);
@@ -124,10 +120,11 @@ const WelcomePopup: React.FC = () => {
                             <div>
                                 <input 
                                     type="text" 
-                                    name="name" 
+                                    id="nome"
+                                    name="nome" 
                                     placeholder="Seu Nome Completo" 
                                     required 
-                                    value={formData.name}
+                                    value={formData.nome}
                                     onChange={handleInputChange}
                                     style={{
                                         width: '100%',
@@ -145,6 +142,7 @@ const WelcomePopup: React.FC = () => {
                             <div>
                                 <input 
                                     type="text" 
+                                    id="cpf"
                                     name="cpf" 
                                     placeholder="CPF" 
                                     required 
@@ -166,10 +164,11 @@ const WelcomePopup: React.FC = () => {
                             <div>
                                 <input 
                                     type="tel" 
-                                    name="phone" 
+                                    id="telefone"
+                                    name="telefone" 
                                     placeholder="Telefone (WhatsApp)" 
                                     required 
-                                    value={formData.phone}
+                                    value={formData.telefone}
                                     onChange={handleInputChange}
                                     style={{
                                         width: '100%',
@@ -186,6 +185,7 @@ const WelcomePopup: React.FC = () => {
                             </div>
                             <button 
                                 type="submit" 
+                                id="enviar"
                                 className="btn btn-brand" 
                                 style={{ 
                                     width: '100%', 
