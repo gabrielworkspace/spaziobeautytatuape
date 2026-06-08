@@ -220,11 +220,9 @@ const WelcomePopup: React.FC = () => {
                                 {isLoading ? 'ENVIANDO...' : 'RESGATAR MEU PRESENTE'}
                             </button>
                             
-                            {statusMsg.text && (
-                                <p id="mensagem" style={{ color: statusMsg.color, textAlign: 'center', marginTop: '8px', fontWeight: 500, fontSize: '0.9rem' }}>
-                                    {statusMsg.text}
-                                </p>
-                            )}
+                            <p id="mensagem" style={{ color: statusMsg.color, textAlign: 'center', marginTop: '8px', fontWeight: 500, fontSize: '0.9rem', minHeight: '20px' }}>
+                                {statusMsg.text}
+                            </p>
                         </form>
                         <p className="font-sans text-center mt-4" style={{ fontSize: '0.75rem', color: '#6B6B63' }}>
                             Ao resgatar, você concorda em receber comunicações exclusivas do Spazio Beauty.
