@@ -268,7 +268,8 @@ const WelcomePopup: React.FC = () => {
                             style={{ 
                                 width: '100%', 
                                 padding: '16px',
-                                borderRadius: '8px'
+                                borderRadius: '8px',
+                                marginTop: '16px'
                             }}
                         >
                             FECHAR
