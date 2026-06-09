@@ -1,6 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const ContactSection: React.FC = () => {
+    const [isMapLoaded, setIsMapLoaded] = useState(false);
+    const mapRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                if (entries[0].isIntersecting) {
+                    setIsMapLoaded(true);
+                    observer.disconnect();
+                }
+            },
+            { rootMargin: '200px' } // Load when within 200px of viewport
+        );
+        
+        if (mapRef.current) {
+            observer.observe(mapRef.current);
+        }
+        
+        return () => observer.disconnect();
+    }, []);
+
     return (
         <section id="contact" className="contact-section px-6" style={{ paddingTop: '100px', paddingBottom: '100px' }}>
             <div className="container">
@@ -17,6 +38,8 @@ const ContactSection: React.FC = () => {
                             <img loading="lazy" 
                                 src="/img/contact-facade.webp" 
                                 alt="Fachada Spazio Beauty" 
+                                width="400"
+                                height="250"
                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent pointer-events-none"></div>
@@ -56,21 +79,27 @@ const ContactSection: React.FC = () => {
                         </div>
                     </div>
                     
-                    <div className="contact-map-block reveal-slide-right rounded-xl overflow-hidden shadow-xl relative" style={{ backgroundColor: '#EBE8E1', border: '1px solid rgba(68, 93, 72, 0.1)', height: '400px' }}>
+                    <div ref={mapRef} className="contact-map-block reveal-slide-right rounded-xl overflow-hidden shadow-xl relative" style={{ backgroundColor: '#EBE8E1', border: '1px solid rgba(68, 93, 72, 0.1)', height: '400px' }}>
                         {/* Overlay to prevent scroll trapping on mobile */}
                         <div className="absolute inset-0 z-20 md:pointer-events-none"></div>
                         <div className="absolute inset-0 pointer-events-none mix-blend-color z-10" style={{ backgroundColor: 'rgba(68, 93, 72, 0.2)' }}></div>
-                        <iframe 
-                            loading="lazy"
-                            src="https://maps.google.com/maps?q=Spazio+Beauty+-+Tatuap%C3%A9,+R.+Azevedo+Soares,+1604&t=&z=16&ie=UTF8&iwloc=&output=embed" 
-                            width="100%" 
-                            height="100%" 
-                            style={{border:0, filter: 'grayscale(100%) contrast(1.1) opacity(0.9)'}} 
-                            allowFullScreen={false} 
-                            referrerPolicy="no-referrer-when-downgrade"
-                            title="Mapa Spazio Beauty"
-                            className="absolute inset-0 w-full h-full z-0"
-                        ></iframe>
+                        {isMapLoaded ? (
+                            <iframe 
+                                loading="lazy"
+                                src="https://maps.google.com/maps?q=Spazio+Beauty+-+Tatuap%C3%A9,+R.+Azevedo+Soares,+1604&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                                width="100%" 
+                                height="100%" 
+                                style={{border:0, filter: 'grayscale(100%) contrast(1.1) opacity(0.9)'}} 
+                                allowFullScreen={false} 
+                                referrerPolicy="no-referrer-when-downgrade"
+                                title="Mapa Spazio Beauty"
+                                className="absolute inset-0 w-full h-full z-0"
+                            ></iframe>
+                        ) : (
+                            <div className="absolute inset-0 w-full h-full z-0 flex items-center justify-center font-sans text-neutral-500">
+                                <i className="fa-solid fa-map mr-2"></i> Carregando mapa...
+                            </div>
+                        )}
                     </div>
                     
                 </div>

@@ -38,9 +38,9 @@ const HeroSection: React.FC = () => {
                         <a href="#booking" className="btn btn-brand font-sans font-medium uppercase tracking-wider hover:bg-accent-brass transition-colors">RESERVAR MEU MOMENTO</a>
                         <div className="social-proof-cluster">
                             <div className="avatar-group">
-                                <img width="48" height="48" loading="eager" src="/img/clientes/cliente1.webp" alt="Cliente do Spazio Beauty exibindo cabelo finalizado" width="48" height="48" loading="lazy" className="avatar-img" />
-                                <img width="48" height="48" loading="eager" src="/img/clientes/cliente2.webp" alt="Cliente do Spazio com unhas em gel e design de sobrancelha" width="48" height="48" loading="lazy" className="avatar-img" />
-                                <img width="48" height="48" loading="eager" src="/img/clientes/cliente3.webp" alt="Cliente Spazio Beauty com maquiagem e penteado para evento" width="48" height="48" loading="lazy" className="avatar-img" />
+                                <img loading="eager" src="/img/clientes/cliente1.webp" alt="Cliente do Spazio Beauty exibindo cabelo finalizado" width="48" height="48"  className="avatar-img" />
+                                <img loading="eager" src="/img/clientes/cliente2.webp" alt="Cliente do Spazio com unhas em gel e design de sobrancelha" width="48" height="48"  className="avatar-img" />
+                                <img loading="eager" src="/img/clientes/cliente3.webp" alt="Cliente Spazio Beauty com maquiagem e penteado para evento" width="48" height="48"  className="avatar-img" />
                             </div>
                             <span className="social-proof-text font-serif italic text-accent-brass">Mais de 3.8k mulheres transformadas</span>
                         </div>
