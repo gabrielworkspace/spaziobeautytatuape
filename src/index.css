@@ -33,7 +33,7 @@
     --color-accent-brass: #74603B;      /* Latão Escovado */
     
     --color-text-dark: #3C3C34;         /* Charcoal/Dark Olive */
-    --color-text-muted: #6B6B63;        /* Muted variant */
+    --color-text-muted: #4D4D45;        /* Muted variant - better contrast */
     --color-white: #FFFFFF;
     
     /* Typography */
@@ -1743,8 +1743,8 @@ textarea.quiz-form-control {
 }
 .footer-links a, .footer-services a {
     font-size: 0.85rem;
-    color: var(--color-brand-green-pale);
-    opacity: 0.75;
+    color: var(--color-bg-primary);
+    opacity: 0.95;
 }
 .footer-links a:hover, .footer-services a:hover {
     color: var(--color-accent-gold);
@@ -1767,8 +1767,8 @@ textarea.quiz-form-control {
 }
 .footer-bottom p {
     font-size: 0.75rem;
-    color: var(--color-brand-green-pale);
-    opacity: 0.6;
+    color: var(--color-bg-primary);
+    opacity: 0.9;
 }
 
 /* ==========================================================================

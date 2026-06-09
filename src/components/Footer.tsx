@@ -34,7 +34,7 @@ const Footer: React.FC<FooterProps> = ({ onOpenPrivacyPolicy, onOpenTermsOfUse }
                 {/* Coluna 2 (Atendimento & Localização) */}
                 <div className="footer-services">
                     <h3>Contato</h3>
-                    <ul style={{ fontSize: '0.85rem', color: 'var(--color-brand-green-pale)', opacity: 0.85, lineHeight: '1.8' }}>
+                    <ul style={{ fontSize: '0.85rem', color: 'var(--color-bg-primary)', lineHeight: '1.8' }}>
                         <li>Rua Azevedo Soares, 1604 - Tatuapé</li>
                         <li>São Paulo - SP, 03322-001</li>
                         <li style={{ marginTop: '12px' }}><strong>WhatsApp:</strong> (11) 95144-1205</li>
