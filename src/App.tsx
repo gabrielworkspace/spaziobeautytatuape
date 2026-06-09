@@ -1,35 +1,29 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense, lazy } from 'react';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
-import ServicesSection from './components/ServicesSection';
-import Footer from './components/Footer';
+import LazyScroll from './components/LazyScroll';
 import './index.css';
 
-import LookbookSection from './components/LookbookSection';
-import TestimonialSection from './components/TestimonialSection';
-import BookingSection from './components/BookingSection';
-import FAQSection from './components/FAQSection';
-import ContactSection from './components/ContactSection';
-
-// Modals and Popups
-import CookieBanner from './components/CookieBanner';
-import PrivacyPolicyModal from './components/PrivacyPolicyModal';
-import TermsOfUseModal from './components/TermsOfUseModal';
-import WelcomePopup from './components/WelcomePopup';
+// Lazy loading the rest of the application
+const ServicesSection = lazy(() => import('./components/ServicesSection'));
+const LookbookSection = lazy(() => import('./components/LookbookSection'));
+const TestimonialSection = lazy(() => import('./components/TestimonialSection'));
+const BookingSection = lazy(() => import('./components/BookingSection'));
+const FAQSection = lazy(() => import('./components/FAQSection'));
+const ContactSection = lazy(() => import('./components/ContactSection'));
+const Footer = lazy(() => import('./components/Footer'));
+const CookieBanner = lazy(() => import('./components/CookieBanner'));
+const PrivacyPolicyModal = lazy(() => import('./components/PrivacyPolicyModal'));
+const TermsOfUseModal = lazy(() => import('./components/TermsOfUseModal'));
+const WelcomePopup = lazy(() => import('./components/WelcomePopup'));
 
 function App() {
   const [isPrivacyModalOpen, setIsPrivacyModalOpen] = useState(false);
   const [isTermsModalOpen, setIsTermsModalOpen] = useState(false);
-  const [isDeferredRendered, setIsDeferredRendered] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsDeferredRendered(true), 150);
-    return () => clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
-    // Simple intersection observer for reveal animations originally in script.js
+    // Simple intersection observer for reveal animations
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -39,14 +33,33 @@ function App() {
         });
     }, { threshold: 0.1 });
 
-    const revealElements = document.querySelectorAll('.mask-reveal, .reveal-fade, .reveal-slide-left, .reveal-slide-right, .reveal-fade-in');
-    revealElements.forEach(el => observer.observe(el));
+    // Function to observe elements
+    const observeElements = () => {
+        const revealElements = document.querySelectorAll('.mask-reveal:not(.revealed), .reveal-fade:not(.revealed), .reveal-slide-left:not(.revealed), .reveal-slide-right:not(.revealed), .reveal-fade-in:not(.revealed)');
+        revealElements.forEach(el => observer.observe(el));
+    };
+
+    // Initial observation
+    observeElements();
+
+    // Observe DOM mutations to catch elements loaded via LazyScroll/Suspense
+    const mutationObserver = new MutationObserver((mutations) => {
+        let shouldObserve = false;
+        mutations.forEach(mutation => {
+            if (mutation.addedNodes.length > 0) {
+                shouldObserve = true;
+            }
+        });
+        if (shouldObserve) observeElements();
+    });
+
+    mutationObserver.observe(document.body, { childList: true, subtree: true });
 
     return () => {
-        revealElements.forEach(el => observer.unobserve(el));
         observer.disconnect();
+        mutationObserver.disconnect();
     };
-  }, [isDeferredRendered]);
+  }, []);
 
   return (
     <div className="App" style={{ overflowX: 'hidden', maxWidth: '100vw', width: '100%' }}>
@@ -55,20 +68,20 @@ function App() {
         <HeroSection />
         <AboutSection />
         
-        {isDeferredRendered && (
-          <>
+        <LazyScroll minHeight="100vh">
+          <Suspense fallback={<div style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><div className="spinner"></div></div>}>
             <ServicesSection />
             <LookbookSection />
             <TestimonialSection />
             <BookingSection />
             <FAQSection />
             <ContactSection />
-          </>
-        )}
+          </Suspense>
+        </LazyScroll>
       </main>
       
-      {isDeferredRendered && (
-        <>
+      <LazyScroll minHeight="200px">
+        <Suspense fallback={null}>
           <Footer 
             onOpenPrivacyPolicy={() => setIsPrivacyModalOpen(true)} 
             onOpenTermsOfUse={() => setIsTermsModalOpen(true)}
@@ -77,8 +90,8 @@ function App() {
           <PrivacyPolicyModal isOpen={isPrivacyModalOpen} onClose={() => setIsPrivacyModalOpen(false)} />
           <TermsOfUseModal isOpen={isTermsModalOpen} onClose={() => setIsTermsModalOpen(false)} />
           <WelcomePopup />
-        </>
-      )}
+        </Suspense>
+      </LazyScroll>
     </div>
   );
 }
