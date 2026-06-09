@@ -7,9 +7,9 @@ const ContactSection: React.FC = () => {
                 <div className="contact-grid">
                     
                     <div className="contact-info-block reveal-slide-left">
-                        <span className="section-badge font-sans font-medium uppercase tracking-wider" style={{ color: '#8E794D' }}>— Localização</span>
+                        <span className="section-badge font-sans font-medium uppercase tracking-wider" style={{ color: '#74603B' }}>— Localização</span>
                         <h2 className="section-title font-serif text-5xl md:text-6xl font-semibold mb-6">O Destino Físico</h2>
-                        <p className="contact-desc font-sans font-light leading-relaxed text-text-dark text-base mb-8">
+                        <p className="contact-desc font-sans font-light leading-relaxed text-neutral-800 text-base mb-8">
                             O Spazio Beauty está localizado no coração do Tatuapé. Uma estrutura pensada para ser o seu oásis particular, com fácil acesso e serviço de valet conveniado.
                         </p>
                         
@@ -27,23 +27,23 @@ const ContactSection: React.FC = () => {
                         
                         <ul style={{ margin: '32px 0', display: 'flex', flexDirection: 'column', gap: '24px' }}>
                             <li style={{ display: 'flex', alignItems: 'flex-start', gap: '16px' }}>
-                                <div className="text-xl" style={{ color: '#8E794D', marginTop: '4px' }}><i className="fa-solid fa-location-dot"></i></div>
+                                <div className="text-xl" style={{ color: '#74603B', marginTop: '4px' }}><i className="fa-solid fa-location-dot"></i></div>
                                 <div>
-                                    <h4 className="font-serif text-lg font-semibold" style={{ color: '#445D48', margin: 0 }}>Endereço</h4>
+                                    <h3 className="font-serif text-lg font-semibold" style={{ color: '#445D48', margin: 0 }}>Endereço</h3>
                                     <p className="font-sans font-light mt-1" style={{ color: 'rgba(60, 60, 52, 0.8)', margin: 0 }}>Rua Azevedo Soares, 1604<br/>Tatuapé - São Paulo, SP</p>
                                 </div>
                             </li>
                             <li style={{ display: 'flex', alignItems: 'flex-start', gap: '16px' }}>
-                                <div className="text-xl" style={{ color: '#8E794D', marginTop: '4px' }}><i className="fa-solid fa-clock"></i></div>
+                                <div className="text-xl" style={{ color: '#74603B', marginTop: '4px' }}><i className="fa-solid fa-clock"></i></div>
                                 <div>
-                                    <h4 className="font-serif text-lg font-semibold" style={{ color: '#445D48', margin: 0 }}>Horário de Funcionamento</h4>
+                                    <h3 className="font-serif text-lg font-semibold" style={{ color: '#445D48', margin: 0 }}>Horário de Funcionamento</h3>
                                     <p className="font-sans font-light mt-1" style={{ color: 'rgba(60, 60, 52, 0.8)', margin: 0 }}>Terça a Sábado<br/>09:00 às 21:00</p>
                                 </div>
                             </li>
                             <li style={{ display: 'flex', alignItems: 'flex-start', gap: '16px' }}>
-                                <div className="text-xl" style={{ color: '#8E794D', marginTop: '4px' }}><i className="fa-solid fa-car"></i></div>
+                                <div className="text-xl" style={{ color: '#74603B', marginTop: '4px' }}><i className="fa-solid fa-car"></i></div>
                                 <div>
-                                    <h4 className="font-serif text-lg font-semibold" style={{ color: '#445D48', margin: 0 }}>Estacionamento com Valet</h4>
+                                    <h3 className="font-serif text-lg font-semibold" style={{ color: '#445D48', margin: 0 }}>Estacionamento com Valet</h3>
                                     <p className="font-sans font-light mt-1" style={{ color: 'rgba(60, 60, 52, 0.8)', margin: 0 }}>Temos estacionamento conveniado com serviço de valet, garantindo comodidade e segurança para seu veículo.</p>
                                 </div>
                             </li>
@@ -61,6 +61,7 @@ const ContactSection: React.FC = () => {
                         <div className="absolute inset-0 z-20 md:pointer-events-none"></div>
                         <div className="absolute inset-0 pointer-events-none mix-blend-color z-10" style={{ backgroundColor: 'rgba(68, 93, 72, 0.2)' }}></div>
                         <iframe 
+                            loading="lazy"
                             src="https://maps.google.com/maps?q=Spazio+Beauty+-+Tatuap%C3%A9,+R.+Azevedo+Soares,+1604&t=&z=16&ie=UTF8&iwloc=&output=embed" 
                             width="100%" 
                             height="100%" 

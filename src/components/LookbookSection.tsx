@@ -15,7 +15,7 @@ const LookbookSection: React.FC = () => {
         <section id="lookbook" className="px-6 bg-[#EBE8E1] overflow-hidden border-y border-[#445D48]/5" style={{ paddingTop: '100px', paddingBottom: '100px' }}>
             {/* Using explicit inline styles to guarantee spacing */}
             <div className="container mx-auto px-6 md:px-0 flex flex-col items-center justify-center text-center" style={{ marginBottom: '100px' }}>
-                <span className="font-sans font-medium uppercase tracking-widest text-xs text-[#8E794D]">— Galeria Editorial</span>
+                <span className="font-sans font-medium uppercase tracking-widest text-xs text-[#74603B]">— Galeria Editorial</span>
                 <h2 className="font-serif text-4xl md:text-5xl font-semibold text-[#445D48] mt-6">Nossas Clientes</h2>
                 <p className="font-sans font-light text-[#3C3C34]/80 mt-6 max-w-2xl leading-relaxed text-lg text-center">
                     Resultados reais construídos em nosso espaço. Deslize para conferir as transformações de quem já viveu a experiência Spazio.

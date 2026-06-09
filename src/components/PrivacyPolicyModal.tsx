@@ -65,7 +65,7 @@ const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({ isOpen, onClose
                             background: 'none',
                             border: 'none',
                             fontSize: '2rem',
-                            color: '#8E794D',
+                            color: '#74603B',
                             cursor: 'pointer',
                             lineHeight: 1
                         }}

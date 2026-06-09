@@ -3,7 +3,7 @@
 @theme {
   --color-brand-green: #445D48;
   --color-brand-green-hover: #364B39;
-  --color-accent-brass: #8E794D;
+  --color-accent-brass: #74603B;
   --color-text-dark: #3C3C34;
   --font-sans: 'Onest', sans-serif;
   --font-serif: 'Fraunces', serif;
@@ -30,7 +30,7 @@
     
     --color-accent-sand: #D1C4B1;       /* Linen sand accent */
     --color-accent-gold: #C5A880;       /* Gold highlights */
-    --color-accent-brass: #8E794D;      /* Latão Escovado */
+    --color-accent-brass: #74603B;      /* Latão Escovado */
     
     --color-text-dark: #3C3C34;         /* Charcoal/Dark Olive */
     --color-text-muted: #6B6B63;        /* Muted variant */

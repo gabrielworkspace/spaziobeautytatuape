@@ -241,7 +241,7 @@ const WelcomePopup: React.FC = () => {
                             alignItems: 'center',
                             justifyContent: 'center',
                             margin: '0 auto 24px auto',
-                            color: submitState === 'success' ? '#8E794D' : '#DC3545'
+                            color: submitState === 'success' ? '#74603B' : '#DC3545'
                         }}>
                             {submitState === 'success' ? (
                                 <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

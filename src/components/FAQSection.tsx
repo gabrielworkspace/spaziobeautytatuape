@@ -30,7 +30,7 @@ const FAQSection: React.FC = () => {
         <section id="faq" style={{ padding: '80px 0', backgroundColor: '#F9F8F6' }}>
             <div className="container" style={{ maxWidth: '800px', margin: '0 auto' }}>
                 <div style={{ textAlign: 'center', marginBottom: '64px' }}>
-                    <span className="font-sans font-medium uppercase text-sm" style={{ color: '#8E794D', letterSpacing: '0.15em' }}>— Dúvidas Frequentes</span>
+                    <span className="font-sans font-medium uppercase text-sm" style={{ color: '#74603B', letterSpacing: '0.15em' }}>— Dúvidas Frequentes</span>
                     <h2 className="font-serif font-semibold" style={{ color: '#445D48', fontSize: '2.5rem', marginTop: '16px' }}>Sua Experiência Spazio</h2>
                 </div>
                 
@@ -42,7 +42,7 @@ const FAQSection: React.FC = () => {
                                 style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', textAlign: 'left', padding: '16px 0', background: 'none', border: 'none', cursor: 'pointer', outline: 'none' }}
                             >
                                 <h3 className="font-serif font-medium" style={{ color: '#445D48', fontSize: '1.25rem', margin: 0, paddingRight: '16px' }}>{faq.question}</h3>
-                                <span style={{ color: '#8E794D', fontSize: '1.8rem', fontWeight: 300, transform: openIndex === index ? 'rotate(45deg)' : 'rotate(0)', transition: 'transform 0.3s' }}>
+                                <span style={{ color: '#74603B', fontSize: '1.8rem', fontWeight: 300, transform: openIndex === index ? 'rotate(45deg)' : 'rotate(0)', transition: 'transform 0.3s' }}>
                                     +
                                 </span>
                             </button>

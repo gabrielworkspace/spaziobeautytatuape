@@ -32,13 +32,13 @@ const TestimonialSection: React.FC = () => {
         <section id="feedbacks" className="px-6" style={{ backgroundColor: '#445D48', paddingTop: '100px', paddingBottom: '100px' }}>
             <div className="container">
                 <div style={{ textAlign: 'center', marginBottom: '64px' }}>
-                    <span className="font-sans font-medium uppercase tracking-wider" style={{ color: '#8E794D', display: 'block', marginBottom: '16px' }}>
+                    <span className="font-sans font-medium uppercase tracking-wider" style={{ color: '#74603B', display: 'block', marginBottom: '16px' }}>
                         — Experiência Comprovada
                     </span>
                     <h2 className="font-serif text-4xl md:text-5xl font-semibold" style={{ color: '#EBE8E1' }}>
                         O que dizem nossas clientes
                     </h2>
-                    <p className="font-sans font-light mt-4 mx-auto text-center" style={{ color: 'rgba(235, 232, 225, 0.8)', maxWidth: '600px', fontSize: '1.125rem', textAlign: 'center' }}>
+                    <p className="font-sans font-light mt-4 mx-auto text-center" style={{ color: 'rgba(235, 232, 225, 0.95)', maxWidth: '600px', fontSize: '1.125rem', textAlign: 'center' }}>
                         A maior prova do nosso padrão de excelência são os sorrisos e as palavras de quem já viveu a experiência Spazio.
                     </p>
                 </div>
@@ -70,7 +70,7 @@ const TestimonialSection: React.FC = () => {
                                         width: '48px', 
                                         height: '48px', 
                                         borderRadius: '50%', 
-                                        backgroundColor: '#8E794D', 
+                                        backgroundColor: '#74603B', 
                                         color: '#FFFFFF',
                                         display: 'flex',
                                         alignItems: 'center',
@@ -81,10 +81,10 @@ const TestimonialSection: React.FC = () => {
                                         {testimonial.name.charAt(0)}
                                     </div>
                                     <div>
-                                        <h4 className="font-sans font-medium" style={{ color: '#EBE8E1', margin: 0, fontSize: '1.125rem' }}>
+                                        <h3 className="font-sans font-medium" style={{ color: '#EBE8E1', margin: 0, fontSize: '1.125rem' }}>
                                             {testimonial.name}
-                                        </h4>
-                                        <span className="font-sans font-light" style={{ color: 'rgba(235, 232, 225, 0.6)', fontSize: '0.875rem' }}>
+                                        </h3>
+                                        <span className="font-sans font-light" style={{ color: 'rgba(235, 232, 225, 0.85)', fontSize: '0.875rem' }}>
                                             {testimonial.badge}
                                         </span>
                                     </div>
@@ -92,11 +92,11 @@ const TestimonialSection: React.FC = () => {
                                 <i className="fa-brands fa-google text-2xl" style={{ color: 'rgba(235, 232, 225, 0.2)' }}></i>
                             </div>
 
-                            <div style={{ display: 'flex', gap: '4px', color: '#8E794D', fontSize: '0.875rem' }}>
+                            <div style={{ display: 'flex', gap: '4px', color: '#74603B', fontSize: '0.875rem' }}>
                                 {[...Array(testimonial.stars)].map((_, i) => (
                                     <i key={i} className="fa-solid fa-star"></i>
                                 ))}
-                                <span className="font-sans font-light ml-2" style={{ color: 'rgba(235, 232, 225, 0.6)' }}>
+                                <span className="font-sans font-light ml-2" style={{ color: 'rgba(235, 232, 225, 0.85)' }}>
                                     {testimonial.time}
                                 </span>
                             </div>

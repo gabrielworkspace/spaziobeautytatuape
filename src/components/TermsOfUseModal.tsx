@@ -60,7 +60,7 @@ const TermsOfUseModal: React.FC<TermsOfUseModalProps> = ({ isOpen, onClose }) =>
                 }}>
                     <div>
                         <h2 className="font-serif text-3xl font-semibold" style={{ color: '#445D48', margin: 0 }}>Termos de Uso</h2>
-                        <p className="font-sans font-light uppercase" style={{ color: '#8E794D', fontSize: '0.75rem', letterSpacing: '0.1em', margin: '4px 0 0 0' }}>
+                        <p className="font-sans font-light uppercase" style={{ color: '#74603B', fontSize: '0.75rem', letterSpacing: '0.1em', margin: '4px 0 0 0' }}>
                             Última atualização: Junho de 2026
                         </p>
                     </div>
@@ -70,7 +70,7 @@ const TermsOfUseModal: React.FC<TermsOfUseModalProps> = ({ isOpen, onClose }) =>
                             background: 'none',
                             border: 'none',
                             fontSize: '2rem',
-                            color: '#8E794D',
+                            color: '#74603B',
                             cursor: 'pointer',
                             lineHeight: 1
                         }}

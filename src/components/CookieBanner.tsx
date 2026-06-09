@@ -58,7 +58,7 @@ const CookieBanner: React.FC<CookieBannerProps> = ({ onOpenPrivacyPolicy }) => {
                             <button 
                                 onClick={handleAccept}
                                 className="font-sans text-sm font-medium shadow-lg transition-all"
-                                style={{ padding: '10px 24px', borderRadius: '50px', border: 'none', backgroundColor: '#8E794D', color: '#FFFFFF', cursor: 'pointer' }}
+                                style={{ padding: '10px 24px', borderRadius: '50px', border: 'none', backgroundColor: '#74603B', color: '#FFFFFF', cursor: 'pointer' }}
                                 onMouseOver={(e) => e.currentTarget.style.filter = 'brightness(1.1)'}
                                 onMouseOut={(e) => e.currentTarget.style.filter = 'brightness(1)'}
                             >

@@ -33,14 +33,14 @@ const HeroSection: React.FC = () => {
                         ✦ O SEU REFÚGIO DE AUTOCUIDADO NO TATUAPÉ
                     </span>
                     <h1 className="hero-title font-serif text-5xl md:text-6xl font-semibold mask-reveal delay-2">A Arte de Revelar a Sua <span className="font-serif italic text-accent-brass">Identidade</span>.</h1>
-                    <p className="hero-subtitle font-sans font-light leading-relaxed text-text-dark text-base mask-reveal delay-3">Esqueça o óbvio. Unimos técnicas autorais de Visagismo, Hair Styling, Nail Design e Make Up em um ambiente aconchegante que te transforma na sua melhor versão.</p>
+                    <p className="hero-subtitle font-sans font-light leading-relaxed text-neutral-800 text-base mask-reveal delay-3">Esqueça o óbvio. Unimos técnicas autorais de Visagismo, Hair Styling, Nail Design e Make Up em um ambiente aconchegante que te transforma na sua melhor versão.</p>
                     <div className="hero-btns mask-reveal delay-4">
                         <a href="#booking" className="btn btn-brand font-sans font-medium uppercase tracking-wider hover:bg-accent-brass transition-colors">RESERVAR MEU MOMENTO</a>
                         <div className="social-proof-cluster">
                             <div className="avatar-group">
-                                <img src="/img/clientes/cliente1.webp" alt="Cliente 1" className="avatar-img" />
-                                <img src="/img/clientes/cliente2.webp" alt="Cliente 2" className="avatar-img" />
-                                <img src="/img/clientes/cliente3.webp" alt="Cliente 3" className="avatar-img" />
+                                <img width="48" height="48" loading="eager" src="/img/clientes/cliente1.webp" alt="Cliente do Spazio Beauty exibindo cabelo finalizado" width="48" height="48" loading="lazy" className="avatar-img" />
+                                <img width="48" height="48" loading="eager" src="/img/clientes/cliente2.webp" alt="Cliente do Spazio com unhas em gel e design de sobrancelha" width="48" height="48" loading="lazy" className="avatar-img" />
+                                <img width="48" height="48" loading="eager" src="/img/clientes/cliente3.webp" alt="Cliente Spazio Beauty com maquiagem e penteado para evento" width="48" height="48" loading="lazy" className="avatar-img" />
                             </div>
                             <span className="social-proof-text font-serif italic text-accent-brass">Mais de 3.8k mulheres transformadas</span>
                         </div>
