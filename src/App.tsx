@@ -1,4 +1,4 @@
-import React, { useEffect, useState, Suspense } from 'react';
+import { useEffect, useState } from 'react';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
@@ -6,18 +6,17 @@ import ServicesSection from './components/ServicesSection';
 import Footer from './components/Footer';
 import './index.css';
 
-// Lazy load sections that are below the fold
-const LookbookSection = React.lazy(() => import('./components/LookbookSection'));
-const TestimonialSection = React.lazy(() => import('./components/TestimonialSection'));
-const BookingSection = React.lazy(() => import('./components/BookingSection'));
-const FAQSection = React.lazy(() => import('./components/FAQSection'));
-const ContactSection = React.lazy(() => import('./components/ContactSection'));
+import LookbookSection from './components/LookbookSection';
+import TestimonialSection from './components/TestimonialSection';
+import BookingSection from './components/BookingSection';
+import FAQSection from './components/FAQSection';
+import ContactSection from './components/ContactSection';
 
-// Lazy load Modals and Popups
-const CookieBanner = React.lazy(() => import('./components/CookieBanner'));
-const PrivacyPolicyModal = React.lazy(() => import('./components/PrivacyPolicyModal'));
-const TermsOfUseModal = React.lazy(() => import('./components/TermsOfUseModal'));
-const WelcomePopup = React.lazy(() => import('./components/WelcomePopup'));
+// Modals and Popups
+import CookieBanner from './components/CookieBanner';
+import PrivacyPolicyModal from './components/PrivacyPolicyModal';
+import TermsOfUseModal from './components/TermsOfUseModal';
+import WelcomePopup from './components/WelcomePopup';
 
 function App() {
   const [isPrivacyModalOpen, setIsPrivacyModalOpen] = useState(false);
@@ -45,29 +44,26 @@ function App() {
   return (
     <div className="App" style={{ overflowX: 'hidden', maxWidth: '100vw', width: '100%' }}>
       <Header />
-      <HeroSection />
-      <AboutSection />
-      <ServicesSection />
-      
-      <Suspense fallback={<div className="py-20 text-center"><i className="fa-solid fa-spinner fa-spin text-2xl text-[#8E794D]"></i></div>}>
+      <main>
+        <HeroSection />
+        <AboutSection />
+        <ServicesSection />
+        
         <LookbookSection />
         <TestimonialSection />
         <BookingSection />
         <FAQSection />
         <ContactSection />
-      </Suspense>
-
+      </main>
       <Footer 
         onOpenPrivacyPolicy={() => setIsPrivacyModalOpen(true)} 
         onOpenTermsOfUse={() => setIsTermsModalOpen(true)}
       />
       
-      <Suspense fallback={null}>
-        <CookieBanner onOpenPrivacyPolicy={() => setIsPrivacyModalOpen(true)} />
-        <PrivacyPolicyModal isOpen={isPrivacyModalOpen} onClose={() => setIsPrivacyModalOpen(false)} />
-        <TermsOfUseModal isOpen={isTermsModalOpen} onClose={() => setIsTermsModalOpen(false)} />
-        <WelcomePopup />
-      </Suspense>
+      <CookieBanner onOpenPrivacyPolicy={() => setIsPrivacyModalOpen(true)} />
+      <PrivacyPolicyModal isOpen={isPrivacyModalOpen} onClose={() => setIsPrivacyModalOpen(false)} />
+      <TermsOfUseModal isOpen={isTermsModalOpen} onClose={() => setIsTermsModalOpen(false)} />
+      <WelcomePopup />
     </div>
   );
 }

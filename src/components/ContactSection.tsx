@@ -30,7 +30,7 @@ const ContactSection: React.FC = () => {
                     <div className="contact-info-block reveal-slide-left">
                         <span className="section-badge font-sans font-medium uppercase tracking-wider" style={{ color: '#74603B' }}>— Localização</span>
                         <h2 className="section-title font-serif text-5xl md:text-6xl font-semibold mb-6">O Destino Físico</h2>
-                        <p className="contact-desc font-sans font-light leading-relaxed text-neutral-800 text-base mb-8">
+                        <p className="contact-desc font-sans font-light leading-relaxed  text-base mb-8">
                             O Spazio Beauty está localizado no coração do Tatuapé. Uma estrutura pensada para ser o seu oásis particular, com fácil acesso e serviço de valet conveniado.
                         </p>
                         

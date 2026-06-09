@@ -77,7 +77,7 @@ const BookingSection: React.FC = () => {
                     
                     <div className="booking-quiz-panel reveal-slide-right" id="bookingQuiz">
                         <div className="quiz-header">
-                            <h3 className="font-sans font-medium uppercase tracking-wider text-sm text-neutral-800">
+                            <h3 className="font-sans font-medium uppercase tracking-wider text-sm ">
                                 <svg className="quiz-star-icon" viewBox="0 0 100 100" fill="currentColor">
                                     <path d="M50,0 C50,35 65,50 100,50 C65,50 50,65 50,100 C50,65 35,50 0,50 C35,50 50,35 50,0 Z"/>
                                 </svg>
@@ -93,7 +93,7 @@ const BookingSection: React.FC = () => {
                             {/* PASSO 1: Seleção de Serviço */}
                             {step === 1 && (
                                 <div className="quiz-step active">
-                                    <h3 className="quiz-step-title font-serif text-2xl font-semibold text-neutral-800">1. Qual serviço você deseja agendar?</h3>
+                                    <h3 className="quiz-step-title font-serif text-2xl font-semibold ">1. Qual serviço você deseja agendar?</h3>
                                     <div className="quiz-options-grid">
                                         {['Cabelos', 'Unhas e Nail Design', 'Make e Olhar'].map((opt) => (
                                             <label className="quiz-option-card" key={opt}>
@@ -114,7 +114,7 @@ const BookingSection: React.FC = () => {
                             {/* PASSO 2: Seleção de Período */}
                             {step === 2 && (
                                 <div className="quiz-step active">
-                                    <h3 className="quiz-step-title font-serif text-2xl font-semibold text-neutral-800">2. Qual o seu dia da semana preferido?</h3>
+                                    <h3 className="quiz-step-title font-serif text-2xl font-semibold ">2. Qual o seu dia da semana preferido?</h3>
                                     <div className="quiz-options-grid">
                                         {['Terça ou Quarta', 'Quinta ou Sexta', 'Sábado (Mais concorrido)'].map((opt) => (
                                             <label className="quiz-option-card" key={opt}>
@@ -147,7 +147,7 @@ const BookingSection: React.FC = () => {
                             {/* PASSO 3: Identificação */}
                             {step === 3 && (
                                 <div className="quiz-step active">
-                                    <h3 className="quiz-step-title font-serif text-2xl font-semibold text-neutral-800">3. Conte-nos quem é você</h3>
+                                    <h3 className="quiz-step-title font-serif text-2xl font-semibold ">3. Conte-nos quem é você</h3>
                                     
                                     <div className="quiz-form-group">
                                         <label htmlFor="quizName" className="quiz-form-label">Seu Nome Completo:</label>
@@ -169,7 +169,7 @@ const BookingSection: React.FC = () => {
                             {/* PASSO 4: Confirmação e Envio WhatsApp */}
                             {step === 4 && (
                                 <div className="quiz-step active">
-                                    <h3 className="quiz-step-title text-center font-serif text-2xl font-semibold text-neutral-800"><i className="fa-solid fa-circle-check text-brand"></i> Tudo pronto, {name.split(' ')[0] || 'Linda'}!</h3>
+                                    <h3 className="quiz-step-title text-center font-serif text-2xl font-semibold "><i className="fa-solid fa-circle-check text-brand"></i> Tudo pronto, {name.split(' ')[0] || 'Linda'}!</h3>
                                     <p className="text-center text-muted mb-4 font-sans font-light">Veja abaixo a mensagem estruturada para sua solicitação:</p>
                                     
                                     <div className="whatsapp-preview-box">
