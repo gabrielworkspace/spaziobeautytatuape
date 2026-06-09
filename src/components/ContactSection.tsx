@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Camera, MapPin, Clock, Car, Map, MapPinned } from 'lucide-react';
 
 const ContactSection: React.FC = () => {
     const [isMapLoaded, setIsMapLoaded] = useState(false);
@@ -44,27 +45,27 @@ const ContactSection: React.FC = () => {
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent pointer-events-none"></div>
                             <div className="absolute bottom-4 left-4 text-white font-sans font-light text-sm tracking-wide">
-                                <i className="fa-solid fa-camera mr-2 opacity-70"></i> Conheça nossa estrutura
+                                <Camera size={16} className="mr-2 opacity-70 inline" /> Conheça nossa estrutura
                             </div>
                         </div>
                         
                         <ul style={{ margin: '32px 0', display: 'flex', flexDirection: 'column', gap: '24px' }}>
                             <li style={{ display: 'flex', alignItems: 'flex-start', gap: '16px' }}>
-                                <div className="text-xl" style={{ color: '#74603B', marginTop: '4px' }}><i className="fa-solid fa-location-dot"></i></div>
+                                <div className="text-xl" style={{ color: '#74603B', marginTop: '4px' }}><MapPin size={24} /></div>
                                 <div>
                                     <h3 className="font-serif text-lg font-semibold" style={{ color: '#445D48', margin: 0 }}>Endereço</h3>
                                     <p className="font-sans font-light mt-1" style={{ color: 'rgba(60, 60, 52, 0.8)', margin: 0 }}>Rua Azevedo Soares, 1604<br/>Tatuapé - São Paulo, SP</p>
                                 </div>
                             </li>
                             <li style={{ display: 'flex', alignItems: 'flex-start', gap: '16px' }}>
-                                <div className="text-xl" style={{ color: '#74603B', marginTop: '4px' }}><i className="fa-solid fa-clock"></i></div>
+                                <div className="text-xl" style={{ color: '#74603B', marginTop: '4px' }}><Clock size={24} /></div>
                                 <div>
                                     <h3 className="font-serif text-lg font-semibold" style={{ color: '#445D48', margin: 0 }}>Horário de Funcionamento</h3>
                                     <p className="font-sans font-light mt-1" style={{ color: 'rgba(60, 60, 52, 0.8)', margin: 0 }}>Terça a Sábado<br/>09:00 às 21:00</p>
                                 </div>
                             </li>
                             <li style={{ display: 'flex', alignItems: 'flex-start', gap: '16px' }}>
-                                <div className="text-xl" style={{ color: '#74603B', marginTop: '4px' }}><i className="fa-solid fa-car"></i></div>
+                                <div className="text-xl" style={{ color: '#74603B', marginTop: '4px' }}><Car size={24} /></div>
                                 <div>
                                     <h3 className="font-serif text-lg font-semibold" style={{ color: '#445D48', margin: 0 }}>Estacionamento com Valet</h3>
                                     <p className="font-sans font-light mt-1" style={{ color: 'rgba(60, 60, 52, 0.8)', margin: 0 }}>Temos estacionamento conveniado com serviço de valet, garantindo comodidade e segurança para seu veículo.</p>
@@ -74,7 +75,7 @@ const ContactSection: React.FC = () => {
                         
                         <div style={{ marginTop: '32px' }}>
                             <a href="https://www.google.com/maps/place/Spazio+Beauty+-+Tatuap%C3%A9/@-23.548012,-46.561273,16z/data=!4m15!1m8!3m7!1s0x94ce5e8eedb337b9:0x83a90cd68f029664!2sR.+Azevedo+Soares,+1604+-+Vila+Gomes+Cardim,+S%C3%A3o+Paulo+-+SP,+03322-001!3b1!8m2!3d-23.5480121!4d-46.5612729!16s%2Fg%2F11c43vgh3p!3m5!1s0x94ce5fd2ce96cdbb:0x6e0b7af48371b7ef!8m2!3d-23.5479395!4d-46.5612602!16s%2Fg%2F11jmvv38kc?hl=pt-BR&entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="btn btn-brand" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
-                                <i className="fa-solid fa-map-location-dot"></i> Como Chegar
+                                <MapPinned size={18} className="mr-2 inline" /> Como Chegar
                             </a>
                         </div>
                     </div>
@@ -82,14 +83,13 @@ const ContactSection: React.FC = () => {
                     <div ref={mapRef} className="contact-map-block reveal-slide-right rounded-xl overflow-hidden shadow-xl relative" style={{ backgroundColor: '#EBE8E1', border: '1px solid rgba(68, 93, 72, 0.1)', height: '400px' }}>
                         {/* Overlay to prevent scroll trapping on mobile */}
                         <div className="absolute inset-0 z-20 md:pointer-events-none"></div>
-                        <div className="absolute inset-0 pointer-events-none mix-blend-color z-10" style={{ backgroundColor: 'rgba(68, 93, 72, 0.2)' }}></div>
                         {isMapLoaded ? (
                             <iframe 
                                 loading="lazy"
-                                src="https://maps.google.com/maps?q=Spazio+Beauty+-+Tatuap%C3%A9,+R.+Azevedo+Soares,+1604&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.481180295628!2d-46.5638402!3d-23.5479395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5fd2ce96cdbb%3A0x6e0b7af48371b7ef!2sSpazio%20Beauty%20-%20Tatuap%C3%A9!5e0!3m2!1spt-BR!2sbr" 
                                 width="100%" 
                                 height="100%" 
-                                style={{border:0, filter: 'grayscale(100%) contrast(1.1) opacity(0.9)'}} 
+                                style={{border:0}} 
                                 allowFullScreen={false} 
                                 referrerPolicy="no-referrer-when-downgrade"
                                 title="Mapa Spazio Beauty"
@@ -97,7 +97,7 @@ const ContactSection: React.FC = () => {
                             ></iframe>
                         ) : (
                             <div className="absolute inset-0 w-full h-full z-0 flex items-center justify-center font-sans text-neutral-500">
-                                <i className="fa-solid fa-map mr-2"></i> Carregando mapa...
+                                <Map size={24} className="mr-2 inline" /> Carregando mapa...
                             </div>
                         )}
                     </div>

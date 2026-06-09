@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Scissors, Sparkles, WandSparkles, MessageCircle } from 'lucide-react';
 
 const ServicesSection: React.FC = () => {
     const [activeTab, setActiveTab] = useState('cabelo');
@@ -21,15 +22,15 @@ const ServicesSection: React.FC = () => {
                 <div className="services-tabs-container">
                     <div className="services-tabs" role="tablist">
                         <button className={`tab-btn ${activeTab === 'cabelo' ? 'active' : ''}`} role="tab" onClick={() => setActiveTab('cabelo')}>
-                            <i className="fa-solid fa-scissors"></i>
+                            <Scissors size={28} />
                             <span>Cabelos</span>
                         </button>
                         <button className={`tab-btn ${activeTab === 'unhas' ? 'active' : ''}`} role="tab" onClick={() => setActiveTab('unhas')}>
-                            <i className="fa-solid fa-hand-sparkles"></i>
+                            <Sparkles size={28} />
                             <span>Unhas e Nail Design</span>
                         </button>
                         <button className={`tab-btn ${activeTab === 'make' ? 'active' : ''}`} role="tab" onClick={() => setActiveTab('make')}>
-                            <i className="fa-solid fa-wand-magic-sparkles"></i>
+                            <WandSparkles size={28} />
                             <span>Make & Olhar</span>
                         </button>
                     </div>
@@ -98,7 +99,7 @@ const ServicesSection: React.FC = () => {
                                             </div>
                                         </li>
                                     </ul>
-                                    <a href="#booking" className="btn btn-brand btn-sm font-sans font-medium uppercase tracking-wider hover:bg-accent-brass transition-colors"><i className="fa-brands fa-whatsapp"></i> Agendar Cabelo</a>
+                                    <a href="#booking" className="btn btn-brand btn-sm font-sans font-medium uppercase tracking-wider hover:bg-accent-brass transition-colors"><MessageCircle size={18} className="inline mr-2" /> Agendar Cabelo</a>
                                 </div>
                                 <div className="panel-visual">
                                     <img loading="lazy" src="/img/penteado-festa/image-opt.webp" alt="Corte e Penteado Spazio Beauty" className="panel-img" />
@@ -184,7 +185,7 @@ const ServicesSection: React.FC = () => {
                                             </div>
                                         </li>
                                     </ul>
-                                    <a href="#booking" className="btn btn-brand btn-sm font-sans font-medium uppercase tracking-wider hover:bg-accent-brass transition-colors"><i className="fa-brands fa-whatsapp"></i> Agendar Unhas</a>
+                                    <a href="#booking" className="btn btn-brand btn-sm font-sans font-medium uppercase tracking-wider hover:bg-accent-brass transition-colors"><MessageCircle size={18} className="inline mr-2" /> Agendar Unhas</a>
                                 </div>
                                 <div className="panel-visual">
                                     <img loading="lazy" src="/img/alongamento-fibra-vidro/image-opt.webp" alt="Unhas em Gel Spazio Beauty" className="panel-img" />
@@ -227,7 +228,7 @@ const ServicesSection: React.FC = () => {
                                             </div>
                                         </li>
                                     </ul>
-                                    <a href="#booking" className="btn btn-brand btn-sm font-sans font-medium uppercase tracking-wider hover:bg-accent-brass transition-colors"><i className="fa-brands fa-whatsapp"></i> Agendar Make Up</a>
+                                    <a href="#booking" className="btn btn-brand btn-sm font-sans font-medium uppercase tracking-wider hover:bg-accent-brass transition-colors"><MessageCircle size={18} className="inline mr-2" /> Agendar Make Up</a>
                                 </div>
                                 <div className="panel-visual">
                                     <img loading="lazy" src="/img/servicos/capa-make-opt.webp" alt="Maquiagem Spazio Beauty" className="panel-img" />

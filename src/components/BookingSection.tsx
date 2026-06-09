@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Scissors, Sparkles, WandSparkles, CalendarDays, ArrowLeft, ArrowRight, Check, CheckCircle, Flower2, MessageCircle } from 'lucide-react';
 
 const BookingSection: React.FC = () => {
     const [step, setStep] = useState(1);
@@ -99,14 +100,16 @@ const BookingSection: React.FC = () => {
                                             <label className="quiz-option-card" key={opt}>
                                                 <input type="radio" name="quizService" value={opt} checked={service === opt} onChange={() => setService(opt)} />
                                                 <div className="quiz-card-content">
-                                                    <i className={`fa-solid ${opt === 'Cabelos' ? 'fa-scissors' : opt === 'Unhas e Nail Design' ? 'fa-hand-sparkles' : 'fa-wand-magic-sparkles'} option-icon`}></i>
+                                                    {opt === 'Cabelos' && <Scissors className="option-icon" size={24} />}
+                                                    {opt === 'Unhas e Nail Design' && <Sparkles className="option-icon" size={24} />}
+                                                    {opt === 'Make e Olhar' && <WandSparkles className="option-icon" size={24} />}
                                                     <span>{opt}</span>
                                                 </div>
                                             </label>
                                         ))}
                                     </div>
                                     <div className="quiz-navigation">
-                                        <button type="button" className="btn btn-brand btn-next-step w-100 font-sans font-medium uppercase tracking-wider hover:bg-accent-brass transition-colors" onClick={nextStep}>Avançar <i className="fa-solid fa-arrow-right"></i></button>
+                                        <button type="button" className="btn btn-brand btn-next-step w-100 font-sans font-medium uppercase tracking-wider hover:bg-accent-brass transition-colors" onClick={nextStep}>Avançar <ArrowRight size={18} className="inline ml-2" /></button>
                                     </div>
                                 </div>
                             )}
@@ -120,7 +123,7 @@ const BookingSection: React.FC = () => {
                                             <label className="quiz-option-card" key={opt}>
                                                 <input type="radio" name="quizDay" value={opt} checked={day === opt} onChange={() => setDay(opt)} />
                                                 <div className="quiz-card-content">
-                                                    <i className="fa-solid fa-calendar-day option-icon"></i>
+                                                    <CalendarDays className="option-icon" size={24} />
                                                     <span>{opt.split(' (')[0]}</span>
                                                 </div>
                                             </label>
@@ -138,8 +141,8 @@ const BookingSection: React.FC = () => {
                                     </div>
                                     
                                     <div className="quiz-navigation mt-4">
-                                        <button type="button" className="btn btn-outline btn-prev-step font-sans font-medium uppercase tracking-wider transition-colors" onClick={prevStep}><i className="fa-solid fa-arrow-left"></i> Voltar</button>
-                                        <button type="button" className="btn btn-brand btn-next-step font-sans font-medium uppercase tracking-wider hover:bg-accent-brass transition-colors" onClick={nextStep}>Avançar <i className="fa-solid fa-arrow-right"></i></button>
+                                        <button type="button" className="btn btn-outline btn-prev-step font-sans font-medium uppercase tracking-wider transition-colors" onClick={prevStep}><ArrowLeft size={18} className="inline mr-2" /> Voltar</button>
+                                        <button type="button" className="btn btn-brand btn-next-step font-sans font-medium uppercase tracking-wider hover:bg-accent-brass transition-colors" onClick={nextStep}>Avançar <ArrowRight size={18} className="inline ml-2" /></button>
                                     </div>
                                 </div>
                             )}
@@ -160,8 +163,8 @@ const BookingSection: React.FC = () => {
                                     </div>
                                     
                                     <div className="quiz-navigation">
-                                        <button type="button" className="btn btn-outline btn-prev-step font-sans font-medium uppercase tracking-wider transition-colors" onClick={prevStep}><i className="fa-solid fa-arrow-left"></i> Voltar</button>
-                                        <button type="button" className="btn btn-brand font-sans font-medium uppercase tracking-wider hover:bg-accent-brass transition-colors" onClick={() => { if(name) nextStep(); else alert('Por favor, informe seu nome.'); }}>Ver Prévia <i className="fa-solid fa-check"></i></button>
+                                        <button type="button" className="btn btn-outline btn-prev-step font-sans font-medium uppercase tracking-wider transition-colors" onClick={prevStep}><ArrowLeft size={18} className="inline mr-2" /> Voltar</button>
+                                        <button type="button" className="btn btn-brand font-sans font-medium uppercase tracking-wider hover:bg-accent-brass transition-colors" onClick={() => { if(name) nextStep(); else alert('Por favor, informe seu nome.'); }}>Ver Prévia <Check size={18} className="inline ml-2" /></button>
                                     </div>
                                 </div>
                             )}
@@ -169,12 +172,12 @@ const BookingSection: React.FC = () => {
                             {/* PASSO 4: Confirmação e Envio WhatsApp */}
                             {step === 4 && (
                                 <div className="quiz-step active">
-                                    <h3 className="quiz-step-title text-center font-serif text-2xl font-semibold "><i className="fa-solid fa-circle-check text-brand"></i> Tudo pronto, {name.split(' ')[0] || 'Linda'}!</h3>
+                                    <h3 className="quiz-step-title text-center font-serif text-2xl font-semibold flex items-center justify-center gap-2"><CheckCircle size={28} className="text-brand" /> Tudo pronto, {name.split(' ')[0] || 'Linda'}!</h3>
                                     <p className="text-center text-muted mb-4 font-sans font-light">Veja abaixo a mensagem estruturada para sua solicitação:</p>
                                     
                                     <div className="whatsapp-preview-box">
                                         <div className="whatsapp-preview-header">
-                                            <div className="whatsapp-avatar"><i className="fa-solid fa-spa"></i></div>
+                                            <div className="whatsapp-avatar"><Flower2 size={24} /></div>
                                             <div className="whatsapp-header-text">
                                                 <h5>Spazio Beauty</h5>
                                                 <span>Online agora</span>
@@ -189,8 +192,8 @@ const BookingSection: React.FC = () => {
                                     </div>
                                     
                                     <div className="quiz-navigation">
-                                        <button type="button" className="btn btn-outline btn-prev-step font-sans font-medium uppercase tracking-wider transition-colors" onClick={prevStep}><i className="fa-solid fa-arrow-left"></i> Ajustar</button>
-                                        <button type="button" className="btn btn-brand font-sans font-medium uppercase tracking-wider hover:bg-accent-brass transition-colors" onClick={handleWhatsAppRedirect}><i className="fa-brands fa-whatsapp"></i> Enviar Mensagem no WhatsApp</button>
+                                        <button type="button" className="btn btn-outline btn-prev-step font-sans font-medium uppercase tracking-wider transition-colors" onClick={prevStep}><ArrowLeft size={18} className="inline mr-2" /> Ajustar</button>
+                                        <button type="button" className="btn btn-brand font-sans font-medium uppercase tracking-wider hover:bg-accent-brass transition-colors" onClick={handleWhatsAppRedirect}><MessageCircle size={18} className="inline mr-2" /> Enviar Mensagem no WhatsApp</button>
                                     </div>
                                 </div>
                             )}

@@ -1,6 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+const InstagramIcon = ({ size = 24, className = "" }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+  </svg>
+);
+
 const LookbookSection: React.FC = () => {
     const lookbookItems = [
         { src: '/img/carrossel/cliente-1-opt.webp', alt: 'Cliente Spazio Beauty 1' },
@@ -52,7 +60,7 @@ const LookbookSection: React.FC = () => {
                             {/* Instagram Hover Overlay */}
                             <div className="absolute inset-0 bg-gradient-to-t from-[#445D48]/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-end pb-8">
                                 <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 flex items-center justify-center mb-3 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                                    <i className="fa-brands fa-instagram text-white text-2xl"></i>
+                                    <InstagramIcon size={24} className="text-white" />
                                 </div>
                                 <span className="font-sans font-medium text-white tracking-wider text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">
                                     Ver no Instagram
@@ -71,7 +79,7 @@ const LookbookSection: React.FC = () => {
                     className="inline-flex items-center gap-4 bg-transparent border border-[#445D48]/30 text-[#445D48] rounded-full font-sans font-medium uppercase tracking-widest text-sm hover:border-[#445D48] hover:bg-[#445D48] hover:text-[#EBE8E1] transition-all duration-300"
                     style={{ padding: '20px 40px' }}
                 >
-                    <i className="fa-brands fa-instagram text-xl"></i> Siga @spaziobeautytatuape
+                    <InstagramIcon size={20} className="inline mr-2" /> Siga @spaziobeautytatuape
                 </a>
             </div>
         </section>

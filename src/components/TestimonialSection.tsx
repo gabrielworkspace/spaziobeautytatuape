@@ -1,4 +1,5 @@
 import React from 'react';
+import { Star } from 'lucide-react';
 
 const testimonials = [
     {
@@ -89,12 +90,12 @@ const TestimonialSection: React.FC = () => {
                                         </span>
                                     </div>
                                 </div>
-                                <i className="fa-brands fa-google text-2xl" style={{ color: 'rgba(235, 232, 225, 0.2)' }}></i>
+                                <span className="font-sans font-bold" style={{ color: 'rgba(235, 232, 225, 0.2)', fontSize: '1.5rem' }}>G</span>
                             </div>
 
                             <div style={{ display: 'flex', gap: '4px', color: '#EBE8E1', fontSize: '0.875rem' }}>
                                 {[...Array(testimonial.stars)].map((_, i) => (
-                                    <i key={i} className="fa-solid fa-star"></i>
+                                    <Star key={i} size={16} fill="currentColor" className="inline" />
                                 ))}
                                 <span className="font-sans font-light ml-2" style={{ color: '#EBE8E1' }}>
                                     {testimonial.time}
