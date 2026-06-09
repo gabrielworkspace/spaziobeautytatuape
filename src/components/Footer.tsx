@@ -73,7 +73,7 @@ const Footer: React.FC<FooterProps> = ({ onOpenPrivacyPolicy, onOpenTermsOfUse }
             {/* Barra Inferior (Copyright e CNPJ) */}
             <div className="footer-bottom">
                 <div className="container footer-bottom-container">
-                    <p>&copy; 2026 Spazio Beauty. Todos os direitos reservados. CNPJ: 27.201.652/0001-40</p>
+                    <p>&copy; 2026 Centro de Beleza Tatuapé. Todos os direitos reservados. CNPJ: 27.201.652/0001-40</p>
                 </div>
             </div>
         </footer>
