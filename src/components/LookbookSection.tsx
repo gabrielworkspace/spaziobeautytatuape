@@ -3,12 +3,12 @@ import { motion } from 'framer-motion';
 
 const LookbookSection: React.FC = () => {
     const lookbookItems = [
-        { src: '/img/carrossel/cliente-1.webp', alt: 'Cliente Spazio Beauty 1' },
-        { src: '/img/carrossel/cliente-2.webp', alt: 'Cliente Spazio Beauty 2' },
-        { src: '/img/carrossel/cliente-3.webp', alt: 'Cliente Spazio Beauty 3' },
-        { src: '/img/carrossel/cliente-4.webp', alt: 'Cliente Spazio Beauty 4' },
-        { src: '/img/carrossel/cliente-5.webp', alt: 'Cliente Spazio Beauty 5' },
-        { src: '/img/carrossel/cliente-6.webp', alt: 'Cliente Spazio Beauty 6' },
+        { src: '/img/carrossel/cliente-1-opt.webp', alt: 'Cliente Spazio Beauty 1' },
+        { src: '/img/carrossel/cliente-2-opt.webp', alt: 'Cliente Spazio Beauty 2' },
+        { src: '/img/carrossel/cliente-3-opt.webp', alt: 'Cliente Spazio Beauty 3' },
+        { src: '/img/carrossel/cliente-4-opt.webp', alt: 'Cliente Spazio Beauty 4' },
+        { src: '/img/carrossel/cliente-5-opt.webp', alt: 'Cliente Spazio Beauty 5' },
+        { src: '/img/carrossel/cliente-6-opt.webp', alt: 'Cliente Spazio Beauty 6' },
     ];
 
     return (

@@ -36,7 +36,7 @@ const ContactSection: React.FC = () => {
                         
                         <div className="mb-10 rounded-xl overflow-hidden shadow-lg h-64 relative group" style={{ border: '1px solid rgba(68, 93, 72, 0.1)' }}>
                             <img loading="lazy" 
-                                src="/img/contact-facade.webp" 
+                                src="/img/contact-facade-opt.webp" 
                                 alt="Fachada Spazio Beauty" 
                                 width="400"
                                 height="250"
