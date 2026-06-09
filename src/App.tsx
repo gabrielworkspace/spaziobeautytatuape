@@ -21,6 +21,12 @@ import WelcomePopup from './components/WelcomePopup';
 function App() {
   const [isPrivacyModalOpen, setIsPrivacyModalOpen] = useState(false);
   const [isTermsModalOpen, setIsTermsModalOpen] = useState(false);
+  const [isDeferredRendered, setIsDeferredRendered] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsDeferredRendered(true), 150);
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     // Simple intersection observer for reveal animations originally in script.js
@@ -38,8 +44,9 @@ function App() {
 
     return () => {
         revealElements.forEach(el => observer.unobserve(el));
+        observer.disconnect();
     };
-  }, []);
+  }, [isDeferredRendered]);
 
   return (
     <div className="App" style={{ overflowX: 'hidden', maxWidth: '100vw', width: '100%' }}>
@@ -47,23 +54,31 @@ function App() {
       <main>
         <HeroSection />
         <AboutSection />
-        <ServicesSection />
         
-        <LookbookSection />
-        <TestimonialSection />
-        <BookingSection />
-        <FAQSection />
-        <ContactSection />
+        {isDeferredRendered && (
+          <>
+            <ServicesSection />
+            <LookbookSection />
+            <TestimonialSection />
+            <BookingSection />
+            <FAQSection />
+            <ContactSection />
+          </>
+        )}
       </main>
-      <Footer 
-        onOpenPrivacyPolicy={() => setIsPrivacyModalOpen(true)} 
-        onOpenTermsOfUse={() => setIsTermsModalOpen(true)}
-      />
       
-      <CookieBanner onOpenPrivacyPolicy={() => setIsPrivacyModalOpen(true)} />
-      <PrivacyPolicyModal isOpen={isPrivacyModalOpen} onClose={() => setIsPrivacyModalOpen(false)} />
-      <TermsOfUseModal isOpen={isTermsModalOpen} onClose={() => setIsTermsModalOpen(false)} />
-      <WelcomePopup />
+      {isDeferredRendered && (
+        <>
+          <Footer 
+            onOpenPrivacyPolicy={() => setIsPrivacyModalOpen(true)} 
+            onOpenTermsOfUse={() => setIsTermsModalOpen(true)}
+          />
+          <CookieBanner onOpenPrivacyPolicy={() => setIsPrivacyModalOpen(true)} />
+          <PrivacyPolicyModal isOpen={isPrivacyModalOpen} onClose={() => setIsPrivacyModalOpen(false)} />
+          <TermsOfUseModal isOpen={isTermsModalOpen} onClose={() => setIsTermsModalOpen(false)} />
+          <WelcomePopup />
+        </>
+      )}
     </div>
   );
 }
