@@ -8,18 +8,19 @@ const WelcomePopup: React.FC = () => {
     const [formData, setFormData] = useState({ nome: '', cpf: '', telefone: '' });
 
     useEffect(() => {
-        // const hasSeenPopup = localStorage.getItem('hasSeenWelcomePopup');
-        // if (!hasSeenPopup) {
+        const hasSeenPopup = sessionStorage.getItem('hasSeenWelcomePopup');
+        if (!hasSeenPopup) {
+            // Pequeno delay apenas para a animação da página não conflitar com a do popup
             const timer = setTimeout(() => {
                 setIsOpen(true);
-            }, 3000); // Show after 3 seconds
+            }, 300);
             return () => clearTimeout(timer);
-        // }
+        }
     }, []);
 
     const handleClose = () => {
         setIsOpen(false);
-        // localStorage.setItem('hasSeenWelcomePopup', 'true');
+        sessionStorage.setItem('hasSeenWelcomePopup', 'true');
     };
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
