@@ -9,14 +9,10 @@ const CookieBanner: React.FC<CookieBannerProps> = ({ onOpenPrivacyPolicy }) => {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
-        // Show banner after a slight delay for better UX
-        const timer = setTimeout(() => {
-            const hasAccepted = localStorage.getItem('spazio_cookies_accepted');
-            if (!hasAccepted) {
-                setIsVisible(true);
-            }
-        }, 1000);
-        return () => clearTimeout(timer);
+        const hasAccepted = localStorage.getItem('spazio_cookies_accepted');
+        if (!hasAccepted) {
+            setIsVisible(true);
+        }
     }, []);
 
     const handleAccept = () => {
