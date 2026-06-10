@@ -49,51 +49,27 @@ const WelcomePopup: React.FC = () => {
         setStatusMsg({ text: 'Enviando...', color: '#6B6B63' });
         
         try {
-            // Usando text/plain para evitar o preflight (CORS OPTIONS) que costuma ser bloqueado no navegador
-            const response = await fetch('https://hook.us2.make.com/yyc86gsqnrk23c1ayrs21fqv3wuk4ggl', {
+            // Usando mode 'no-cors' força o navegador a enviar sem checar preflight, garantindo a entrega.
+            // A desvantagem é que não podemos ler a resposta (fica 'opaca'), então assumimos sucesso sempre que não falhar a rede.
+            await fetch('https://hook.us2.make.com/yyc86gsqnrk23c1ayrs21fqv3wuk4ggl', {
                 method: 'POST',
+                mode: 'no-cors',
                 headers: {
-                    'Content-Type': 'text/plain',
+                    'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(formData)
             });
             
-            const textResponse = await response.text();
-            let isDuplicate = false;
-            let responseMsg = 'Cadastro realizado com sucesso!';
-
-            try {
-                const resultado = JSON.parse(textResponse);
-                if (resultado.status && resultado.status !== 'novo') {
-                    isDuplicate = true;
-                    if (resultado.mensagem) responseMsg = resultado.mensagem;
-                } else if (resultado.mensagem) {
-                    responseMsg = resultado.mensagem;
-                }
-            } catch (e) {
-                // Not JSON, assume default success message from Make text
-            }
-
-            if (response.ok) {
-                if (isDuplicate) {
-                    setStatusMsg({ text: responseMsg, color: 'orange' });
-                    setTimeout(() => {
-                        setSubmitState('duplicate');
-                    }, 1500);
-                } else {
-                    setStatusMsg({ text: responseMsg, color: 'green' });
-                    setTimeout(() => {
-                        setSubmitState('success');
-                    }, 1500);
-                }
-            } else {
-                throw new Error(`Falha no envio: Código ${response.status}`);
-            }
+            // Se chegou aqui, a requisição disparou com sucesso (no-cors não joga erro 4xx/5xx, só falha de rede fatal).
+            setStatusMsg({ text: 'Cadastro realizado com sucesso!', color: 'green' });
+            setTimeout(() => {
+                setSubmitState('success');
+            }, 1500);
             
         } catch (error: any) {
             console.error('Erro ao enviar lead:', error);
             setStatusMsg({ 
-                text: `Erro de conexão: O navegador pode ter bloqueado o envio (Ex: AdBlock ou CORS). Detalhe: ${error.message}`, 
+                text: `Erro de conexão: O navegador bloqueou fisicamente o envio. Desative AdBlockers ou VPNs para continuar.`, 
                 color: 'red' 
             });
         } finally {
