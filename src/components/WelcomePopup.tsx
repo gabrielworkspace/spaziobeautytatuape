@@ -8,19 +8,20 @@ const WelcomePopup: React.FC = () => {
     const [formData, setFormData] = useState({ nome: '', cpf: '', telefone: '' });
 
     useEffect(() => {
-        const hasSeenPopup = sessionStorage.getItem('hasSeenWelcomePopup');
-        if (!hasSeenPopup) {
+        // Deixando o popup ativo infinitamente para testes
+        // const hasSeenPopup = sessionStorage.getItem('hasSeenWelcomePopup');
+        // if (!hasSeenPopup) {
             // Pequeno delay apenas para a animação da página não conflitar com a do popup
             const timer = setTimeout(() => {
                 setIsOpen(true);
             }, 300);
             return () => clearTimeout(timer);
-        }
+        // }
     }, []);
 
     const handleClose = () => {
         setIsOpen(false);
-        sessionStorage.setItem('hasSeenWelcomePopup', 'true');
+        // sessionStorage.setItem('hasSeenWelcomePopup', 'true');
     };
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -235,6 +236,20 @@ const WelcomePopup: React.FC = () => {
                                     }}
                                 />
                             </div>
+
+                            {statusMsg.text && submitState === 'form' && (
+                                <div style={{ 
+                                    color: statusMsg.color, 
+                                    fontSize: '0.85rem', 
+                                    textAlign: 'center',
+                                    padding: '8px',
+                                    borderRadius: '4px',
+                                    backgroundColor: statusMsg.color === 'red' ? 'rgba(220, 53, 69, 0.1)' : 'transparent'
+                                }}>
+                                    {statusMsg.text}
+                                </div>
+                            )}
+
                             <button 
                                 type="submit" 
                                 id="enviar"
