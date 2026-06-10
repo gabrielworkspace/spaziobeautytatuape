@@ -8,20 +8,15 @@ const WelcomePopup: React.FC = () => {
     const [formData, setFormData] = useState({ nome: '', cpf: '', telefone: '' });
 
     useEffect(() => {
-        // Deixando o popup ativo infinitamente para testes
-        // const hasSeenPopup = sessionStorage.getItem('hasSeenWelcomePopup');
-        // if (!hasSeenPopup) {
-            // Pequeno delay apenas para a animação da página não conflitar com a do popup
-            const timer = setTimeout(() => {
-                setIsOpen(true);
-            }, 300);
-            return () => clearTimeout(timer);
-        // }
+        // Delay suave para não conflitar com a animação de entrada da página
+        const timer = setTimeout(() => {
+            setIsOpen(true);
+        }, 300);
+        return () => clearTimeout(timer);
     }, []);
 
     const handleClose = () => {
         setIsOpen(false);
-        // sessionStorage.setItem('hasSeenWelcomePopup', 'true');
     };
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
