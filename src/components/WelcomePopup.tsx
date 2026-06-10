@@ -1,19 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
 const WelcomePopup: React.FC = () => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(true);
     const [submitState, setSubmitState] = useState<'form' | 'success' | 'duplicate'>('form');
     const [isLoading, setIsLoading] = useState(false);
     const [statusMsg, setStatusMsg] = useState({ text: '', color: '' });
     const [formData, setFormData] = useState({ nome: '', cpf: '', telefone: '' });
-
-    useEffect(() => {
-        // Delay suave para não conflitar com a animação de entrada da página
-        const timer = setTimeout(() => {
-            setIsOpen(true);
-        }, 300);
-        return () => clearTimeout(timer);
-    }, []);
 
     const handleClose = () => {
         setIsOpen(false);
