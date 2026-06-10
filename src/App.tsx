@@ -16,7 +16,6 @@ const Footer = lazy(() => import('./components/Footer'));
 const CookieBanner = lazy(() => import('./components/CookieBanner'));
 const PrivacyPolicyModal = lazy(() => import('./components/PrivacyPolicyModal'));
 const TermsOfUseModal = lazy(() => import('./components/TermsOfUseModal'));
-const WelcomePopup = lazy(() => import('./components/WelcomePopup'));
 
 function App() {
   const [isPrivacyModalOpen, setIsPrivacyModalOpen] = useState(false);
