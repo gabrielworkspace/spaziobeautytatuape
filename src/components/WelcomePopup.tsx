@@ -49,10 +49,11 @@ const WelcomePopup: React.FC = () => {
         setStatusMsg({ text: 'Enviando...', color: '#6B6B63' });
         
         try {
+            // Usando text/plain para evitar o preflight (CORS OPTIONS) que costuma ser bloqueado no navegador
             const response = await fetch('https://hook.us2.make.com/yyc86gsqnrk23c1ayrs21fqv3wuk4ggl', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json',
+                    'Content-Type': 'text/plain',
                 },
                 body: JSON.stringify(formData)
             });
@@ -86,12 +87,15 @@ const WelcomePopup: React.FC = () => {
                     }, 1500);
                 }
             } else {
-                throw new Error('Falha no envio da requisição');
+                throw new Error(`Falha no envio: Código ${response.status}`);
             }
             
-        } catch (error) {
+        } catch (error: any) {
             console.error('Erro ao enviar lead:', error);
-            setStatusMsg({ text: 'Erro de conexão. Tente novamente.', color: 'red' });
+            setStatusMsg({ 
+                text: `Erro de conexão: O navegador pode ter bloqueado o envio (Ex: AdBlock ou CORS). Detalhe: ${error.message}`, 
+                color: 'red' 
+            });
         } finally {
             setIsLoading(false);
         }
