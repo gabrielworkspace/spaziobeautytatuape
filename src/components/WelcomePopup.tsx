@@ -23,7 +23,21 @@ const WelcomePopup: React.FC = () => {
     };
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const { name, value } = e.target;
+        let { name, value } = e.target;
+
+        if (name === 'cpf') {
+            value = value.replace(/\D/g, '');
+            if (value.length > 11) value = value.slice(0, 11);
+            value = value.replace(/(\d{3})(\d)/, '$1.$2');
+            value = value.replace(/(\d{3})(\d)/, '$1.$2');
+            value = value.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+        } else if (name === 'telefone') {
+            value = value.replace(/\D/g, '');
+            if (value.length > 11) value = value.slice(0, 11);
+            value = value.replace(/^(\d{2})(\d)/g, '($1) $2');
+            value = value.replace(/(\d)(\d{4})$/, '$1-$2');
+        }
+
         setFormData(prev => ({ ...prev, [name]: value }));
     };
 
@@ -41,22 +55,36 @@ const WelcomePopup: React.FC = () => {
                 body: JSON.stringify(formData)
             });
             
-            const resultado = await response.json();
-            
-            if (resultado.status === 'novo') {
-                setStatusMsg({ text: resultado.mensagem, color: 'green' });
-                // Move to the success screen after a brief delay
-                setTimeout(() => {
-                    setSubmitState('success');
-                    // localStorage.setItem('hasSeenWelcomePopup', 'true');
-                }, 1500);
+            const textResponse = await response.text();
+            let isDuplicate = false;
+            let responseMsg = 'Cadastro realizado com sucesso!';
+
+            try {
+                const resultado = JSON.parse(textResponse);
+                if (resultado.status && resultado.status !== 'novo') {
+                    isDuplicate = true;
+                    if (resultado.mensagem) responseMsg = resultado.mensagem;
+                } else if (resultado.mensagem) {
+                    responseMsg = resultado.mensagem;
+                }
+            } catch (e) {
+                // Not JSON, assume default success message from Make text
+            }
+
+            if (response.ok) {
+                if (isDuplicate) {
+                    setStatusMsg({ text: responseMsg, color: 'orange' });
+                    setTimeout(() => {
+                        setSubmitState('duplicate');
+                    }, 1500);
+                } else {
+                    setStatusMsg({ text: responseMsg, color: 'green' });
+                    setTimeout(() => {
+                        setSubmitState('success');
+                    }, 1500);
+                }
             } else {
-                setStatusMsg({ text: resultado.mensagem, color: 'orange' });
-                // Move to the duplicate screen after a brief delay
-                setTimeout(() => {
-                    setSubmitState('duplicate');
-                    // localStorage.setItem('hasSeenWelcomePopup', 'true');
-                }, 1500);
+                throw new Error('Falha no envio da requisição');
             }
             
         } catch (error) {
