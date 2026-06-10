@@ -88,7 +88,6 @@ function App() {
           <CookieBanner onOpenPrivacyPolicy={() => setIsPrivacyModalOpen(true)} />
           <PrivacyPolicyModal isOpen={isPrivacyModalOpen} onClose={() => setIsPrivacyModalOpen(false)} />
           <TermsOfUseModal isOpen={isTermsModalOpen} onClose={() => setIsTermsModalOpen(false)} />
-          <WelcomePopup />
         </Suspense>
       </LazyScroll>
     </div>
