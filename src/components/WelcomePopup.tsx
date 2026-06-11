@@ -157,7 +157,7 @@ const WelcomePopup: React.FC = () => {
                             <p className="font-sans font-light" style={{ color: 'rgba(60, 60, 52, 0.8)', fontSize: '0.95rem' }}>
                                 Preencha seus dados para receber <strong>10% de desconto</strong> no seu primeiro agendamento conosco.
                                 <br />
-                                <span style={{ fontSize: '0.85rem', display: 'block', marginTop: '8px', color: '#8E794D', fontWeight: 500 }}>* Oferecemos 1 vale presente por CPF.</span>
+                                <span style={{ fontSize: '0.85rem', display: 'block', marginTop: '8px', color: '#445D48', fontWeight: 500 }}>* Oferecemos 1 vale presente por CPF.</span>
                             </p>
                         </div>
 
