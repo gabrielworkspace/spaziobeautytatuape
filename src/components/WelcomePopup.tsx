@@ -156,6 +156,8 @@ const WelcomePopup: React.FC = () => {
                             </h2>
                             <p className="font-sans font-light" style={{ color: 'rgba(60, 60, 52, 0.8)', fontSize: '0.95rem' }}>
                                 Preencha seus dados para receber <strong>10% de desconto</strong> no seu primeiro agendamento conosco.
+                                <br />
+                                <span style={{ fontSize: '0.85rem', display: 'block', marginTop: '8px', color: '#8E794D', fontWeight: 500 }}>* Oferecemos 1 vale presente por CPF.</span>
                             </p>
                         </div>
 
@@ -243,7 +245,7 @@ const WelcomePopup: React.FC = () => {
                             <button 
                                 type="submit" 
                                 id="enviar"
-                                disabled={isLoading}
+                                disabled={isLoading || formData.cpf.length < 14}
                                 className="btn btn-brand" 
                                 style={{ 
                                     width: '100%', 
@@ -252,8 +254,8 @@ const WelcomePopup: React.FC = () => {
                                     borderRadius: '8px',
                                     fontSize: '0.9rem',
                                     letterSpacing: '1.5px',
-                                    opacity: isLoading ? 0.7 : 1,
-                                    cursor: isLoading ? 'wait' : 'pointer'
+                                    opacity: (isLoading || formData.cpf.length < 14) ? 0.5 : 1,
+                                    cursor: isLoading ? 'wait' : formData.cpf.length < 14 ? 'not-allowed' : 'pointer'
                                 }}
                             >
                                 {isLoading ? 'ENVIANDO...' : 'RESGATAR MEU PRESENTE'}
