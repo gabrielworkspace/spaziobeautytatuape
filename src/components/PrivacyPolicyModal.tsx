@@ -85,12 +85,15 @@ const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({ isOpen, onClose
                     </section>
 
                     <section>
-                        <h3 className="font-serif font-medium mb-4" style={{ color: '#445D48', fontSize: '1.5rem' }}>2. Coleta e Fluxo de Dados (Assistente de Agendamento)</h3>
+                        <h3 className="font-serif font-medium mb-4" style={{ color: '#445D48', fontSize: '1.5rem' }}>2. Coleta e Fluxo de Dados</h3>
                         <p style={{ margin: '0 0 16px 0' }}>
                             Nosso ambiente digital é um espaço de vitrine e conexão. Não realizamos transações financeiras (checkout) diretamente no site.
                         </p>
+                        <p style={{ margin: '0 0 16px 0' }}>
+                            Para proporcionar um atendimento ágil e processar sua solicitação de agendamento (ou presente de boas-vindas), coletamos de forma voluntária os dados preenchidos nos formulários.
+                        </p>
                         <p style={{ margin: '0' }}>
-                            Para proporcionar um atendimento ágil e personalizado, utilizamos um Assistente de Agendamento que coleta de forma voluntária informações como seu Nome Completo e observações sobre o serviço desejado. Ao prosseguir, você é direcionado(a) de forma segura para o nosso canal oficial de WhatsApp, onde nossa equipe (e nossos sistemas de roteamento) darão continuidade à marcação do seu horário e apresentação de propostas.
+                            <strong>Importante:</strong> Informamos que os dados inseridos (como Nome, CPF e Telefone) são trafegados via <em>webhook</em> e processados através da ferramenta de automação Make. Em seguida, essas informações são salvas de forma segura em uma planilha do Google Sheets e redirecionadas para o nosso e-mail oficial (<strong>spaziobeautytatuape@gmail.com</strong>). O objetivo deste fluxo é exclusivamente garantir que nossa equipe receba sua solicitação e dê continuidade ao seu atendimento da melhor forma possível.
                         </p>
                     </section>
                     
