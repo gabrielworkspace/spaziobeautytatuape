@@ -90,10 +90,10 @@ const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({ isOpen, onClose
                             Nosso ambiente digital é um espaço de vitrine e conexão. Não realizamos transações financeiras (checkout) diretamente no site.
                         </p>
                         <p style={{ margin: '0 0 16px 0' }}>
-                            Para proporcionar um atendimento ágil e processar sua solicitação de agendamento (ou presente de boas-vindas), coletamos de forma voluntária os dados preenchidos nos formulários.
+                            Esclarecemos que a coleta de dados ocorre <strong>exclusivamente através do Pop-up de Boas-Vindas</strong>. Os dados ali preenchidos (Nome, CPF e Telefone) são trafegados via <em>webhook</em> e processados pela ferramenta Make, sendo salvos em uma planilha segura do Google Sheets e enviados ao nosso e-mail oficial (<strong>spaziobeautytatuape@gmail.com</strong>) para que nossa equipe dê continuidade ao seu atendimento.
                         </p>
                         <p style={{ margin: '0' }}>
-                            <strong>Importante:</strong> Informamos que os dados inseridos (como Nome, CPF e Telefone) são trafegados via <em>webhook</em> e processados através da ferramenta de automação Make. Em seguida, essas informações são salvas de forma segura em uma planilha do Google Sheets e redirecionadas para o nosso e-mail oficial (<strong>spaziobeautytatuape@gmail.com</strong>). O objetivo deste fluxo é exclusivamente garantir que nossa equipe receba sua solicitação e dê continuidade ao seu atendimento da melhor forma possível.
+                            <strong>Importante:</strong> O nosso Atendimento Automático (assistente virtual de agendamento no site) <strong>não realiza nenhuma coleta ou armazenamento de dados</strong>. Ele serve apenas para formular e agilizar a mensagem inicial que você enviará diretamente para o nosso WhatsApp, onde o atendimento será continuado pela nossa equipe.
                         </p>
                     </section>
                     
