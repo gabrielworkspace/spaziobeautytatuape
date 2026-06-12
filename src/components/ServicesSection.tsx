@@ -110,7 +110,7 @@ const ServicesSection: React.FC = () => {
                         <div className={`tab-panel ${activeTab === 'unhas' ? 'active' : ''}`} role="tabpanel">
                             <div className="panel-grid">
                                 <div className="panel-text">
-                                    <h3 className="panel-title font-serif text-3xl font-semibold">Unhas em Gel & Nail Art Autoral</h3>
+                                    <h3 className="panel-title font-serif text-3xl font-semibold">Unhas em Gel, Nail Art & Podologia</h3>
                                     <p className="panel-desc font-sans font-light leading-relaxed  text-base">Especialistas em alongamento em gel de altíssima durabilidade, com técnicas modernas que cuidam e respeitam a estrutura natural das unhas.</p>
                                     
                                     <ul className="service-menu-list">
