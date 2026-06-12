@@ -111,8 +111,9 @@ const ServicesSection: React.FC = () => {
                             <div className="panel-grid">
                                 <div className="panel-text">
                                     <h3 className="panel-title font-serif text-3xl font-semibold">Unhas em Gel, Nail Art & Podologia</h3>
-                                    <p className="panel-desc font-sans font-light leading-relaxed  text-base">Especialistas em alongamento em gel de altíssima durabilidade, com técnicas modernas que cuidam e respeitam a estrutura natural das unhas.</p>
+                                    <p className="panel-desc font-sans font-light leading-relaxed  text-base">Especialistas em alongamento em gel, unhas tradicionais e podologia para cuidar e respeitar a estrutura natural das suas unhas.</p>
                                     
+                                    <h4 className="font-serif text-2xl font-semibold mt-6 mb-4 text-brand">Nail Design</h4>
                                     <ul className="service-menu-list">
                                         <li className="flex items-center gap-4">
                                             <img loading="lazy" src="/img/manicure-esmaltacao-gel/image-opt-thumb.webp" alt="Manicure e Esmaltação em Gel" width="64" height="64"  className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
@@ -134,6 +135,10 @@ const ServicesSection: React.FC = () => {
                                                 <p className="service-details font-sans font-light leading-relaxed  text-sm mt-1">Resistência extrema com aspecto fino e natural.</p>
                                             </div>
                                         </li>
+                                    </ul>
+
+                                    <h4 className="font-serif text-2xl font-semibold mt-8 mb-4 text-brand">Unhas Tradicionais</h4>
+                                    <ul className="service-menu-list">
                                         <li className="flex items-center gap-4">
                                             <img loading="lazy" src="/img/pedicure-tradicional/image-opt-thumb.webp" alt="Pedicure Tradicional" width="64" height="64"  className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
                                             <div className="flex-1">
@@ -164,6 +169,10 @@ const ServicesSection: React.FC = () => {
                                                 <p className="service-details font-sans font-light leading-relaxed  text-sm mt-1">Unindo dois serviços com valor especial.</p>
                                             </div>
                                         </li>
+                                    </ul>
+
+                                    <h4 className="font-serif text-2xl font-semibold mt-8 mb-4 text-brand">Podologia</h4>
+                                    <ul className="service-menu-list">
                                         <li className="flex items-center gap-4">
                                             <img loading="lazy" src="/img/servicos/spa-dos-pes-opt.webp" alt="Spa dos Pés com Bota Térmica" width="64" height="64"  className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
                                             <div className="flex-1">
@@ -185,7 +194,7 @@ const ServicesSection: React.FC = () => {
                                             </div>
                                         </li>
                                     </ul>
-                                    <a href="#booking" className="btn btn-brand btn-sm font-sans font-medium uppercase tracking-wider hover:bg-accent-brass transition-colors"><MessageCircle size={18} className="inline mr-2" /> Agendar Unhas</a>
+                                    <a href="#booking" className="btn btn-brand btn-sm font-sans font-medium uppercase tracking-wider hover:bg-accent-brass transition-colors mt-6"><MessageCircle size={18} className="inline mr-2" /> Agendar Horário</a>
                                 </div>
                                 <div className="panel-visual">
                                     <img loading="lazy" src="/img/alongamento-fibra-vidro/image-opt.webp" alt="Unhas em Gel Spazio Beauty" className="panel-img" />
