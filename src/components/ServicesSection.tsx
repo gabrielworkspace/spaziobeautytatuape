@@ -27,7 +27,15 @@ const ServicesSection: React.FC = () => {
                         </button>
                         <button className={`tab-btn ${activeTab === 'unhas' ? 'active' : ''}`} role="tab" onClick={() => setActiveTab('unhas')}>
                             <Sparkles size={28} />
-                            <span>Unhas, Nail Designer e Podologia</span>
+                            <span>Unhas</span>
+                        </button>
+                        <button className={`tab-btn ${activeTab === 'nail_design' ? 'active' : ''}`} role="tab" onClick={() => setActiveTab('nail_design')}>
+                            <Sparkles size={28} />
+                            <span>Nail Design</span>
+                        </button>
+                        <button className={`tab-btn ${activeTab === 'podologia' ? 'active' : ''}`} role="tab" onClick={() => setActiveTab('podologia')}>
+                            <Sparkles size={28} />
+                            <span>Podologia</span>
                         </button>
                         <button className={`tab-btn ${activeTab === 'make' ? 'active' : ''}`} role="tab" onClick={() => setActiveTab('make')}>
                             <WandSparkles size={28} />
@@ -110,34 +118,9 @@ const ServicesSection: React.FC = () => {
                         <div className={`tab-panel ${activeTab === 'unhas' ? 'active' : ''}`} role="tabpanel">
                             <div className="panel-grid">
                                 <div className="panel-text">
-                                    <h3 className="panel-title font-serif text-3xl font-semibold">Unhas em Gel, Nail Art & Podologia</h3>
-                                    <p className="panel-desc font-sans font-light leading-relaxed  text-base">Especialistas em alongamento em gel, unhas tradicionais e podologia para cuidar e respeitar a estrutura natural das suas unhas.</p>
+                                    <h3 className="panel-title font-serif text-3xl font-semibold">Unhas Tradicionais</h3>
+                                    <p className="panel-desc font-sans font-light leading-relaxed  text-base">Cuidados clássicos para as suas unhas com cutilagem perfeita e esmaltação premium.</p>
                                     
-                                    <h4 className="font-serif text-2xl font-semibold mt-6 mb-4 text-brand">Nail Design</h4>
-                                    <ul className="service-menu-list">
-                                        <li className="flex items-center gap-4">
-                                            <img loading="lazy" src="/img/manicure-esmaltacao-gel/image-opt-thumb.webp" alt="Manicure e Esmaltação em Gel" width="64" height="64"  className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
-                                            <div className="flex-1">
-                                                <div className="service-menu-item flex-1">
-                                                    <span className="service-name font-sans font-medium text-lg">Manicure + Esmaltação em Gel</span>
-                                                    <span className="service-price font-sans font-medium ">R$ 100,00</span>
-                                                </div>
-                                                <p className="service-details font-sans font-light leading-relaxed  text-sm mt-1">Acabamento impecável e alta durabilidade.</p>
-                                            </div>
-                                        </li>
-                                        <li className="flex items-center gap-4">
-                                            <img loading="lazy" src="/img/alongamento-fibra-vidro/image-opt-thumb.webp" alt="Alongamentos Naturais" width="64" height="64"  className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
-                                            <div className="flex-1">
-                                                <div className="service-menu-item flex-1">
-                                                    <span className="service-name font-sans font-medium text-lg">Alongamentos Naturais</span>
-                                                    <span className="service-price font-sans font-medium ">a partir de R$ 180,00</span>
-                                                </div>
-                                                <p className="service-details font-sans font-light leading-relaxed  text-sm mt-1">Resistência extrema com aspecto fino e natural.</p>
-                                            </div>
-                                        </li>
-                                    </ul>
-
-                                    <h4 className="font-serif text-2xl font-semibold mt-8 mb-4 text-brand">Unhas Tradicionais</h4>
                                     <ul className="service-menu-list">
                                         <li className="flex items-center gap-4">
                                             <img loading="lazy" src="/img/pedicure-tradicional/image-opt-thumb.webp" alt="Pedicure Tradicional" width="64" height="64"  className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
@@ -170,8 +153,56 @@ const ServicesSection: React.FC = () => {
                                             </div>
                                         </li>
                                     </ul>
+                                    <a href="#booking" className="btn btn-brand btn-sm font-sans font-medium uppercase tracking-wider hover:bg-accent-brass transition-colors mt-6"><MessageCircle size={18} className="inline mr-2" /> Agendar Unhas</a>
+                                </div>
+                                <div className="panel-visual">
+                                    <img loading="lazy" src="/img/servicos/pe-e-mao-opt.webp" alt="Unhas Tradicionais Spazio Beauty" className="panel-img" />
+                                </div>
+                            </div>
+                        </div>
 
-                                    <h4 className="font-serif text-2xl font-semibold mt-8 mb-4 text-brand">Podologia</h4>
+                        <div className={`tab-panel ${activeTab === 'nail_design' ? 'active' : ''}`} role="tabpanel">
+                            <div className="panel-grid">
+                                <div className="panel-text">
+                                    <h3 className="panel-title font-serif text-3xl font-semibold">Nail Design & Alongamentos</h3>
+                                    <p className="panel-desc font-sans font-light leading-relaxed  text-base">Especialistas em alongamento em gel de altíssima durabilidade, com técnicas modernas que cuidam e respeitam a estrutura natural das unhas.</p>
+                                    
+                                    <ul className="service-menu-list">
+                                        <li className="flex items-center gap-4">
+                                            <img loading="lazy" src="/img/manicure-esmaltacao-gel/image-opt-thumb.webp" alt="Manicure e Esmaltação em Gel" width="64" height="64"  className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <div className="flex-1">
+                                                <div className="service-menu-item flex-1">
+                                                    <span className="service-name font-sans font-medium text-lg">Manicure + Esmaltação em Gel</span>
+                                                    <span className="service-price font-sans font-medium ">R$ 100,00</span>
+                                                </div>
+                                                <p className="service-details font-sans font-light leading-relaxed  text-sm mt-1">Acabamento impecável e alta durabilidade.</p>
+                                            </div>
+                                        </li>
+                                        <li className="flex items-center gap-4">
+                                            <img loading="lazy" src="/img/alongamento-fibra-vidro/image-opt-thumb.webp" alt="Alongamentos Naturais" width="64" height="64"  className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <div className="flex-1">
+                                                <div className="service-menu-item flex-1">
+                                                    <span className="service-name font-sans font-medium text-lg">Alongamentos Naturais</span>
+                                                    <span className="service-price font-sans font-medium ">a partir de R$ 180,00</span>
+                                                </div>
+                                                <p className="service-details font-sans font-light leading-relaxed  text-sm mt-1">Resistência extrema com aspecto fino e natural.</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <a href="#booking" className="btn btn-brand btn-sm font-sans font-medium uppercase tracking-wider hover:bg-accent-brass transition-colors mt-6"><MessageCircle size={18} className="inline mr-2" /> Agendar Nail Design</a>
+                                </div>
+                                <div className="panel-visual">
+                                    <img loading="lazy" src="/img/alongamento-fibra-vidro/image-opt.webp" alt="Unhas em Gel Spazio Beauty" className="panel-img" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className={`tab-panel ${activeTab === 'podologia' ? 'active' : ''}`} role="tabpanel">
+                            <div className="panel-grid">
+                                <div className="panel-text">
+                                    <h3 className="panel-title font-serif text-3xl font-semibold">Podologia</h3>
+                                    <p className="panel-desc font-sans font-light leading-relaxed  text-base">Tratamentos especializados para a saúde e bem-estar dos seus pés, garantindo conforto e hidratação profunda.</p>
+                                    
                                     <ul className="service-menu-list">
                                         <li className="flex items-center gap-4">
                                             <img loading="lazy" src="/img/servicos/spa-dos-pes-opt.webp" alt="Spa dos Pés com Bota Térmica" width="64" height="64"  className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
@@ -194,10 +225,10 @@ const ServicesSection: React.FC = () => {
                                             </div>
                                         </li>
                                     </ul>
-                                    <a href="#booking" className="btn btn-brand btn-sm font-sans font-medium uppercase tracking-wider hover:bg-accent-brass transition-colors mt-6"><MessageCircle size={18} className="inline mr-2" /> Agendar Horário</a>
+                                    <a href="#booking" className="btn btn-brand btn-sm font-sans font-medium uppercase tracking-wider hover:bg-accent-brass transition-colors mt-6"><MessageCircle size={18} className="inline mr-2" /> Agendar Podologia</a>
                                 </div>
                                 <div className="panel-visual">
-                                    <img loading="lazy" src="/img/alongamento-fibra-vidro/image-opt.webp" alt="Unhas em Gel Spazio Beauty" className="panel-img" />
+                                    <img loading="lazy" src="/img/servicos/podologia-opt.webp" alt="Podologia Spazio Beauty" className="panel-img" />
                                 </div>
                             </div>
                         </div>
