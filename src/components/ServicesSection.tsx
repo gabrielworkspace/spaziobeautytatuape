@@ -224,6 +224,51 @@ const ServicesSection: React.FC = () => {
                                                 <p className="service-details font-sans font-light leading-relaxed  text-sm mt-1">Remoção de calosidades, rachaduras e hidratação especial.</p>
                                             </div>
                                         </li>
+                                        <li className="flex items-center gap-4">
+                                            <img loading="lazy" src="/img/servicos/calo-remocao.png" alt="Calo e Calosidade - Remoção" width="64" height="64"  className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <div className="flex-1">
+                                                <div className="service-menu-item flex-1">
+                                                    <span className="service-name font-sans font-medium text-lg">Calo e Calosidade - Remoção</span>
+                                                    <span className="service-price font-sans font-medium ">R$ 70,00</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li className="flex items-center gap-4">
+                                            <img loading="lazy" src="/img/servicos/corte-unhas.png" alt="Corte correto das unhas e limpeza" width="64" height="64"  className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <div className="flex-1">
+                                                <div className="service-menu-item flex-1">
+                                                    <span className="service-name font-sans font-medium text-lg">Corte correto das unhas e limpeza</span>
+                                                    <span className="service-price font-sans font-medium ">R$ 50,00</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li className="flex items-center gap-4">
+                                            <img loading="lazy" src="/img/servicos/curativo-infeccao.png" alt="Curativo Infecção" width="64" height="64"  className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <div className="flex-1">
+                                                <div className="service-menu-item flex-1">
+                                                    <span className="service-name font-sans font-medium text-lg">Curativo Infecção</span>
+                                                    <span className="service-price font-sans font-medium ">a partir de R$ 150,00</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li className="flex items-center gap-4">
+                                            <img loading="lazy" src="/img/servicos/ortese-fibra.png" alt="Órtese de fibra" width="64" height="64"  className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <div className="flex-1">
+                                                <div className="service-menu-item flex-1">
+                                                    <span className="service-name font-sans font-medium text-lg">Órtese de fibra</span>
+                                                    <span className="service-price font-sans font-medium ">R$ 100,00</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li className="flex items-center gap-4">
+                                            <img loading="lazy" src="/img/servicos/spa-reflexologia.png" alt="Spa dos pés + reflexologia" width="64" height="64"  className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <div className="flex-1">
+                                                <div className="service-menu-item flex-1">
+                                                    <span className="service-name font-sans font-medium text-lg">Spa dos pés + reflexologia</span>
+                                                    <span className="service-price font-sans font-medium ">R$ 85,00</span>
+                                                </div>
+                                            </div>
+                                        </li>
                                     </ul>
                                     <a href="#booking" className="btn btn-brand btn-sm font-sans font-medium uppercase tracking-wider hover:bg-accent-brass transition-colors mt-6"><MessageCircle size={18} className="inline mr-2" /> Agendar Podologia</a>
                                 </div>
