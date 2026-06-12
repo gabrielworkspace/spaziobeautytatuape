@@ -1973,10 +1973,21 @@ body.no-scroll {
     
     .services-tabs {
         gap: 8px;
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 12px;
+        flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .services-tabs::-webkit-scrollbar {
+        display: none;
     }
     .tab-btn {
         padding: 10px 16px;
         font-size: 0.7rem;
+        flex-shrink: 0;
     }
     
     .footer-container {
@@ -2027,17 +2038,6 @@ body.no-scroll {
     
     .concept-quote-text {
         font-size: 1.3rem;
-    }
-    
-    .services-tabs {
-        justify-content: flex-start;
-        overflow-x: auto;
-        padding-bottom: 12px;
-        flex-wrap: nowrap;
-        -webkit-overflow-scrolling: touch;
-    }
-    .tab-btn {
-        flex-shrink: 0;
     }
     
     .service-menu-item {
