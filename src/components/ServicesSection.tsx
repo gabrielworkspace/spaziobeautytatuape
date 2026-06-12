@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Scissors, Sparkles, WandSparkles, MessageCircle, Droplet, Gem, Footprints } from 'lucide-react';
+import { Scissors, WandSparkles, MessageCircle, Droplet, Gem, Footprints } from 'lucide-react';
 
 const ServicesSection: React.FC = () => {
     const [activeTab, setActiveTab] = useState('cabelo');
