@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Scissors, WandSparkles, MessageCircle, Droplet, Gem, Footprints } from 'lucide-react';
+import { Scissors, WandSparkles, MessageCircle, Flower2, Sparkles, Footprints } from 'lucide-react';
 
 const ServicesSection: React.FC = () => {
     const [activeTab, setActiveTab] = useState('cabelo');
@@ -26,11 +26,11 @@ const ServicesSection: React.FC = () => {
                             <span>Cabelos</span>
                         </button>
                         <button className={`tab-btn ${activeTab === 'unhas' ? 'active' : ''}`} role="tab" onClick={() => setActiveTab('unhas')}>
-                            <Droplet size={28} />
+                            <Flower2 size={28} />
                             <span>Unhas</span>
                         </button>
                         <button className={`tab-btn ${activeTab === 'nail_design' ? 'active' : ''}`} role="tab" onClick={() => setActiveTab('nail_design')}>
-                            <Gem size={28} />
+                            <Sparkles size={28} />
                             <span>Nail Design</span>
                         </button>
                         <button className={`tab-btn ${activeTab === 'podologia' ? 'active' : ''}`} role="tab" onClick={() => setActiveTab('podologia')}>
