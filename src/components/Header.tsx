@@ -42,6 +42,11 @@ const Header: React.FC = () => {
                     <nav className={`nav-menu ${isMobileOpen ? 'active' : ''}`} id="navMenu">
                         <ul>
                             <li>
+                                <a href="#home" onClick={closeMenu} className="nav-link">
+                                    Início
+                                </a>
+                            </li>
+                            <li>
                                 <a href="#about" onClick={closeMenu} className="nav-link">
                                     Sobre Nós
                                 </a>
@@ -64,6 +69,11 @@ const Header: React.FC = () => {
                             <li>
                                 <a href="#faq" onClick={closeMenu} className="nav-link">
                                     FAQ
+                                </a>
+                            </li>
+                            <li className="mobile-only-link" style={{ display: 'none' }}>
+                                <a href="#booking" onClick={closeMenu} className="nav-link text-brand font-600">
+                                    Agendar
                                 </a>
                             </li>
                         </ul>

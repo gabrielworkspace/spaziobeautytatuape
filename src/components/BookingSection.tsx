@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Scissors, Sparkles, WandSparkles, CalendarDays, ArrowLeft, ArrowRight, Check, CheckCircle, Flower2, MessageCircle } from 'lucide-react';
+import { Scissors, Sparkles, WandSparkles, CalendarDays, ArrowLeft, ArrowRight, Check, CheckCircle, Flower2, MessageCircle, Footprints } from 'lucide-react';
 
 const BookingSection: React.FC = () => {
     const [step, setStep] = useState(1);
@@ -96,12 +96,14 @@ const BookingSection: React.FC = () => {
                                 <div className="quiz-step active">
                                     <h3 className="quiz-step-title font-serif text-2xl font-semibold ">1. Qual serviço você deseja agendar?</h3>
                                     <div className="quiz-options-grid">
-                                        {['Cabelos', 'Unhas e Nail Design', 'Make e Olhar'].map((opt) => (
+                                        {['Cabelos', 'Unhas', 'Nail Design', 'Podologia', 'Make e Olhar'].map((opt) => (
                                             <label className="quiz-option-card" key={opt}>
                                                 <input type="radio" name="quizService" value={opt} checked={service === opt} onChange={() => setService(opt)} />
                                                 <div className="quiz-card-content">
                                                     {opt === 'Cabelos' && <Scissors className="option-icon" size={24} />}
-                                                    {opt === 'Unhas e Nail Design' && <Sparkles className="option-icon" size={24} />}
+                                                    {opt === 'Unhas' && <Flower2 className="option-icon" size={24} />}
+                                                    {opt === 'Nail Design' && <Sparkles className="option-icon" size={24} />}
+                                                    {opt === 'Podologia' && <Footprints className="option-icon" size={24} />}
                                                     {opt === 'Make e Olhar' && <WandSparkles className="option-icon" size={24} />}
                                                     <span>{opt}</span>
                                                 </div>

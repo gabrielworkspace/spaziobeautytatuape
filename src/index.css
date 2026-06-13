@@ -1967,6 +1967,10 @@ body.no-scroll {
         display: block;
     }
     
+    .mobile-only-link {
+        display: block !important;
+    }
+    
     .d-none-mobile {
         display: none !important;
     }
