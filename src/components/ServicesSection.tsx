@@ -152,6 +152,16 @@ const ServicesSection: React.FC = () => {
                                                 <p className="service-details font-sans font-light leading-relaxed  text-sm mt-1">Unindo dois serviços com valor especial.</p>
                                             </div>
                                         </li>
+                                        <li className="flex items-center gap-4">
+                                            <img loading="lazy" src="/img/servicos/spa-dos-pes-opt.webp" alt="Spa dos Pés com Bota Térmica" width="64" height="64"  className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
+                                            <div className="flex-1">
+                                                <div className="service-menu-item flex-1">
+                                                    <span className="service-name font-sans font-medium text-lg">Spa dos Pés com Bota Térmica</span>
+                                                    <span className="service-price font-sans font-medium ">R$ 30,00</span>
+                                                </div>
+                                                <p className="service-details font-sans font-light leading-relaxed  text-sm mt-1">Hidratação profunda e esfoliação.</p>
+                                            </div>
+                                        </li>
                                     </ul>
                                     <a href="#booking" className="btn btn-brand btn-sm font-sans font-medium uppercase tracking-wider hover:bg-accent-brass transition-colors mt-6"><MessageCircle size={18} className="inline mr-2" /> Agendar Unhas</a>
                                 </div>
@@ -204,16 +214,7 @@ const ServicesSection: React.FC = () => {
                                     <p className="panel-desc font-sans font-light leading-relaxed  text-base">Tratamentos especializados para a saúde e bem-estar dos seus pés, garantindo conforto e hidratação profunda.</p>
                                     
                                     <ul className="service-menu-list">
-                                        <li className="flex items-center gap-4">
-                                            <img loading="lazy" src="/img/servicos/spa-dos-pes-opt.webp" alt="Spa dos Pés com Bota Térmica" width="64" height="64"  className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
-                                            <div className="flex-1">
-                                                <div className="service-menu-item flex-1">
-                                                    <span className="service-name font-sans font-medium text-lg">Spa dos Pés com Bota Térmica</span>
-                                                    <span className="service-price font-sans font-medium ">R$ 30,00</span>
-                                                </div>
-                                                <p className="service-details font-sans font-light leading-relaxed  text-sm mt-1">Hidratação profunda e esfoliação.</p>
-                                            </div>
-                                        </li>
+
                                         <li className="flex items-center gap-4">
                                             <img loading="lazy" src="/img/servicos/podologia-opt.webp" alt="Podologia Simples" width="64" height="64"  className="w-16 h-16 rounded-md object-cover shadow-sm border border-[#445D48]/10" />
                                             <div className="flex-1">
